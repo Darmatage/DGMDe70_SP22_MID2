@@ -349,7 +349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'char 1 speech
+  m_Text: '
 
 '
 --- !u!222 &268012057
@@ -496,7 +496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Char2Name
+  m_Text: 
 --- !u!222 &336529249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1296,7 +1296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Char 2 Speech
+  m_Text: 
 --- !u!222 &1210310238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1728,7 +1728,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Char2Name
+  m_Text: 
 --- !u!1 &1453750497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Char 2 Speech
+  m_Text: 
 --- !u!1 &1505945958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2319,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Char1Name
+  m_Text: 
 --- !u!222 &2095894944
 CanvasRenderer:
   m_ObjectHideFlags: 0
