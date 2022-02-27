@@ -930,7 +930,7 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 2044314093}
   ArtChar1: {fileID: 111443883}
   ArtBG1: {fileID: 1782560756}
-  Choice1a: {fileID: 1505945958}
+  Choice1a: {fileID: 1291473376}
   Choice1b: {fileID: 418096499}
   NextScene1Button: {fileID: 1505945958}
   NextScene2Button: {fileID: 932512872}
