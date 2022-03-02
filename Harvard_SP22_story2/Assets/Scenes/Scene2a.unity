@@ -258,7 +258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Run to warn Ragu
+  m_Text: 'In Progress...
 
 '
 --- !u!222 &37430257
@@ -653,9 +653,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: Choice1bFunct
+      - m_Target: {fileID: 719187705}
+        m_TargetAssemblyTypeName: Scene2aDialogue, Assembly-CSharp
+        m_MethodName: Choice1bFunct2a
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1013,6 +1013,7 @@ GameObject:
   - component: {fileID: 818296113}
   - component: {fileID: 818296115}
   - component: {fileID: 818296114}
+  - component: {fileID: 818296116}
   m_Layer: 5
   m_Name: TextOneAtATime
   m_TagString: Untagged
@@ -1027,7 +1028,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818296112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1036,8 +1037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507, y: 225}
-  m_SizeDelta: {x: 200, y: 150}
+  m_AnchoredPosition: {x: -149.986, y: 243}
+  m_SizeDelta: {x: 860.027, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &818296114
 MonoBehaviour:
@@ -1072,7 +1073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Practice Text One at a Time Displayer
+  m_Text: Alpha Centurial x1342yg Sector 12...
 --- !u!222 &818296115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1081,6 +1082,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818296112}
   m_CullTransparentMesh: 1
+--- !u!114 &818296116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818296112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4670c172aea1a940bd0e5331e92ab12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
+  fullText: Alpha Centurial x1342yg Sector 12
 --- !u!1001 &827835772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1286,9 +1301,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: SceneChange2
+      - m_Target: {fileID: 719187705}
+        m_TargetAssemblyTypeName: Scene2aDialogue, Assembly-CSharp
+        m_MethodName: SceneChange3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1406,7 +1421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NO!
+  m_Text: ' 1 option'
 --- !u!222 &949668143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1485,7 +1500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lead Jeda to Ragu
+  m_Text: In Progress ...
 --- !u!222 &1100909565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1643,7 +1658,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YES..
+  m_Text: 2 option
 --- !u!222 &1212525104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1735,9 +1750,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+      - m_Target: {fileID: 719187705}
+        m_TargetAssemblyTypeName: Scene2aDialogue, Assembly-CSharp
+        m_MethodName: Choice1aFunct2a
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1868,9 +1883,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: talking
+      - m_Target: {fileID: 719187705}
+        m_TargetAssemblyTypeName: Scene2aDialogue, Assembly-CSharp
+        m_MethodName: talking2a
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2159,9 +2174,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: SceneChange1
+      - m_Target: {fileID: 719187705}
+        m_TargetAssemblyTypeName: Scene2aDialogue, Assembly-CSharp
+        m_MethodName: SceneChange3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
