@@ -64,7 +64,7 @@ public void talking(){         // main story function. Players hit next to progr
               //    primeInt = 10;//send story to frame 11
               //}
         }
-       else if (primeInt ==3){
+       else if (primeInt == 3){
                 Char1name.text = "NARRATOR";
                 Char1speech.text = "You wrench the helm to avoid the next volley of fire from the enemy Dreadnought.";
                 Char2name.text = "";
@@ -90,7 +90,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-       else if (primeInt ==7){
+       else if (primeInt == 7){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "You";
@@ -109,7 +109,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
 
-        else if (primeInt ==11){
+        else if (primeInt == 11){
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "You";
