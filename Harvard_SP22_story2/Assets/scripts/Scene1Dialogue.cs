@@ -53,29 +53,35 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "Jeda";
-                Char1speech.text = "Wakey wakey, human.";
+                Char1name.text = "NARRATOR";
+                Char1speech.text = "A laser fires through space, scorching the Galactic Union insignia from the hull of your standard issue cruiser.";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+
+            //  if (playerHealth <= 5){
+              //    primeInt = 10;//send story to frame 11
+              //}
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Wuh..? What happened?";
+                Char1name.text = "NARRATOR";
+                Char1speech.text = "You wrench the helm to avoid the next volley of fire from the enemy Dreadnought.";
+                Char2name.text = "";
+                Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "Jeda";
-                Char1speech.text = "I know I did not hit you that hard.";
+                Char1name.text = "NARRATOR";
+                Char1speech.text = "To your left, Lieutenant Rory's hands fly across displays and controls.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Hit me? Why?";
+                Char2name.text = "Lt. Rory";
+                Char2speech.text = "Shields at 15 percent, Captain! Concentrating all remaining defensive power to our rear. Awaiting further orders.";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
@@ -91,8 +97,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "Why do you think I know anything?";
         }
        else if (primeInt == 8){
-                Char1name.text = "Jeda";
-                Char1speech.text = "Do not play the stupid. You will take me to him.";
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
@@ -101,6 +107,18 @@ public void talking(){         // main story function. Players hit next to progr
                 Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
         }
+
+
+        else if (primeInt ==11){
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "You";
+                 Char2speech.text = "I feel rotten... Got any medPacks?";
+         }
+
+
+
+
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
                 Char1name.text = "Jeda";
@@ -118,6 +136,8 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene1Button.SetActive(true);
         }
 
+
+
        else if (primeInt == 200){
                 Char1name.text = "Jeda";
                 Char1speech.text = "Do not think you can fool me, human. Where will we find him?";
@@ -133,6 +153,13 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 NextScene2Button.SetActive(true);
         }
+
+
+
+
+
+
+
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
