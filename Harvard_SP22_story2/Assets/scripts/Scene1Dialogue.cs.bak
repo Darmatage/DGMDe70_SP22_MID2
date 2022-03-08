@@ -53,8 +53,8 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "CommanderZurcik";
-                Char1speech.text = "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?";
+                Char1name.text = "NARRATOR";
+                Char1speech.text = "A laser fires through space, scorching the Galactic Union insignia from the hull of your standard issue cruiser.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
