@@ -22,6 +22,7 @@ public class Scene1aDialogue : MonoBehaviour {
 		public GameObject red3;
 		public GameObject red4;
 		public GameObject red5;
+		public GameObject red6;
 		public GameObject blue1;
         // public GameObject Choice1a;
         // public GameObject Choice2;
@@ -33,19 +34,21 @@ public class Scene1aDialogue : MonoBehaviour {
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
-        DialogueDisplay.SetActive(false);
+        DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
 		red1.SetActive(false);
 		red2.SetActive(false);
 		red3.SetActive(false);
 		red4.SetActive(false);
 		red5.SetActive(false);
+		red6.SetActive(false);
 		blue1.SetActive(false);
         ArtBG1.SetActive(true);
-        Choice1a.SetActive(false);
-        Choice2.SetActive(false);
+        // Choice1a.SetActive(false);
+        // Choice2.SetActive(false);
         NextScene1Button.SetActive(false);
-        // NextScene2Button.SetActive(false);
+		nextButton.SetActive(false);
+        allowSpace = false;
         nextButton.SetActive(true);
    }
 
@@ -104,9 +107,9 @@ public void talking(){         // main story function. Players hit next to progr
 				 red2.SetActive(true);
         }
 		else if (primeInt == 6){
-                Char1name.text = "";
-                Char1speech.text = "Captain Asana";
-                Char2speech.text = "Yes, Lieutenant?";
+                Char1name.text = "Captain Asana";
+                Char1speech.text = "Yes, Lieutenant?";
+                Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
@@ -148,7 +151,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
 				Char2name.text = "Captain Asana";
-                Char2speech.text = "The honor is mine, Lieutenant...You’re a good man, Rory. Thank you.";
+                Char2speech.text = "You’re a good man, Rory. Thank you.";
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
@@ -172,13 +175,14 @@ public void talking(){         // main story function. Players hit next to progr
 				  red4.SetActive(true);
 				  red5.SetActive(true);
 				}
-		else if (primeInt == 10){
+		else if (primeInt == 11){
                 Char1name.text = "********";
                 Char1speech.text = "A captain's duty is to make hard decisions. Perhaps it is a mercy that the gravest mistake a captain can make is the only one she will not have to live with.  -General Lorne";
                 Char2name.text = "";
                 Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
+				red6.SetActive(true);
 				NextScene1Button.SetActive(true); 
 				}
 				
