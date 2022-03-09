@@ -193,7 +193,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Run to warn Ragu
+  m_Text: Full power to forward weapons. Let's give these pirates a reason to fear
+    the Galactic Union!
 --- !u!222 &37430257
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -516,7 +517,7 @@ GameObject:
   - component: {fileID: 418096502}
   - component: {fileID: 418096501}
   m_Layer: 5
-  m_Name: ButtonChoice1b
+  m_Name: ButtonChoice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,7 +589,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: Choice1bFunct
+        m_MethodName: Choice2Funct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -930,7 +931,7 @@ MonoBehaviour:
   ArtChar1: {fileID: 111443883}
   ArtBG1: {fileID: 1782560756}
   Choice1a: {fileID: 1291473376}
-  Choice1b: {fileID: 418096499}
+  Choice2: {fileID: 418096499}
   NextScene1Button: {fileID: 1505945958}
   NextScene2Button: {fileID: 932512872}
   nextButton: {fileID: 1292274639}
@@ -970,8 +971,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228, y: 186}
-  m_SizeDelta: {x: 350, y: 70}
+  m_AnchoredPosition: {x: 235.62, y: 170.06}
+  m_SizeDelta: {x: 365.24, y: 101.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932512874
 MonoBehaviour:
@@ -1137,7 +1138,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NO!
+  m_Text: Full power to forward weapons. Let's give these pirates a reason to fear
+    the Galactic Union!
 --- !u!222 &949668143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1216,7 +1218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lead Jeda to Ragu
+  m_Text: Full power to engines. That wormhole is our only ticket out of here!
 --- !u!222 &1100909565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1374,7 +1376,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YES..
+  m_Text: Full power to engines. That wormhole is our only ticket out of here!
 --- !u!222 &1212525104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1965,8 +1967,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294, y: 183}
-  m_SizeDelta: {x: 350, y: 70}
+  m_AnchoredPosition: {x: -281.36682, y: 168.56213}
+  m_SizeDelta: {x: 375.266, y: 98.876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505945960
 MonoBehaviour:
