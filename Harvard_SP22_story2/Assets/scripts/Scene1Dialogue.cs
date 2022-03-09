@@ -16,6 +16,7 @@ public class Scene1Dialogue : MonoBehaviour {
 		public Text Char4speech_shake;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
+        public GameObject ArtChar2;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice2;
@@ -29,6 +30,7 @@ public class Scene1Dialogue : MonoBehaviour {
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
+        ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice2.SetActive(false);
@@ -133,18 +135,18 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "My requests won’t go through. It’s almost as if we’re being jammed, but I don’t-";
         }
-				
+
 
 
         else if (primeInt == 11){
-                 Char1name.text = "********";
-				 Char1speech.text = "";
+                Char1name.text = "********";
+				        Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-                 Char4speech_shake.text = "The ship rocks as a laser smashes into the ship’s side. A dreadnought looms to starboard.";
-      
+                Char4speech_shake.text = "The ship rocks as a laser smashes into the ship’s side. A dreadnought looms to starboard.";
+                ArtChar2.SetActive(true);
          }
 else if (primeInt == 12){
                 Char1name.text = "";
@@ -156,7 +158,7 @@ else if (primeInt == 12){
                Char3name.text = "";
                 Char3speech.text = "";
                 Char4speech_shake.text = "Shields up! 9";
-              
+
 			  }
 				else if (primeInt == 13){
                 Char1name.text = "";
@@ -167,7 +169,7 @@ else if (primeInt == 12){
 			   Char3speech.text = "";
                 Char4speech_shake.text = "Evasive maneuvers! 11";
         }
-			 
+
 				else if (primeInt == 14){
                 Char1name.text = "********";
                 Char1speech.text = "";
@@ -176,7 +178,7 @@ else if (primeInt == 12){
                Char3name.text = "";
                 Char4speech_shake.text = "With a hum, energy shields surround the ship. The next shot sends a ripple of energy across the porthole, but the ship holds stable.";
         }
-					  
+
 				else if (primeInt == 15){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -186,7 +188,7 @@ else if (primeInt == 12){
                 Char3speech.text = "Shields at 80 percent, Captain. Here comes another volley!";
 				 Char4speech_shake.text = "";
         }
-					  
+
 				else if (primeInt == 16){
                 Char1name.text = "********";
                 Char1speech.text = "";
