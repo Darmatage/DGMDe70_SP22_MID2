@@ -54,7 +54,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "COMMAND";
                 Char1speech.text = "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?";
@@ -98,7 +98,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "Lieutenant Rory";
+				        Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "No, sir. Systems are stable and functioning as expected. We picked up some chatter a few hours back, but I was unable to lock onto the signal. It’s probably nothing.";
 		}
        else if (primeInt == 8){
@@ -106,7 +106,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "Thank you, Lieutenant. That may... {tchhkshhh} notice of a batt... {zztch} earby territory. Avoid at... {tzzkkshh} mission... {ktchhhhssshhhh}";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "";
+				        Char3name.text = "";
                 Char3speech.text = "";
                 // // Turn off "Next" button, turn on "Choice" buttons
                // nextButton.SetActive(false);
@@ -119,7 +119,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "Captain Asana";
                 Char2speech.text = "We're losing contact...Lieutenant, can you reconnect to command?";
-				Char3name.text = "";
+				        Char3name.text = "";
                 Char3speech.text = "";
                 // // Turn off "Next" button, turn on "Choice" buttons
                // nextButton.SetActive(false);
@@ -132,13 +132,14 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
+                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "My requests won’t go through. It’s almost as if we’re being jammed, but I don’t-";
         }
 
 
 
         else if (primeInt == 11){
+                ArtChar2.SetActive(true);
                 Char1name.text = "********";
 				        Char1speech.text = "";
                 Char2name.text = "";
@@ -146,16 +147,15 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3name.text = "";
                 Char3speech.text = "";
                 Char4speech_shake.text = "The ship rocks as a laser smashes into the ship’s side. A dreadnought looms to starboard.";
-                ArtChar2.SetActive(true);
          }
 else if (primeInt == 12){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Captain Asana";
-				Char1speech.text = "";
+			        	Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
                 Char4speech_shake.text = "Shields up! 9";
 
@@ -165,8 +165,8 @@ else if (primeInt == 12){
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
-			   Char3speech.text = "";
+                Char3name.text = "Lieutenant Rory";
+			          Char3speech.text = "";
                 Char4speech_shake.text = "Evasive maneuvers! 11";
         }
 
