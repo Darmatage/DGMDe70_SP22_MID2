@@ -62,6 +62,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "********";
                 Char1speech.text = "You punch it. As the nose of your vessel enters the wormhole, you see a flash of blue light from the Dreadnought. The blue ripples around you as the world as you knew it falls apart. ";
                 Char2name.text = "";
+
                 Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
@@ -73,6 +74,10 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
+				blue1.SetActive(true);
+				 ArtBG1.SetActive(true);
+				 ArtBG_wormhole.SetActive(false);
+		
 				 // Char4speech_shake.text = "";
 		Choice1.SetActive(true);
 		Choice1Text.text = "Reach for Rory's hand";
@@ -82,6 +87,7 @@ public void talking(){         // main story function. Players hit next to progr
 				allowSpace = false;
 		}else if (primeInt == 4){
                 Char1name.text = "********";
+						blue1.SetActive(true);
                 Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
                 Char2name.text = "";
                 Char2speech.text = "";

@@ -1,0 +1,430 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
+public class Scene3Dialogue : MonoBehaviour {
+        public int primeInt = 1; // This integer drives game progress!
+        public Text Char1name;
+        public Text Char1speech;
+        public Text Char2name;
+        public Text Char2speech;
+        public Text Char3name;
+        public Text Char3speech;
+		public Text Choice1Text;
+		public Text Choice2Text;
+        public GameObject DialogueDisplay;
+        public GameObject ArtChar1;
+        public GameObject ArtChar2;
+        public GameObject ArtBG1;
+		public GameObject ArtBG_UnidentifiedVessel;
+		public GameObject ArtBG_MissileFire;
+		public GameObject ArtBG_ShipExplodes;
+		public GameObject ArtBG_Headache;
+        public GameObject Choice1;
+        public GameObject Choice2;
+        public GameObject nextButton;
+       //public GameHandler gameHandler;
+       //public AudioSource audioSource;
+        private bool allowSpace = true;
+
+void Start(){         // initial visibility settings
+        DialogueDisplay.SetActive(false);
+        ArtChar1.SetActive(false);
+        ArtChar2.SetActive(false);
+		ArtBG_UnidentifiedVessel.SetActive(false);
+		ArtBG_MissileFire.SetActive(false);
+		ArtBG_ShipExplodes.SetActive(false);
+		ArtBG_Headache.SetActive(false);
+        ArtBG1.SetActive(true);
+        Choice1.SetActive(false);
+        Choice2.SetActive(false);
+        nextButton.SetActive(true);
+   }
+
+void Update(){         // use spacebar as Next button
+        if (allowSpace == true){
+                if (Input.GetKeyDown("space")){
+                       talking();
+                }
+        }
+   }
+
+//Story Units:
+public void talking(){         // main story function. Players hit next to progress to next int
+        primeInt = primeInt + 1;
+        if (primeInt == 1){
+                // AudioSource.Play();
+        }
+        else if (primeInt == 2){
+                ArtChar1.SetActive(false);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = "********";
+                Char1speech.text = "You come to";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+				Choice1.SetActive(true);
+        Choice2.SetActive(true);
+		Choice1Text.text = "Ow, my head";
+		Choice2Text.text = "Lieutenant, report!";
+        nextButton.SetActive(false);
+		allowSpace = false;
+
+            //  if (playerHealth <= 5){
+              //    primeInt = 10;//send story to frame 11
+              //}
+        }
+       else if (primeInt == 3){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Glad to see you’re awake, Captain. We took quite a beating, and, well…";
+                Choice1.SetActive(true);
+				Choice2.SetActive(true);
+				Choice1Text.text = "What is it, Rory?";
+				Choice2Text.text = "Spit it out, Lieutenant!";
+				nextButton.SetActive(false);
+		allowSpace = false;
+				// nextButton.SetActive(true);
+		// allowSpace = true;
+
+				//gameHandler.AddPlayerStat(1);
+        }
+       else if (primeInt == 4){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Sorry, Captain, it's just... I don't know where we are.";
+                Choice1.SetActive(true);
+				Choice2.SetActive(true);
+				Choice1Text.text = "You mean...";
+				Choice2Text.text = "The wormhole!";
+				  nextButton.SetActive(false);
+		allowSpace = false;
+        }
+       else if (primeInt == 5){
+                    Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Yes, Captain. We entered the wormhole and ended up... Well, all I know is the star charts don’t match any in our database..";
+                Choice1.SetActive(true);
+				Choice2.SetActive(true);
+				Choice1Text.text = "Lieutenant, do you know what this means?";
+				Choice2Text.text = "Status report.";
+				  nextButton.SetActive(false);
+		allowSpace = false;
+                //gameHandler.AddPlayerStat(1);
+        }
+       else if (primeInt == 6){
+   Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Uh... we’re lost";
+                Choice1.SetActive(true);
+				Choice2.SetActive(true);
+				Choice1Text.text = "I believe we’ve unlocked the secret to interdimensional travel!";
+				Choice2Text.text = "Damn it all! We’re going to miss the convention!";
+				  nextButton.SetActive(false);
+		allowSpace = false;
+        }
+       else if (primeInt == 7){
+                  Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				Char3name.text = "Lieutenant Rory";
+                Char3speech.text = " I... I suppose that’s true, but... that won’t matter unless we, you know... Get back.";
+                Choice1.SetActive(true);
+				Choice2.SetActive(true);
+				Choice1Text.text = "Good point, Lieutenant. Now, scan the area..";
+				Choice2Text.text = "Mind your tone, Lieutenant. Now, scan the area.";
+				  nextButton.SetActive(false);
+		allowSpace = false;
+		}
+       else if (primeInt == 8){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				        Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Yes, Captain";
+                // // Turn off "Next" button, turn on "Choice" buttons
+               // nextButton.SetActive(false);
+                // allowSpace = false;
+               //  Choice1.SetActive(true); // function Choice1Funct()
+               // Choice1b.SetActive(true); // function Choice1bFunct()
+        }
+		 else if (primeInt == 9){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				        Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Sensors are picking up another standard class Galactic Union ship! How did it get all the way out here?";
+                ArtBG_UnidentifiedVessel.SetActive(true);
+				ArtBG1.SetActive(false);
+				Choice1.SetActive(true);
+				Choice2.SetActive(true);
+				Choice1Text.text = "Read me the identification code.";
+				Choice2Text.text = "Careful, this could be a pirate trap.";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+				// // Turn off "Next" button, turn on "Choice" buttons
+               // nextButton.SetActive(false);
+                // allowSpace = false;
+               //  Choice1.SetActive(true); // function Choice1Funct()
+               // Choice1b.SetActive(true); // function Choice1bFunct()
+        }
+		else if (primeInt == 10){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "They seem to be bouncing back our signal, Captain. We have no way of knowing whether they are friend or foe.";
+				Choice1.SetActive(true);
+				Choice1Text.text = "Hail them on an open channel. Let’s have a chat with our new neighbors";
+				nextButton.SetActive(false);
+				 allowSpace = false;
+		
+		}		
+
+
+
+        else if (primeInt == 11){
+                ArtChar2.SetActive(true);
+                Char1name.text = "********";
+				        Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Comms are open, Captain.";
+                
+				Choice1.SetActive(true);
+				Choice1Text.text = "Unidentified Vessel! Respond immediately or we will be forced to treat you as hostile.";
+				Choice2.SetActive(true);
+				Choice2Text.text = "This is Captain Asana of the Galactic Union Fleet. If you can hear this message, please respond";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+				// Char4speech_shake.text = "The ship rocks as a laser smashes into the ship’s side. A dreadnought looms to starboard.";
+					// PlayerStats player moral count -1
+		 }
+else if (primeInt == 12){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+			       Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "Lieutenant Rory";
+                Char3speech.text = " Nothing but space hiss. I don’t like this one bit.";Choice1.SetActive(true);
+				Choice1.SetActive(true);
+				Choice1Text.text = "We’ve taken enough risks today. Destroy that ship, Lieutenant. That’s an order.";
+				Choice2.SetActive(true);
+				Choice2Text.text = "Neither do I... Let’s get some answers. Prepare to board.";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+			  }
+				else if (primeInt == 13){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "Lieutenant Rory";
+			    Char3speech.text = "";
+				ArtBG_UnidentifiedVessel.SetActive(false);
+                ArtBG_MissileFire.SetActive(true);
+        }
+
+				else if (primeInt == 14){
+                Char1name.text = "********";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "";
+			   ArtBG_MissileFire.SetActive(false);
+				ArtBG_ShipExplodes.SetActive(true);
+        }
+
+				else if (primeInt == 15){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "";
+                Char3speech.text = "";
+				ArtBG_Headache.SetActive(true);
+				ArtBG_ShipExplodes.SetActive(false);
+				Choice1.SetActive(true);
+				Choice1Text.text = "My head...";
+				Choice2.SetActive(true);
+				Choice2Text.text = "What's happening?";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+        }
+
+				else if (primeInt == 16){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "Nothing but space hiss. I don’t like this one bit.";
+				Choice1.SetActive(true);
+				Choice1Text.text = "Neither do I... But I know what General Lorne would say.";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+                //Choice1.SetActive(true); // function Choice1Funct()
+                // Choice2.SetActive(true); // function Choice1bFunct()
+		}
+		else if (primeInt == 17){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "What’s that, Captain?";
+			Choice1.SetActive(true);
+				Choice1Text.text = "In the desperate nothing of space, even a rock could be a rescue.";
+				Choice2.SetActive(true);
+				Choice2Text.text = "A Captain’s duty is not to ask questions, but to find answers.";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+                //Choice1.SetActive(true); // function Choice1Funct()
+                // Choice2.SetActive(true); // function Choice1bFunct()
+		}
+		else if (primeInt == 18){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "Lieutenant Rory";
+                Char3speech.text = " I’m not sure I catch your meaning, Captain Asana.";
+			Choice1.SetActive(true);
+				Choice1Text.text = "It means they’re stranded, and we’re all they’ve got. Prepare to board.";
+				Choice2.SetActive(true);
+				Choice2Text.text = "Does it matter Rory if you understand?";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+                //Choice1.SetActive(true); // function Choice1Funct()
+                // Choice2.SetActive(true); // function Choice1bFunct()
+		}
+				else if (primeInt == 19){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "Lieutenant Rory";
+                Char3speech.text = "I still have a lot of questions...";
+			Choice2.SetActive(true);
+				Choice2Text.text = "And that, Lieutenant, is why I’m the Captain. Prepare to board.";
+				// Choice2.SetActive(true);
+				// Choice2Text.text = "A Captain’s duty is not to ask questions, but to find answers.";
+				 nextButton.SetActive(false);
+				 allowSpace = false;
+                //Choice1.SetActive(true); // function Choice1Funct()
+                // Choice2.SetActive(true); // function Choice1bFunct()
+		}
+
+}
+
+// FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
+        public void Choice1Funct(){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "You";
+                Char2speech.text = "I don't know what you're talking about!";
+                  if (primeInt != 9 || primeInt != 11 || primeInt != 12 || primeInt != 15 || primeInt != 17){
+					primeInt = primeInt + 1;
+				}
+				if (primeInt == 9){
+					primeInt = 10;
+				}
+					if (primeInt == 11){
+					primeInt = 12;
+				}
+				if (primeInt == 12){
+					primeInt = 13;
+				}
+				if (primeInt == 15){
+					 SceneChange2();
+				}
+				if (primeInt == 17){
+					 primeInt = 18;
+				}
+				if (primeInt == 18){
+					  SceneChange4();
+				}
+				// primeInt = 99;
+				
+				if (primeInt != 18 || primeInt != 15){
+					Choice1.SetActive(false);
+					Choice2.SetActive(false);
+					nextButton.SetActive(true);
+					allowSpace = true;
+					
+					talking();
+				}
+        }
+        public void Choice2Funct(){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "You";
+                Char2speech.text = "Sure, anything you want... just lay off the club.";
+                if (primeInt != 9 ||  primeInt != 11 || primeInt != 12 || primeInt != 15 || primeInt != 18 || primeInt != 19){
+					primeInt = primeInt + 1;
+				}
+					if (primeInt == 9){
+					primeInt = 11;
+				}
+					if (primeInt == 11){
+					primeInt = 16;
+				}
+				if (primeInt == 12){
+					SceneChange4();
+				}
+				if (primeInt == 15){
+					 primeInt = primeInt + 1;
+				}
+				if (primeInt == 17){
+					 primeInt = 19;
+				}
+				if (primeInt == 19){
+					 SceneChange4();
+				}
+				// primeInt = 199;
+				if ( primeInt != 12 || primeInt != 19) {
+					Choice1.SetActive(false);
+					Choice2.SetActive(false);
+					nextButton.SetActive(true);
+					allowSpace = true;
+					
+					talking();
+				}
+        }
+
+        public void SceneChange1(){
+               SceneManager.LoadScene("Scene1a");
+        }
+
+		  public void SceneChange4(){
+                SceneManager.LoadScene("Scene4");
+        }
+		
+		// Not sure how to specifically go to scene 2.2?
+		 public void SceneChange2(){
+                SceneManager.LoadScene("Scene2");
+        }
+}
