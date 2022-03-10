@@ -194,16 +194,16 @@ else if (primeInt == 12){
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
-			   Char3speech.text = "";
+                Char3name.text = "";
+			          Char3speech.text = "";
                 Char4speech_shake.text = "As you bank the ship into a tight turn, something catches your eye- a laser meant for your ship suddenly bends into a sphere and disappears. A wormhole!";
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-				 nextButton.SetActive(false);
+		       		  nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
-				 NextScene2Button.SetActive(true);
+				        NextScene2Button.SetActive(true);
                 //Choice1a.SetActive(true); // function Choice1aFunct()
                 // Choice2.SetActive(true); // function Choice1bFunct()
 		}
