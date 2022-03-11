@@ -13,17 +13,18 @@ public class Scene1aDialogue : MonoBehaviour {
         public Text Char2speech;
         public Text Char3name;
         public Text Char3speech;
-		public Text Char4speech_shake;
+		    public Text Char4speech_shake;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
         public GameObject ArtBG1;
-		public GameObject red1;
-		public GameObject red2;
-		public GameObject red3;
-		public GameObject red4;
-		public GameObject red5;
-		public GameObject red6;
-		public GameObject blue1;
+        public GameObject ArtBG2;
+		    public GameObject red1;
+		    public GameObject red2;
+		    public GameObject red3;
+		    public GameObject red4;
+		    public GameObject red5;
+		    public GameObject red6;
+		    public GameObject blue1;
         // public GameObject Choice1a;
         // public GameObject Choice2;
         public GameObject NextScene1Button;
@@ -44,6 +45,7 @@ void Start(){         // initial visibility settings
 		red6.SetActive(false);
 		blue1.SetActive(false);
         ArtBG1.SetActive(true);
+        ArtBG2.SetActive(false);
         // Choice1a.SetActive(false);
         // Choice2.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -176,18 +178,25 @@ public void talking(){         // main story function. Players hit next to progr
 				  red5.SetActive(true);
 				}
 		else if (primeInt == 11){
-                Char1name.text = "********";
-                Char1speech.text = "A captain's duty is to make hard decisions. Perhaps it is a mercy that the gravest mistake a captain can make is the only one she will not have to live with.  -General Lorne";
+                ArtBG1.SetActive(false);
+                ArtBG2.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-				red6.SetActive(true);
-				nextButton.SetActive(false);
-				allowSpace = false;
-				NextScene1Button.SetActive(true); 
+                red1.SetActive(false);
+            		red2.SetActive(false);
+            		red3.SetActive(false);
+            		red4.SetActive(false);
+            		red5.SetActive(false);
+                red6.SetActive(true);
+			     	    nextButton.SetActive(false);
+				        allowSpace = false;
+				        NextScene1Button.SetActive(true);
 				}
-				
+
 
 
         // else if (primeInt == 11){
@@ -198,7 +207,7 @@ public void talking(){         // main story function. Players hit next to progr
                // Char3name.text = "";
                 // Char3speech.text = "";
                  // Char4speech_shake.text = "The ship rocks as a laser smashes into the ship’s side. A dreadnought looms to starboard.";
-      
+
          // }
 // else if (primeInt == 12){
                 // Char1name.text = "";
@@ -210,7 +219,7 @@ public void talking(){         // main story function. Players hit next to progr
                // Char3name.text = "";
                 // Char3speech.text = "";
                 // Char4speech_shake.text = "Shields up! 9";
-              
+
 			  // }
 				// else if (primeInt == 13){
                 // Char1name.text = "";
@@ -221,7 +230,7 @@ public void talking(){         // main story function. Players hit next to progr
 			   // Char3speech.text = "";
                 // Char4speech_shake.text = "Evasive maneuvers! 11";
         // }
-			 
+
 				// else if (primeInt == 14){
                 // Char1name.text = "********";
                 // Char1speech.text = "";
@@ -230,7 +239,7 @@ public void talking(){         // main story function. Players hit next to progr
                // Char3name.text = "";
                 // Char4speech_shake.text = "With a hum, energy shields surround the ship. The next shot sends a ripple of energy across the porthole, but the ship holds stable.";
         // }
-					  
+
 				// else if (primeInt == 15){
                 // Char1name.text = "";
                 // Char1speech.text = "";
@@ -240,7 +249,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // Char3speech.text = "Shields at 80 percent, Captain. Here comes another volley!";
 				 // Char4speech_shake.text = "";
         // }
-					  
+
 				// else if (primeInt == 16){
                 // Char1name.text = "********";
                 // Char1speech.text = "";

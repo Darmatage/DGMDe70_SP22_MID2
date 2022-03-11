@@ -78,6 +78,8 @@ public void talking(){         // main story function. Players hit next to progr
 		Choice1Text.text = "Reach for Rory's hand";
         Choice2.SetActive(true);
 		Choice2Text.text = "Reach for the helm";
+				 nextButton.SetActive(false);
+				allowSpace = false;
 		}else if (primeInt == 4){
                 Char1name.text = "********";
                 Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
@@ -116,10 +118,12 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 primeInt = 5;
+				
                 Choice1.SetActive(false);
                 Choice2.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
+				talking();
         }
         public void Choice2Funct(){
                 Char1name.text = "";
@@ -131,6 +135,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Choice2.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
+				talking();
         }
 
         public void SceneChange(){
