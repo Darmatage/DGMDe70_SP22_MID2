@@ -1261,7 +1261,7 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 2044314093}
   ArtChar1: {fileID: 111443883}
   ArtBG1: {fileID: 1782560756}
-  ArtBG2: {fileID: 0}
+  ArtBG2: {fileID: 1040835008}
   red1: {fileID: 636541740}
   red2: {fileID: 2020946867}
   red3: {fileID: 2012109668}
