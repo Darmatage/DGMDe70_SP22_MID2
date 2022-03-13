@@ -82,4 +82,9 @@ public class GameHandler : MonoBehaviour {
                 Application.Quit();
                 #endif
         }
+		
+		    public void SceneChangeCredits(){
+               SceneManager.LoadScene("Credits");
+        }
 }
+    
