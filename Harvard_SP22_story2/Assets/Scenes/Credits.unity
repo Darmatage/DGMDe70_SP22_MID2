@@ -234,6 +234,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonRestart
       objectReference: {fileID: 0}
+    - target: {fileID: 5998737798944369123, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1572151806}
+    - target: {fileID: 5998737798944369123, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
 --- !u!224 &487408114 stripped
@@ -1214,6 +1222,14 @@ PrefabInstance:
     - target: {fileID: 5701477769494646830, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
       propertyPath: m_Name
       value: ButtonQuit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998737798944369123, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1572151806}
+    - target: {fileID: 5998737798944369123, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a0355bcf70504d76a37ba797c918ac2, type: 3}
