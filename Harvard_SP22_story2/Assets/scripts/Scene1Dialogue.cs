@@ -13,6 +13,7 @@ public class Scene1Dialogue : MonoBehaviour {
         public Text Char2speech;
         public Text Char3name;
         public Text Char3speech;
+		// public Text TextDelay;
 		public Text Char4speech_shake;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
@@ -57,7 +58,7 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "COMMAND";
-                Char1speech.text = "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?";
+                 StartCoroutine(TypeText(Char1speech, "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?"));
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
@@ -76,7 +77,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 4){
                 Char1name.text = "COMMAND";
-                Char1speech.text = "Requesting a status report from the Galactic Union’s most capable ambassadors.";
+                  StartCoroutine(TypeText(Char1speech, "Requesting a status report from the Galactic Union’s most capable ambassadors."));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -89,7 +90,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 6){
                 Char1name.text = "COMMAND";
-                Char1speech.text = "Thank you, Captain. Anything to add, Lieutenant Rory";
+                  StartCoroutine(TypeText(Char1speech,"Thank you, Captain. Anything to add, Lieutenant Rory"));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -103,7 +104,7 @@ public void talking(){         // main story function. Players hit next to progr
 		}
        else if (primeInt == 8){
                 Char1name.text = "COMMAND";
-                Char1speech.text = "Thank you, Lieutenant. That may... {tchhkshhh} notice of a batt... {zztch} earby territory. Avoid at... {tzzkkshh} mission... {ktchhhhssshhhh}";
+                  StartCoroutine(TypeText(Char1speech,"Thank you, Lieutenant. That may... {tchhkshhh} notice of a batt... {zztch} earby territory. Avoid at... {tzzkkshh} mission... {ktchhhhssshhhh}"));
                 Char2name.text = "";
                 Char2speech.text = "";
 				        Char3name.text = "";
@@ -140,7 +141,7 @@ public void talking(){         // main story function. Players hit next to progr
 
         else if (primeInt == 11){
                 ArtChar2.SetActive(true);
-                Char1name.text = "********";
+                Char1name.text = "";
 				        Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -171,7 +172,7 @@ else if (primeInt == 12){
         }
 
 				else if (primeInt == 14){
-                Char1name.text = "********";
+                Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -190,7 +191,7 @@ else if (primeInt == 12){
         }
 
 				else if (primeInt == 16){
-                Char1name.text = "********";
+                Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -220,7 +221,7 @@ else if (primeInt == 12){
                 // Char3speech.text = "Suck plasma, you bastards! ...FIRE!";
 				 // Char4speech_shake.text = ""
         // }else if (primeInt == 101){
-                // Char1name.text = "********"
+                // Char1name.text = ""
                 // Char1speech.text = "";
                 // Char2name.text = "";
                 // Char2speech.text = "";
@@ -303,4 +304,18 @@ else if (primeInt == 12){
         public void SceneChange2(){
                 SceneManager.LoadScene("Scene2");
         }
+		
+		    IEnumerator TypeText(Text target, string fullText){
+                float delay = 0.045f;
+                nextButton.SetActive(false);
+                allowSpace = false;
+                for (int i = 0; i < fullText.Length; i++){
+                        string currentText = fullText.Substring(0,i);
+                        target.text = currentText;
+                        yield return new WaitForSeconds(delay);
+                }
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+
 }

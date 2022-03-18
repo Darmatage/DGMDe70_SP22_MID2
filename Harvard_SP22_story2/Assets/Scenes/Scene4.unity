@@ -814,7 +814,7 @@ PrefabInstance:
     - target: {fileID: 1824655010691904265, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}
       propertyPath: pauseMenuUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1151285345}
     - target: {fileID: 2858954155003646690, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1594,6 +1594,11 @@ PrefabInstance:
 --- !u!224 &1151285344 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8666653853668432324, guid: a2ad82074e2dbc346b37e16829d078c2, type: 3}
+  m_PrefabInstance: {fileID: 1151285343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1151285345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8666653853668432323, guid: a2ad82074e2dbc346b37e16829d078c2, type: 3}
   m_PrefabInstance: {fileID: 1151285343}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210310235
