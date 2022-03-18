@@ -145,15 +145,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964083018161420863, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 278.85767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 964083018161420863, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 136.37553
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 964083018161420863, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.202026
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 964083018161420863, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &741741429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,15 +629,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2858954155003646690, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 171.56279
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2858954155003646690, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 190.76051
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2858954155003646690, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60.6176
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2858954155003646690, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -787,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568057399308947541, guid: 496bbacebe8934e14b075d0183a44632, type: 3}
       propertyPath: m_Name
-      value: ButtonRestart (1)
+      value: ButtonRestart
       objectReference: {fileID: 0}
     - target: {fileID: 6698251472548302620, guid: 496bbacebe8934e14b075d0183a44632, type: 3}
       propertyPath: m_FontData.m_MaxSize
