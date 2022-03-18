@@ -38,6 +38,14 @@ public class GameHandler : MonoBehaviour {
                                 Pause();
                         }
                 }
+                {
+                if (SceneManager.GetActiveScene () == SceneManager.GetSceneByName ("MainMenu")) 
+                {
+                pauseMenuUI.SetActive(false);
+                        }
+                }
+
+                
         }
 
         void Pause(){
