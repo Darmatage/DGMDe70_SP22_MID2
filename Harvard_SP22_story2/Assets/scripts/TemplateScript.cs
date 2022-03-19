@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene5aDialogue : MonoBehaviour {
+public class TemplateScript : MonoBehaviour {
         public int primeInt = 1; // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -34,20 +34,24 @@ public class Scene5aDialogue : MonoBehaviour {
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
+		resetArt();
+		resetButtons();
+		
         DialogueDisplay.SetActive(true);
-        ArtChar1.SetActive(false);
-		ArtChar11.SetActive(false);
-		ArtChar2.SetActive(false);
+        // ArtChar1.SetActive(false);
+		// ArtChar11.SetActive(false);
+		// ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
-        ArtBG2.SetActive(false);
-		ArtLaser1.SetActive(false);
-		ArtLaser2.SetActive(false);
-		ArtLaser3.SetActive(false);
-		ArtLaser4.SetActive(false);
-        NextScene1Button.SetActive(false);
+        // ArtBG2.SetActive(false);
+		// ArtLaser1.SetActive(false);
+		// ArtLaser2.SetActive(false);
+		// ArtLaser3.SetActive(false);
+		// ArtLaser4.SetActive(false);
+        // NextScene1Button.SetActive(false);
+		
 		nextButton.SetActive(true);
         allowSpace = true;
-		TalkButton.SetActive(false);
+		// TalkButton.SetActive(false);
    }
 
 void Update(){         // use spacebar as Next button
@@ -137,11 +141,12 @@ public void talking(){         // main story function. Players hit next to progr
 				 ArtLaser4.SetActive(true);
 				 Char4speech_shake.text = "Fire! Fire! Fire! Fire! FIRE! FIRE!";
         }
+}
        
 	   
 	   // this turns off ALL art to make it easier to reset the canvas
 	   public void resetArt(){
-		   ArtChar1.SetActive(false);
+		 ArtChar1.SetActive(false);
 		ArtChar11.SetActive(false);
 		ArtChar2.SetActive(false);
         ArtBG1.SetActive(false);
@@ -170,7 +175,5 @@ public void talking(){         // main story function. Players hit next to progr
         public void SceneChange7Lose(){
                SceneManager.LoadScene("Scene7");
         }
-        // public void SceneChange2a(){
-                // SceneManager.LoadScene("Scene2");
-        // }
+
 }

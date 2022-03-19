@@ -217,6 +217,9 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
+				ResetButtons();
+				nextButton.SetActive(true);
+				allowSpace=true;
 
 				}
 				
@@ -392,7 +395,7 @@ else if (primeInt == 12){
         // }
 		
 		public void Choice1ButtonFun(){
-				primeInt = 10;
+				primeInt = 9;
 				talking();
 				Choice1Button.SetActive(false);
 				Choice2Button.SetActive(false);

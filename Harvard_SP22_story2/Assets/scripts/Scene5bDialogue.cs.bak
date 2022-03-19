@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene5a_2Dialogue : MonoBehaviour {
+public class Scene5cDialogue : MonoBehaviour {
         public int primeInt = 1; // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -14,29 +14,20 @@ public class Scene5a_2Dialogue : MonoBehaviour {
         public Text Char3name;
         public Text Char3speech;
 		public Text ButtonText1;
-		public Text Choice1ButtonText;
-		public Text Choice2ButtonText;
-		 public Text Char4speech_shake;
+		public Text Char4speech_shake;
         public GameObject DialogueDisplay;
         public GameObject ArtBG1;
-        public GameObject ArtBG2;
-		 public GameObject ArtHeadache;
-		 public GameObject ArtCaptBridge;
-		 public GameObject ArtConvergence;
-		 public GameObject ArtShip;
+        public GameObject ArtOpenAirLock;
+		public GameObject ArtHeadache;
 		public GameObject ArtChar1;
-		public GameObject ArtChar11;
-        public GameObject ArtChar2;
-		public GameObject ArtBadge;
-		public GameObject ArtCharShip;
+		public GameObject ArtChar2;
+        public GameObject ArtChar3Unholstered;
 		public GameObject ArtLaser1;
 		public GameObject ArtLaser2;
 		public GameObject ArtLaser3;
 		public GameObject ArtLaser4;
         public GameObject NextScene1Button;
 		 public GameObject TalkButton;
-		 public GameObject Choice1Button;
-		 public GameObject Choice2Button;
         // public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
@@ -46,24 +37,17 @@ public class Scene5a_2Dialogue : MonoBehaviour {
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
-		ArtChar11.SetActive(false);
+		ArtChar1.SetActive(false);
 		ArtChar2.SetActive(false);
-		ArtBadge.SetActive(false);
-		ArtBadge.SetActive(false);
-		ArtConvergence.SetActive(false);
-        ArtBG1.SetActive(true);
-        ArtBG2.SetActive(false);
-		ArtShip.SetActive(false);
+        ArtChar3Unholstered.SetActive(false);
+		ArtBG1.SetActive(true);
+        ArtOpenAirLock.SetActive(false);
+		ArtHeadache.SetActive(false);
 		ArtLaser1.SetActive(false);
 		ArtLaser2.SetActive(false);
 		ArtLaser3.SetActive(false);
 		ArtLaser4.SetActive(false);
-		ArtCaptBridge.SetActive(false);
-		ArtHeadache.SetActive(false);
-		ArtCharShip.SetActive(false);
         NextScene1Button.SetActive(false);
-		Choice1Button.SetActive(false);
-		Choice2Button.SetActive(false);		
 		nextButton.SetActive(true);
         allowSpace = true;
 		TalkButton.SetActive(false);
@@ -88,12 +72,10 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "Airlocks attached, Captain. Doors open on your word";
+               Char3name.text = "";
+                Char3speech.text = "";
 				 Char4speech_shake.text = "";
-				 TalkButton.SetActive(true);
-				 ButtonText1.text = "Go!";
-				 nextButton.SetActive(false);
+
                 allowSpace = false;
         }else if (primeInt == 3){
                  Char1name.text = "";
@@ -102,14 +84,9 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
-				// ArtBG1.SetActive(false);
-				// ArtBG2.SetActive(true);
-				
-				 Char4speech_shake.text = "";
-				 TalkButton.SetActive(false);
-				 ButtonText1.text = "";
-				 ArtChar1.SetActive(true);
-				 ArtChar11.SetActive(true);
+				 TalkButton.SetActive(true);
+				 ButtonText1.text = "Go!";
+				 nextButton.SetActive(false);
 				 // nextButton.SetActive(false);
                 // allowSpace = false;
 				
@@ -118,62 +95,62 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "What should we do Captain? ";
+               Char3name.text = "";
+                Char3speech.text = "";
 				 Char4speech_shake.text = "";
-				 nextButton.SetActive(false);
-                allowSpace = false;
-				Choice1Button.SetActive(true);
-				Choice1ButtonText.text = "Let's talk things out";
-				Choice2Button.SetActive(true);
-				Choice2ButtonText.text = "Eliminate the threat";
-				
-
+				 resetArt();
+				 resetButton();
+				 ArtOpenAirLock.SetActive(true);
+				 ArtChar1.SetActive(true);
+				 ArtChar2.SetActive(true);
+				 nextButton.SetActive(true);
+				 allowSpace = true;
+				 
         }
        else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "Yes, Captain!";
+               Char3name.text = "Alt Lieutenant";
+                Char3speech.text = "Your orders, Captain?";
 				 Char4speech_shake.text = "";
-				 TalkButton.SetActive(false);
-				 nextButton.SetActive(true);
-				 allowSpace = true;
+				 ArtBG1.SetActive(false);
+				 ArtOpenAirLock.SetActive(true);
+				 ArtChar3Unholstered.SetActive(true);
+				 ArtChar1.SetActive(false);
+				 
 				 
 				 
         }
 		else if (primeInt == 6){
-				 Char1name.text = "";
+				         Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
-                Char3speech.text = "";
+               Char3name.text = "Alt Lieutenant";
+                Char3speech.text = "Your orders, Captain?";
 				 Char4speech_shake.text = "";
-				 TalkButton.SetActive(false);
-				 ArtBG2.SetActive(true);
 				 ArtBG1.SetActive(false);
-				 ArtChar1.SetActive(true);
-				 ArtChar11.SetActive(true);
-				 ArtChar2.SetActive(true);
-				 ArtLaser1.SetActive(true);
-				 ArtLaser2.SetActive(true);
-				 ArtLaser3.SetActive(true);
-				 ArtLaser4.SetActive(true);
+				 ArtOpenAirLock.SetActive(true);
+				 ArtChar3Unholstered.SetActive(true);
+				 ArtChar1.SetActive(false);
+				 
 			
         }
 		else if (primeInt == 7){
-  			 Char1name.text = "YOU";
-                Char1speech.text = "Something feels wrong...";
+     	
+				         Char1name.text = "Alt Captain";
+                Char1speech.text = "Fire!";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
-                Char3speech.text = "";
+               Char3name.text = "Alt Lieutenant";
+                Char3speech.text = "Your orders, Captain?";
 				 Char4speech_shake.text = "";
-				
-        }
+	
+				 
+			
+        }  
        else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -182,123 +159,99 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
-				  ArtBG2.SetActive(false);
-				  ArtCaptBridge.SetActive(true);
-				 ArtBG1.SetActive(false);
-				 ArtChar1.SetActive(false);
-				 ArtChar11.SetActive(false);
-				 ArtChar2.SetActive(false);
-				 ArtLaser1.SetActive(false);
-				 ArtLaser2.SetActive(false);
-				 ArtLaser3.SetActive(false);
-				 ArtLaser4.SetActive(false);
+				 ArtLaser1.SetActive(true);
+				 ArtLaser2.SetActive(true);
+				 ArtLaser3.SetActive(true);
 
         }
-      else if (primeInt == 9){
-                Char1name.text = "";
-                Char1speech.text = "";
-				Char2name.text = "";
-                Char2speech.text = "";
-               Char3name.text = "";
-                Char3speech.text = "";
-				 Char4speech_shake.text = "";
-				   ArtCaptBridge.SetActive(false);
-				 ArtHeadache.SetActive(true);
-				 ArtCharShip.SetActive(true);
-				 NextScene1Button.SetActive(true);
-				 nextButton.SetActive(false);
-				 allowSpace = false;
+      // else if (primeInt == 9){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+				// Char2name.text = "Captain Asana";
+                // Char2speech.text = "You’re a good man, Rory. Thank you.";
+               // Char3name.text = "";
+                // Char3speech.text = "";
+				 // Char4speech_shake.text = "";
 
-        }
-		 else if (primeInt == 10){
-                Char1name.text = "YOU";
-                Char1speech.text = "We hailed you earlier - why didn't you answer?";
-                Char2name.text = "";
-                Char2speech.text = "";
-				Char3name.text = "";
-                Char3speech.text = "";
-				ResetButtons();
-				nextButton.SetActive(true);
-				allowSpace=true;
+        // }
+		 // else if (primeInt == 10){
+                // Char1name.text = "********";
+                // Char1speech.text = "Lieutenant Rory's steady eyes fade into scarlet lightning as the world roars into oblivion.";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+				// Char3name.text = "";
+                // Char3speech.text = "";
 
-				}
-				
-		else if (primeInt == 11){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "ALT Captain";
-                Char2speech.text = "Our computers got fried by an EMP";  // KAI ADD DELAY TEXT!
-                Char3name.text = "";
-                Char3speech.text = "";
-				}
+				// }
+		// else if (primeInt == 11){
+                // ArtBG1.SetActive(false);
+                // ArtOpenAirLock.SetActive(true);
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+                // Char3name.text = "";
+                // Char3speech.text = "";
+
+    
+			     	    // nextButton.SetActive(false);
+				        // allowSpace = false;
+				        // NextScene1Button.SetActive(true);
+				// }
 
 
 
-        else if (primeInt == 12){
-                 Char1name.text = "";
-				 Char1speech.text = "";
-                Char2name.text = "ALT CAPTAIN";
-                Char2speech.text = "And that was before we went through the wormhole";
-               Char3name.text = "";
-                Char3speech.text = "";
-                 Char4speech_shake.text = "";
+        // else if (primeInt == 11){
+                 // Char1name.text = "********";
+				 // Char1speech.text = "";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+               // Char3name.text = "";
+                // Char3speech.text = "";
+                 // Char4speech_shake.text = "The ship rocks as a laser smashes into the ship’s side. A dreadnought looms to starboard.";
 
-         }
-else if (primeInt == 13){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-				Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "Captain, look! Their Badge!";
-				
-                Char4speech_shake.text = "";
+         // }
+// else if (primeInt == 12){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "Captain Asana";
+				// Char1speech.text = "";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+               // Char3name.text = "";
+                // Char3speech.text = "";
+                // Char4speech_shake.text = "Shields up! 9";
 
-			  }
-				else if (primeInt == 14){
-				ResetArt();
-				ArtShip.SetActive(true);
-				ArtBadge.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "That's impossible!";
-                Char2name.text = "";
-                Char2speech.text = "";
-               Char3name.text = "";
-			   Char3speech.text = "";
-                Char4speech_shake.text = "";
-        }
+			  // }
+				// else if (primeInt == 13){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+               // Char3name.text = "Lieutenant Rory";
+			   // Char3speech.text = "";
+                // Char4speech_shake.text = "Evasive maneuvers! 11";
+        // }
 
+				// else if (primeInt == 14){
+                // Char1name.text = "********";
+                // Char1speech.text = "";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+               // Char3name.text = "";
+                // Char4speech_shake.text = "With a hum, energy shields surround the ship. The next shot sends a ripple of energy across the porthole, but the ship holds stable.";
+        // }
 
-				else if (primeInt == 15){
-				ResetArt();
-				ArtHeadache.SetActive(true);
-				ArtChar1.SetActive(true);
-				ArtChar11.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-               Char3name.text = "";
-                Char3speech.text = "";
-				 Char4speech_shake.text = "";
-        }
+				// else if (primeInt == 15){
+                // Char1name.text = "";
+                // Char1speech.text = "";
+                // Char2name.text = "";
+                // Char2speech.text = "";
+               // Char3name.text = "Lieutenant Rory";
+                // Char3speech.text = "Shields at 80 percent, Captain. Here comes another volley!";
+				 // Char4speech_shake.text = "";
+        // }
 
-	else if (primeInt == 16){
-				ResetArt();
-				ResetButtons();
-				ArtConvergence.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-               Char3name.text = "";
-                Char3speech.text = "";
-				 Char4speech_shake.text = "";
-				 NextScene1Button.SetActive(true);
-				 
-        }
 				// else if (primeInt == 16){
                 // Char1name.text = "********";
                 // Char1speech.text = "";
@@ -393,72 +346,36 @@ else if (primeInt == 13){
                 // nextButton.SetActive(true);
                 // allowSpace = true;
         // }
-		
-		public void Choice1ButtonFun(){
-				primeInt = 9;
-				talking();
-				Choice1Button.SetActive(false);
-				Choice2Button.SetActive(false);
-				nextButton.SetActive(true);
-                allowSpace = true;
-		}
-		
-			public void Choice2ButtonFun(){
-				talking();
-				Choice1Button.SetActive(false);
-				Choice2Button.SetActive(false);
-				nextButton.SetActive(true);
-                allowSpace = true;
-		}
-		
         public void TalkButton1(){
 			talking();
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
 		
-		public void ResetButtons(){
-			NextScene1Button.SetActive(false);
-		Choice1Button.SetActive(false);
-		Choice2Button.SetActive(false);		
-		nextButton.SetActive(false);
-        allowSpace = false;
-		TalkButton.SetActive(false);
-		}
-		  public void ResetArt(){
+		public void resetArt(){
 			ArtChar1.SetActive(false);
-		ArtChar11.SetActive(false);
+		ArtChar1.SetActive(false);
 		ArtChar2.SetActive(false);
-		ArtBadge.SetActive(false);
-        ArtBG1.SetActive(false);
-		ArtConvergence.SetActive(false);
-		ArtBadge.SetActive(false);
-        ArtBG2.SetActive(false);
-		ArtShip.SetActive(false);
+        ArtChar3Unholstered.SetActive(false);
+		ArtBG1.SetActive(false);
+        ArtOpenAirLock.SetActive(false);
+		ArtOpenAirLock.SetActive(false);
+		ArtHeadache.SetActive(false);
 		ArtLaser1.SetActive(false);
 		ArtLaser2.SetActive(false);
 		ArtLaser3.SetActive(false);
 		ArtLaser4.SetActive(false);
-		ArtCaptBridge.SetActive(false);
-		ArtHeadache.SetActive(false);
-		ArtCharShip.SetActive(false);
-        NextScene1Button.SetActive(false);
-		Choice1Button.SetActive(false);
-		Choice2Button.SetActive(false);		
-		nextButton.SetActive(true);
-        allowSpace = true;
-		TalkButton.SetActive(false);
-        }
+		}
 
-        public void SceneChange22(){
-			if (primeInt == 16)
-			{
-				SceneManager.LoadScene("Scene6");
-			}
-               SceneManager.LoadScene("Scene2");
-        }
-		        public void SceneChange6(){
-               SceneManager.LoadScene("Scene6");
+		public void resetButton() {
+		NextScene1Button.SetActive(false);
+		nextButton.SetActive(false);
+        allowSpace = false;
+		TalkButton.SetActive(false);
+		}
+
+        public void SceneChange7Lose(){
+               SceneManager.LoadScene("Scene7");
         }
         // public void SceneChange2a(){
                 // SceneManager.LoadScene("Scene2");
