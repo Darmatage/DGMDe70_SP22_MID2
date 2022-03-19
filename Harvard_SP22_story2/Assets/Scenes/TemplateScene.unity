@@ -760,7 +760,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 719187705}
-        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
+        m_TargetAssemblyTypeName: TemplateScript, Assembly-CSharp
         m_MethodName: TalkButton1
         m_Mode: 1
         m_Arguments:
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 719187700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762c7de2f5f1df4fbfe292d756032d8, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a70272e4724e94da86bcd2d14b219b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
@@ -1727,7 +1727,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 719187705}
-        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
+        m_TargetAssemblyTypeName: TemplateScript, Assembly-CSharp
         m_MethodName: talking
         m_Mode: 1
         m_Arguments:
@@ -1970,7 +1970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 527, y: -228}
+  m_AnchoredPosition: {x: 517, y: -238}
   m_SizeDelta: {x: 203.523, y: 63.479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505945960
@@ -2018,7 +2018,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 719187705}
-        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
+        m_TargetAssemblyTypeName: TemplateScript, Assembly-CSharp
         m_MethodName: SceneChange7Lose
         m_Mode: 1
         m_Arguments:
@@ -2180,7 +2180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: -126}
+  m_AnchoredPosition: {x: 16, y: -126}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626669784
