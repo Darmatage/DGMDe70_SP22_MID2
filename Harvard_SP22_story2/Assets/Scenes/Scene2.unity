@@ -1698,7 +1698,7 @@ GameObject:
   - component: {fileID: 1590724943}
   - component: {fileID: 1590724942}
   m_Layer: 5
-  m_Name: ButtonAwake
+  m_Name: NextSceneButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1721,7 +1721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257, y: -314}
+  m_AnchoredPosition: {x: 520, y: -319}
   m_SizeDelta: {x: 203.523, y: 63.479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590724942
@@ -1770,7 +1770,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene2Dialogue, Assembly-CSharp
-        m_MethodName: SceneChange
+        m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

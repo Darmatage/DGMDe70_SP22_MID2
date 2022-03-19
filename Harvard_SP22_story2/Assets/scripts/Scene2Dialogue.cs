@@ -40,7 +40,7 @@ void Start(){         // initial visibility settings
         Choice2.SetActive(false);
         NextScene1Button.SetActive(false);
 		nextButton.SetActive(false);
-        allowSpace = false;
+        allowSpace = true;
         nextButton.SetActive(true);
    }
 
@@ -84,39 +84,8 @@ public void talking(){         // main story function. Players hit next to progr
         Choice2.SetActive(true);
 	Choice2Text.text = "Reach for the helm";
 				nextButton.SetActive(false);
-				allowSpace = false;
-
-        //CHOICE 1: Reach for the helm                        
-	}else if (primeInt == 100){
-                Char1name.text = "";
-				blue1.SetActive(true);
-                Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
-                Char2name.text = "";
-                Char2speech.text = "";
-                Char3name.text = "";
-                Char3speech.text = "";
-				 // Char4speech_shake.text = "";
-	Choice1.SetActive(false);
-        Choice2.SetActive(false);
-				 nextButton.SetActive(false);
-				allowSpace = false;
-				
-        }
-        //CHOICE 2: Reach for Rory
-       else if (primeInt == 200){
-                Char1name.text = "";
-                Char1speech.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
-                Char2name.text = "";
-                Char2speech.text = "";
-               Char3name.text = "";
-                Char3speech.text = "";
-				 // Char4speech_shake.text = "";
-				 Choice1.SetActive(false);
-				Choice2.SetActive(false);
-				 	 nextButton.SetActive(false);
-				allowSpace = false;
-				
-                }
+				allowSpace = false;                       
+	        }
         }
 public void Choice1Funct(){
                 Char1name.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
@@ -134,7 +103,7 @@ public void Choice1Funct(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "You";
-                Char2speech.text = "Sure, anything you want... just lay off the club.";
+                Char2speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
                 primeInt = 199;
                 Choice1.SetActive(false);
                 Choice2.SetActive(false);
@@ -142,4 +111,7 @@ public void Choice1Funct(){
                 allowSpace = true;
                 NextScene1Button.SetActive(true); 
         }       
+          public void NextScene(){
+               SceneManager.LoadScene("Scene3");
+        }
 }
