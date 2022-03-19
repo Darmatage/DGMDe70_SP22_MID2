@@ -59,49 +59,52 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                Char1name.text = "********";
+                Char1name.text = "";
                 Char1speech.text = "You punch it. As the nose of your vessel enters the wormhole, you see a flash of blue light from the Dreadnought. The blue ripples around you as the world as you knew it falls apart. ";
                 Char2name.text = "";
 
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 				 // Char4speech_shake.text = "";
         }else if (primeInt == 3){
-                Char1name.text = "********";
+                Char1name.text = "";
                 Char1speech.text = "You feel reality rip into infinite threads yet somehow manage to perceive your lieutenant reaching for you through the quantum mire. You are floating out of your seat, away from the helm. You have an infinite moment to make your decision.";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 				blue1.SetActive(true);
-				 ArtBG1.SetActive(true);
-				 ArtBG_wormhole.SetActive(false);
+				ArtBG1.SetActive(true);
+				ArtBG_wormhole.SetActive(false);
 		
 				 // Char4speech_shake.text = "";
-		Choice1.SetActive(true);
-		Choice1Text.text = "Reach for Rory's hand";
+	Choice1.SetActive(true);
+	Choice1Text.text = "Reach for Rory's hand";
         Choice2.SetActive(true);
-		Choice2Text.text = "Reach for the helm";
-				 nextButton.SetActive(false);
+	Choice2Text.text = "Reach for the helm";
+				nextButton.SetActive(false);
 				allowSpace = false;
-		}else if (primeInt == 4){
-                Char1name.text = "********";
-						blue1.SetActive(true);
+
+        //CHOICE 1: Reach for the helm                        
+	}else if (primeInt == 100){
+                Char1name.text = "";
+				blue1.SetActive(true);
                 Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 				 // Char4speech_shake.text = "";
-				 		Choice1.SetActive(false);
+	Choice1.SetActive(false);
         Choice2.SetActive(false);
 				 nextButton.SetActive(false);
 				allowSpace = false;
-				NextScene1Button.SetActive(true); 
+				
         }
-       else if (primeInt == 5){
-                Char1name.text = "********";
+        //CHOICE 2: Reach for Rory
+       else if (primeInt == 200){
+                Char1name.text = "";
                 Char1speech.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -112,40 +115,31 @@ public void talking(){         // main story function. Players hit next to progr
 				Choice2.SetActive(false);
 				 	 nextButton.SetActive(false);
 				allowSpace = false;
-				NextScene1Button.SetActive(true); 
-        }
-}
-		
-		
-
-
-// FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-        public void Choice1Funct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                primeInt = 5;
 				
+                }
+        }
+public void Choice1Funct(){
+                Char1name.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 99;
                 Choice1.SetActive(false);
                 Choice2.SetActive(false);
-                nextButton.SetActive(false);
-                allowSpace = false;
-				talking();
+                nextButton.SetActive(true);
+                allowSpace = true;
+                NextScene1Button.SetActive(true); 
         }
         public void Choice2Funct(){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 4;
+                Char2name.text = "You";
+                Char2speech.text = "Sure, anything you want... just lay off the club.";
+                primeInt = 199;
                 Choice1.SetActive(false);
                 Choice2.SetActive(false);
-                nextButton.SetActive(false);
-                allowSpace = false;
-				talking();
-        }
-
-        public void SceneChange(){
-               SceneManager.LoadScene("Scene3");
-        }
-
+                nextButton.SetActive(true);
+                allowSpace = true;
+                NextScene1Button.SetActive(true); 
+        }       
 }
