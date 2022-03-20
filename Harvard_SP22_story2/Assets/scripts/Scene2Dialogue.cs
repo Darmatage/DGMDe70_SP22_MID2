@@ -72,14 +72,14 @@ public void talking(){         // main story function. Players hit next to progr
 	allowSpace = false;                       
 	        }
 
-//        else if (primeInt == 100){
-//                Char1name.text = "";
-//                Char1speech.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
-//
-//        }else if (primeInt == 200){
-//                Char1name.text = "";
-//                Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
-//        }
+       else if (primeInt == 100){
+               Char1name.text = "";
+               Char1speech.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
+
+       }else if (primeInt == 200){
+               Char1name.text = "";
+               Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
+       }
 }		
 	// Char4speech_shake.text = "";
 	
@@ -90,9 +90,9 @@ public void talking(){         // main story function. Players hit next to progr
                 primeInt = 99;
                 Choice1.SetActive(false);
                 Choice2.SetActive(false);
-                nextButton.SetActive(false);
+                nextButton.SetActive(true);
                 allowSpace = false;
-                NextScene1Button.SetActive(true); 
+                NextScene1Button.SetActive(false); 
         }
         public void Choice2ButtonFun(){
                         Char1name.text = "";
