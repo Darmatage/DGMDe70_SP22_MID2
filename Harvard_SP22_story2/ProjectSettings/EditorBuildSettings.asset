@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene2a.unity
     guid: bedbb6e4950e7df459a1b458b3106d6f
   - enabled: 1
-    path: Assets/Scenes/SceneEnd.unity
+    path: Assets/Scenes/SceneEarlyLose.unity
     guid: 11dca2a67b478bf4e87449312ed207ab
   - enabled: 1
     path: Assets/Scenes/Scene1a.unity
