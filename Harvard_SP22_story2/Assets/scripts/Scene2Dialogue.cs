@@ -18,7 +18,7 @@ public class Scene2Dialogue : MonoBehaviour {
 	public GameObject blue1;
         public GameObject Choice1;
         public GameObject Choice2;
-        public GameObject NextScene1Button;
+        public GameObject ButtonScene3;
         // public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
@@ -33,7 +33,7 @@ void Start(){         // initial visibility settings
         ArtBG1.SetActive(false);
         Choice1.SetActive(false);
         Choice2.SetActive(false);
-        NextScene1Button.SetActive(false);
+        ButtonScene3.SetActive(false);
         allowSpace = true;
         nextButton.SetActive(true);
    }
@@ -90,9 +90,9 @@ public void talking(){         // main story function. Players hit next to progr
                 primeInt = 99;
                 Choice1.SetActive(false);
                 Choice2.SetActive(false);
-                nextButton.SetActive(true);
+                nextButton.SetActive(false);
                 allowSpace = false;
-                NextScene1Button.SetActive(false); 
+                ButtonScene3.SetActive(true); 
         }
         public void Choice2ButtonFun(){
                         Char1name.text = "";
@@ -102,9 +102,9 @@ public void talking(){         // main story function. Players hit next to progr
                 Choice2.SetActive(false);
                 nextButton.SetActive(false);
                 allowSpace = false;
-                NextScene1Button.SetActive(true); 
+                ButtonScene3.SetActive(true); 
         }       
-        public void NextScene(){
+        public void Scene3(){
                SceneManager.LoadScene("Scene3");
         }
 }
