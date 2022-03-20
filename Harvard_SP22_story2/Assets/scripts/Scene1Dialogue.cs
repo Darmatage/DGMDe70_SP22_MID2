@@ -306,7 +306,7 @@ else if (primeInt == 12){
         }
 		
 		    IEnumerator TypeText(Text target, string fullText){
-                float delay = 0.045f;
+                float delay = 0.025f;
                 nextButton.SetActive(false);
                 allowSpace = false;
                 for (int i = 0; i < fullText.Length; i++){
