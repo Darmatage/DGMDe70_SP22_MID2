@@ -816,7 +816,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: Choice2Funct
+        m_MethodName: talking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1163,6 +1163,7 @@ MonoBehaviour:
   ArtBG1: {fileID: 1782560756}
   ChoiceEvade1: {fileID: 1291473376}
   ChoiceEvade2: {fileID: 388196421}
+  ChoiceFight: {fileID: 418096499}
   NextScene1aButton: {fileID: 1505945958}
   NextScene2Button: {fileID: 932512872}
   nextButton: {fileID: 1292274639}
