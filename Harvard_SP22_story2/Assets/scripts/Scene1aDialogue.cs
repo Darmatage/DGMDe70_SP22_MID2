@@ -18,13 +18,17 @@ public class Scene1aDialogue : MonoBehaviour {
         public GameObject ArtChar1;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
-		    public GameObject red1;
-		    public GameObject red2;
-		    public GameObject red3;
-		    public GameObject red4;
-		    public GameObject red5;
-		    public GameObject red6;
-		    public GameObject blue1;
+        public GameObject ArtBG3;
+        public GameObject ArtBG4;
+        public GameObject ArtBG5;
+        public GameObject ArtBG6;
+	//	    public GameObject red1;
+	//	    public GameObject red2;
+	//	    public GameObject red3;
+	//	    public GameObject red4;
+//	    public GameObject red5;
+	//	    public GameObject red6;
+	//	    public GameObject blue1;
         // public GameObject Choice1a;
         // public GameObject Choice2;
         public GameObject NextScene1Button;
@@ -37,15 +41,19 @@ public class Scene1aDialogue : MonoBehaviour {
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
-		red1.SetActive(false);
-		red2.SetActive(false);
-		red3.SetActive(false);
-		red4.SetActive(false);
-		red5.SetActive(false);
-		red6.SetActive(false);
-		blue1.SetActive(false);
+	//	red1.SetActive(false);
+	//	red2.SetActive(false);
+//		red3.SetActive(false);
+//		red4.SetActive(false);
+//		red5.SetActive(false);
+//		red6.SetActive(false);
+//		blue1.SetActive(false);
         ArtBG1.SetActive(true);
         ArtBG2.SetActive(false);
+        ArtBG3.SetActive(false);
+        ArtBG4.SetActive(false);
+        ArtBG5.SetActive(false);
+        ArtBG6.SetActive(false);
         // Choice1a.SetActive(false);
         // Choice2.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -69,6 +77,12 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+                ArtBG1.SetActive(true);
+                ArtBG2.SetActive(false);
+                ArtBG3.SetActive(false);
+                ArtBG4.SetActive(false);
+                ArtBG5.SetActive(false);
+                ArtBG6.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -77,6 +91,12 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "Suck plasma, you bastards! ...FIRE!";
 				 Char4speech_shake.text = "";
         }else if (primeInt == 3){
+          ArtBG1.SetActive(false);
+          ArtBG2.SetActive(false);
+          ArtBG3.SetActive(true);
+          ArtBG4.SetActive(false);
+          ArtBG5.SetActive(false);
+          ArtBG6.SetActive(false);
                 Char1name.text = "********";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -84,8 +104,13 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "A chunk of the Dreadnought's flank explodes outwards, oxygen igniting then imploding in a red and orange flash. ";
-				red1.SetActive(true);
 		}else if (primeInt == 4){
+      ArtBG1.SetActive(false);
+      ArtBG2.SetActive(false);
+      ArtBG3.SetActive(false);
+      ArtBG4.SetActive(true);
+      ArtBG5.SetActive(false);
+      ArtBG6.SetActive(false);
                 Char1name.text = "********";
                 Char1speech.text = "A blue flash from the belly of the ship follows quickly, and all lights in your cabin snap off. ";
                 Char2name.text = "";
@@ -93,10 +118,16 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
-				 red1.SetActive(false);
-				 blue1.SetActive(true);
+				 //red1.SetActive(false);
+				// blue1.SetActive(true);
         }
        else if (primeInt == 5){
+         ArtBG1.SetActive(false);
+         ArtBG2.SetActive(false);
+         ArtBG3.SetActive(false);
+         ArtBG4.SetActive(false);
+         ArtBG5.SetActive(true);
+         ArtBG6.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -104,9 +135,9 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "Captain Asana?";
 				 Char4speech_shake.text = "";
-				 red1.SetActive(true);
-				 blue1.SetActive(false);
-				 red2.SetActive(true);
+//				 red1.SetActive(true);
+//				 blue1.SetActive(false);
+//				 red2.SetActive(true);
         }
 		else if (primeInt == 6){
                 Char1name.text = "Captain Asana";
@@ -115,12 +146,18 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
-	 red1.SetActive(true);
-				 blue1.SetActive(false);
-				 red2.SetActive(true);
-				  red3.SetActive(true);
+	// red1.SetActive(true);
+		//		 blue1.SetActive(false);
+		//		 red2.SetActive(true);
+		//		  red3.SetActive(true);
         }
 		else if (primeInt == 7){
+      ArtBG1.SetActive(false);
+      ArtBG2.SetActive(false);
+      ArtBG3.SetActive(false);
+      ArtBG4.SetActive(false);
+      ArtBG5.SetActive(false);
+      ArtBG6.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
 				Char2name.text = "";
@@ -128,11 +165,11 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "Lieutenant ";
                 Char3speech.text = " It's been an honor";
 				 Char4speech_shake.text = "";
-	 red1.SetActive(true);
-				 blue1.SetActive(false);
-				 red2.SetActive(true);
-				  red3.SetActive(true);
-				  red4.SetActive(true);
+//	 red1.SetActive(true);
+	//			 blue1.SetActive(false);
+	//			 red2.SetActive(true);
+	//			  red3.SetActive(true);
+	//			  red4.SetActive(true);
         }
        else if (primeInt == 8){
                 Char1name.text = "";
@@ -142,12 +179,12 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
-	 red1.SetActive(true);
-				 blue1.SetActive(false);
-				 red2.SetActive(true);
-				  red3.SetActive(true);
-				  red4.SetActive(true);
-				  red5.SetActive(true);
+//	 red1.SetActive(true);
+	//			 blue1.SetActive(false);
+		//		 red2.SetActive(true);
+		//		  red3.SetActive(true);
+		//		  red4.SetActive(true);
+		//		  red5.SetActive(true);
         }
       else if (primeInt == 9){
                 Char1name.text = "";
@@ -157,12 +194,12 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "";
                 Char3speech.text = "";
 				 Char4speech_shake.text = "";
-	 red1.SetActive(true);
-				 blue1.SetActive(false);
-				 red2.SetActive(true);
-				  red3.SetActive(true);
-				  red4.SetActive(true);
-				  red5.SetActive(true);
+//	 red1.SetActive(true);
+	//			 blue1.SetActive(false);
+	//			 red2.SetActive(true);
+	//			  red3.SetActive(true);
+		//		  red4.SetActive(true);
+		//		  red5.SetActive(true);
         }
 		 else if (primeInt == 10){
                 Char1name.text = "********";
@@ -171,27 +208,31 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
 				Char3name.text = "";
                 Char3speech.text = "";
-                blue1.SetActive(true);
-				 red2.SetActive(true);
-				  red3.SetActive(true);
-				  red4.SetActive(true);
-				  red5.SetActive(true);
+          //      blue1.SetActive(true);
+				// red2.SetActive(true);
+				//  red3.SetActive(true);
+				//  red4.SetActive(true);
+				//  red5.SetActive(true);
 				}
 		else if (primeInt == 11){
-                ArtBG1.SetActive(false);
-                ArtBG2.SetActive(true);
+      ArtBG1.SetActive(false);
+      ArtBG2.SetActive(true);
+      ArtBG3.SetActive(false);
+      ArtBG4.SetActive(false);
+      ArtBG5.SetActive(false);
+      ArtBG6.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-                red1.SetActive(false);
-            		red2.SetActive(false);
-            		red3.SetActive(false);
-            		red4.SetActive(false);
-            		red5.SetActive(false);
-                red6.SetActive(true);
+    //            red1.SetActive(false);
+  //          		red2.SetActive(false);
+    //        		red3.SetActive(false);
+    //        		red4.SetActive(false);
+    //        		red5.SetActive(false);
+    //            red6.SetActive(true);
 			     	    nextButton.SetActive(false);
 				        allowSpace = false;
 				        NextScene1Button.SetActive(true);
