@@ -901,7 +901,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_MethodName: NextScene1aFun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1456,7 +1456,6 @@ MonoBehaviour:
   Char4speech_shake: {fileID: 1769941667}
   DialogueDisplay: {fileID: 2044314093}
   ArtChar1: {fileID: 111443883}
-  ArtChar2: {fileID: 1526789466}
   ArtBG1: {fileID: 1782560756}
   ArtBG2: {fileID: 23772341}
   ArtBG3: {fileID: 441075912}
@@ -1563,7 +1562,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: SceneChange2
+        m_MethodName: NextScene1aFun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2215,7 +2214,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_MethodName: ChoiceEvade1Fun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2696,7 +2695,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: SceneChange1
+        m_MethodName: ChoiceEvade1Fun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
