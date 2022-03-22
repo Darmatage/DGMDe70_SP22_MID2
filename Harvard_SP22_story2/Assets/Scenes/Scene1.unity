@@ -901,7 +901,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: NextScene1aFun
+        m_MethodName: ChoiceEvade2Fun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1562,7 +1562,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: NextScene1aFun
+        m_MethodName: NextScene2Fun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2695,7 +2695,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 719187705}
         m_TargetAssemblyTypeName: Scene1Dialogue, Assembly-CSharp
-        m_MethodName: ChoiceEvade1Fun
+        m_MethodName: NextScene1aFun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
