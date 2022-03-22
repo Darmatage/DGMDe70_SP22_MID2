@@ -74,15 +74,21 @@ public class GameHandler : MonoBehaviour {
                 Debug.Log("Current Player Stat = " + playerStat);
         }
 		
+		public int setPlayerStats(){
+				AggressionScore = 0;
+				PeacefulnessScore = 0;
+				return 0;
+		}
+		
 		// PlayerStats
 		public void updateAggressionScore(int amount){
                 AggressionScore += amount;
-                Debug.Log("Current Player Stat = " + AggressionScore);
+                Debug.Log("Current Player AggressionScore Stat = " + AggressionScore);
         }
 		
 		public void updatePeacefulnessScore(int amount){
                 PeacefulnessScore += amount;
-                Debug.Log("Current Player Stat = " + PeacefulnessScore);
+                Debug.Log("Current Player PeacefulnessScore Stat = " + PeacefulnessScore);
         }
 		
 		public int checkAggressionScore(){
@@ -98,6 +104,8 @@ public class GameHandler : MonoBehaviour {
         }
 
         public void StartGame(){
+				AggressionScore = 0;
+			PeacefulnessScore = 0;
                 SceneManager.LoadScene("Scene1");
         }
 

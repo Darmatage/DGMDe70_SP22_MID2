@@ -21,6 +21,8 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        AggressionScore.text = "Aggression Score: " + gameHandler.checkAggressionScore().ToString();
+		PeacefulnessScore.text = "Peacefulness Score: " + gameHandler.checkPeacefulnessScore().ToString();
+
     }
 }

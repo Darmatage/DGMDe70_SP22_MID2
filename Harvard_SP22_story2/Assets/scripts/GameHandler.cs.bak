@@ -8,8 +8,8 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int playerStat;
-		public static int AggressionScore = 0;
-		public static int PeacefulnessScore = 0;
+		public static int AggressionScore;
+		public static int PeacefulnessScore;
 
 
         public static bool GameisPaused = false;
@@ -28,8 +28,8 @@ public class GameHandler : MonoBehaviour {
         }
 
         void Start (){
-			// AggressionScore = 0;
-			// PeacefulnessScore = 0;
+			AggressionScore = 0;
+			PeacefulnessScore = 0;
                 pauseMenuUI.SetActive(false);
         }
 
@@ -74,6 +74,12 @@ public class GameHandler : MonoBehaviour {
                 Debug.Log("Current Player Stat = " + playerStat);
         }
 		
+		public int setPlayerStats(){
+				AggressionScore = 0;
+				PeacefulnessScore = 0;
+				return 0;
+		}
+		
 		// PlayerStats
 		public void updateAggressionScore(int amount){
                 AggressionScore += amount;
@@ -98,6 +104,8 @@ public class GameHandler : MonoBehaviour {
         }
 
         public void StartGame(){
+				AggressionScore = 0;
+			PeacefulnessScore = 0;
                 SceneManager.LoadScene("Scene1");
         }
 

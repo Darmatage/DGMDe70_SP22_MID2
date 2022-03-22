@@ -933,6 +933,7 @@ MonoBehaviour:
   choice2Text: {fileID: 1212525103}
   NextSceneButton: {fileID: 1416222908}
   nextButton: {fileID: 1292274639}
+  gameHandler: {fileID: 8897926}
 --- !u!1 &752125418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9011129439240453833, guid: a2ad82074e2dbc346b37e16829d078c2, type: 3}
+      propertyPath: gameHandler
+      value: 
+      objectReference: {fileID: 8897926}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2ad82074e2dbc346b37e16829d078c2, type: 3}
 --- !u!1 &1033678860 stripped

@@ -417,7 +417,7 @@ choice2Button.SetActive(false);
 
 public void choice1button(){
 		// hostile ++;
-	//	gameHandler.updateAggressionScore(10);
+		gameHandler.updateAggressionScore(10);
 		 if (primeInt == 18){
 		       primeInt = 29;
            resetButtons();
@@ -437,7 +437,7 @@ public void choice1button(){
 
 public void choice2button() {
 // peaceful ++;
-//			gameHandler.updatePeacefulnessScore(10);
+			gameHandler.updatePeacefulnessScore(10);
 		   if (primeInt == 18){
 
             resetButtons();
