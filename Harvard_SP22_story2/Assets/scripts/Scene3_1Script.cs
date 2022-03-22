@@ -281,14 +281,16 @@ else if (primeInt == 21){
 
         }
 else if (primeInt == 22){
+
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-	resetArt();
-	ArtBGExplosion.SetActive(true);
+	              resetArt();
+	              ArtBGExplosion.SetActive(true);
+                ArtCharRory.SetActive(false);
 
 
 
@@ -300,10 +302,12 @@ else if (primeInt == 23){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-		resetButtons();
-		resetArt();
-			ArtBGHeadache.SetActive(true);
-		NextSceneButton.SetActive(true);
+		            resetButtons();
+		            resetArt();
+                ArtBG1.SetActive(true);
+                ArtCharRory.SetActive(false);
+		          	ArtBGHeadache.SetActive(true);
+		            NextSceneButton.SetActive(true);
 
 
         }
@@ -412,7 +416,7 @@ choice2Button.SetActive(false);
 
 	   public void choice1button(){
 		// hostile ++;
-		gameHandler.updateAggressionScore(10);
+	//	gameHandler.updateAggressionScore(10);
 		if (primeInt == 18){
 		primeInt = 29;
 resetButtons();
@@ -431,7 +435,7 @@ talking();
 
 	   public void choice2button() {
 // peaceful ++;
-			gameHandler.updatePeacefulnessScore(10);
+//			gameHandler.updatePeacefulnessScore(10);
 		   if (primeInt == 18){
 
 resetButtons();
