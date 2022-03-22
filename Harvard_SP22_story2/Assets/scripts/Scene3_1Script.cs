@@ -319,8 +319,8 @@ else if (primeInt == 23){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-		resetButtons();
-		NextSceneButton.SetActive(true);
+		            resetButtons();
+		            NextSceneButton.SetActive(true);
 
 
         }
@@ -452,11 +452,11 @@ public void choice2button() {
 
 public void SceneChange() {
 
-   if (primeInt != 35) {
+   if (primeInt != 23) {
         SceneManager.LoadScene("Scene4");
    }
    else {
-     SceneManager.LoadScene("Scene3");
+        SceneManager.LoadScene("Scene3");
    }
 }
 
