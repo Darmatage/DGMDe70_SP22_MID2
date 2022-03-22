@@ -69,15 +69,15 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "Ow, my head.";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
                 allowSpace = false;
         }else if (primeInt == 3){
-                 Char1name.text = "";
+                Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
                 Char2speech.text = "Glad to see you're awake, Captain. We took quite a beaing, and, well...";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 
 
@@ -86,7 +86,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "What is it, Rory?";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
         }
        else if (primeInt == 5){
                 Char1name.text = "";
@@ -123,7 +123,7 @@ else if (primeInt == 7){
                 Char1speech.text = "Lieutenant, do you know what this means?";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 
 
@@ -133,7 +133,7 @@ else if (primeInt == 8){
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
                 Char2speech.text = "Oh, we're lost?";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 
 
@@ -185,7 +185,7 @@ else if (primeInt == 13){
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
                 Char2speech.text = "Sensors are picking up another standard class Galactic union ship! How did it get all the way out here?";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 
 
@@ -262,15 +262,16 @@ else if (primeInt == 20){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-	resetButtons();
-	choice1Button.SetActive(true);
-	choice2Button.SetActive(true);
-	choice1Text.text = "We've taken enough risks today. Destroy that ship, Lieutenant. That's an order.";
-	choice2Text.text = "Let's get some answers. Prepare to board.";
-
+                resetButtons();
+              	choice1Button.SetActive(true);
+              	choice2Button.SetActive(true);
+              	choice1Text.text = "We've taken enough risks today. Destroy that ship, Lieutenant. That's an order.";
+              	choice2Text.text = "Let's get some answers. Prepare to board.";
 
         }
 else if (primeInt == 21){
+                choice1Button.SetActive(false);
+                choice2Button.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "FIRE MISSLES!";
                 Char2name.text = "";
@@ -312,11 +313,11 @@ else if (primeInt == 23){
 
         }
 		else if (primeInt == 24){
-Char1name.text = "YOU";
+                Char1name.text = "YOU";
                 Char1speech.text = "My head…";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
 		resetButtons();
 		NextSceneButton.SetActive(true);
@@ -414,49 +415,49 @@ choice2Button.SetActive(false);
 
 	   }
 
-	   public void choice1button(){
+public void choice1button(){
 		// hostile ++;
 	//	gameHandler.updateAggressionScore(10);
-		if (primeInt == 18){
-		primeInt = 29;
-resetButtons();
-nextButton.SetActive(true);
-allowSpace = true;
-talking();
+		 if (primeInt == 18){
+		       primeInt = 29;
+           resetButtons();
+           nextButton.SetActive(true);
+           allowSpace = true;
+           talking();
+         }
+     if (primeInt == 20){
+  //mistake  if (primeInt == 20){
+  //  SceneChange();
+        nextButton.SetActive(true);
+        allowSpace = true;
+        talking();
+      }
 }
-	if (primeInt == 20){
 
-resetButtons();
-nextButton.SetActive(true);
-allowSpace = true;
-talking();
-}
-		   }
 
-	   public void choice2button() {
+public void choice2button() {
 // peaceful ++;
 //			gameHandler.updatePeacefulnessScore(10);
 		   if (primeInt == 18){
 
-resetButtons();
-nextButton.SetActive(true);
-allowSpace = true;
-talking();
+            resetButtons();
+            nextButton.SetActive(true);
+            allowSpace = true;
+            talking();
+       }
+       if (primeInt == 20){
+             SceneChange();
+		   }
 }
-if (primeInt == 20){
-SceneChange();
-		}
 
-
-	   }
-
-
-        public void SceneChange() {
+public void SceneChange() {
 
    if (primeInt != 35) {
-               SceneManager.LoadScene("Scene2");
-        }
-               SceneManager.LoadScene("Scene4");
-
+        SceneManager.LoadScene("Scene4");
+   }
+   else {
+     SceneManager.LoadScene("Scene3");
+   }
 }
+
 }
