@@ -25,7 +25,7 @@ public class Scene3_1Script : MonoBehaviour {
 		public Text choice2Text;
         public GameObject NextSceneButton;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+       public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -412,6 +412,7 @@ choice2Button.SetActive(false);
 	   
 	   public void choice1button(){
 		// hostile ++;
+		gameHandler.updateAggressionScore(10);
 		if (primeInt == 18){
 		primeInt = 29;
 resetButtons();
@@ -430,7 +431,7 @@ talking();
 	   
 	   public void choice2button() {
 // peaceful ++;
-
+			gameHandler.updatePeacefulnessScore(10);
 		   if (primeInt == 18){
 		
 resetButtons();
