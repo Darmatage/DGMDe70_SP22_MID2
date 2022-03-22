@@ -288,11 +288,26 @@ Char1name.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
 	resetArt();
-	ArtBGHeadache.SetActive(true);
+	ArtBGExplosion.SetActive(true);
+
 
 
         }
 else if (primeInt == 23){
+Char1name.text = "YOU";
+                Char1speech.text = "My head…";
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "";
+                Char3speech.text = "";
+		resetButtons();
+		resetArt();
+			ArtBGHeadache.SetActive(true);
+		NextSceneButton.SetActive(true);
+
+
+        }
+		else if (primeInt == 24){
 Char1name.text = "YOU";
                 Char1speech.text = "My head…";
                 Char2name.text = "";
@@ -398,7 +413,7 @@ choice2Button.SetActive(false);
 	   public void choice1button(){
 		// hostile ++;
 		if (primeInt == 18){
-		primeInt += 4;
+		primeInt = 29;
 resetButtons();
 nextButton.SetActive(true);
 allowSpace = true;	

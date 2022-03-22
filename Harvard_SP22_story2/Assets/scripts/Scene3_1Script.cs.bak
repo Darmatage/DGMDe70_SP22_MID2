@@ -380,7 +380,7 @@ Char1name.text = "YOU";
        ArtBGExplosion.SetActive(false);
 	ArtBGShip.SetActive(false);
 	ArtBGHeadache.SetActive(false);
-        ArtCharRory.SetActive(false);
+        ArtCharRory.SetActive(true);
 		
 	   }
 
@@ -398,7 +398,7 @@ choice2Button.SetActive(false);
 	   public void choice1button(){
 		// hostile ++;
 		if (primeInt == 18){
-		primeInt += 4;
+		primeInt = 29;
 resetButtons();
 nextButton.SetActive(true);
 allowSpace = true;	
