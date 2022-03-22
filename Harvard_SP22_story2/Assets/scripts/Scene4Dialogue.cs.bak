@@ -314,14 +314,14 @@ public void talking(){         // main story function. Players hit next to progr
 
 
 	   public void resetButtons(){
-
+        NextScene1Button.SetActive(false);
 		    nextButton.SetActive(false);
         allowSpace = false;
 		    // TalkButton.SetActive(false);
 	   }
 	   
 	   public void resetButtons2(){
-
+        NextScene1Button.SetActive(false);
 		    nextButton.SetActive(false);
         allowSpace = false;
     ButtonChoice1a.SetActive(false);

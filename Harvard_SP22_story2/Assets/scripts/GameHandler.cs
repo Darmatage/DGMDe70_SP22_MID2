@@ -8,8 +8,8 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int playerStat;
-		public static int AggressionScore;
-		public static int PeacefulnessScore;
+		public static int AggressionScore = 0;
+		public static int PeacefulnessScore = 0;
 
 
         public static bool GameisPaused = false;
@@ -28,9 +28,10 @@ public class GameHandler : MonoBehaviour {
         }
 
         void Start (){
-			AggressionScore = 0;
-			PeacefulnessScore = 0;
+			// AggressionScore = 0;  // this will activate every new scene
+			// PeacefulnessScore = 0;
                 pauseMenuUI.SetActive(false);
+				  Debug.Log("gameHander start() activated");
         }
 
         void Update (){
@@ -106,6 +107,7 @@ public class GameHandler : MonoBehaviour {
         public void StartGame(){
 				AggressionScore = 0;
 			PeacefulnessScore = 0;
+			  Debug.Log("gameHander startGame() activated");
                 SceneManager.LoadScene("Scene1");
         }
 
