@@ -45,8 +45,8 @@ void Start(){
 		// ArtChar11.SetActive(false);
 		ArtChar2.SetActive(false);
     ArtBG1.SetActive(true);
-	textButtonChoice1a.text="";
-	textButtonChoice1b.text="";
+	  textButtonChoice1a.text="";
+	  textButtonChoice1b.text="";
         // ArtBG2.SetActive(false);
 		// ArtLaser1.SetActive(false);
 		// ArtLaser2.SetActive(false);
@@ -264,7 +264,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char1speech.text = "Permission to voice a concern, Captain?";
           Char2name.text = "";
           Char2speech.text = "";
-        } else if (primeInt == 30){   
+        } else if (primeInt == 30){
           Char1name.text = "";
           Char1speech.text = "";
           Char2name.text = "CAPTAIN";
@@ -289,7 +289,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char1speech.text = "";
           Char2name.text = "CAPTAIN";
           Char2speech.text = "";
-		  
+
 		  resetButtons2();
 		  ButtonChoice1a.SetActive(true);
 		  textButtonChoice1a.text = "That's a risk well have to take. To the airlock!";
@@ -319,7 +319,7 @@ public void talking(){         // main story function. Players hit next to progr
         allowSpace = false;
 		    // TalkButton.SetActive(false);
 	   }
-	   
+
 	   public void resetButtons2(){
 
 		    nextButton.SetActive(false);
@@ -345,7 +345,7 @@ public void choice1button(){
            allowSpace = true;
            talking();
          }
-		 
+
 		if (primeInt == 30) {
 			SceneManager.LoadScene("Scene5a");
 		}
