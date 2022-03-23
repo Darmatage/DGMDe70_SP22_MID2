@@ -13,7 +13,7 @@ public class Scene5_winDialogue : MonoBehaviour {
         public Text Char2speech;
         public Text Char3name;
         public Text Char3speech;
-		    public Text TextOneAtATime; // shaking text
+		  //  public Text TextOneAtATime; // shaking text
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
         public GameObject ArtChar2;
@@ -64,8 +64,8 @@ public void talking5c(){         // main story function. Players hit next to pro
 			//Char1speech.gameObject.GetComponentInParent<Shaker>().ChangeShake(10f);
                 ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "Rory";
-                Char1speech.text = "Airlock is attached, Captain. Doors open on your word.";
+                Char3name.text = "Rory";
+                Char3speech.text = "Airlock is attached, Captain. Doors open on your word.";
 		//		TextOneAtATime.text = "Centurion Alpha Speca System. Star Date 5550. Star Code 234j22d1";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -78,6 +78,8 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char2name.text = "You";
 		//		TextOneAtATime.text = "";
                 Char2speech.text = "Make it so, Lieutenant.";
+                Char3name.text = "";
+                Char3speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
@@ -102,21 +104,21 @@ public void talking5c(){         // main story function. Players hit next to pro
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-                Char1name.text = "Unknown";
-                Char1speech.text = "Our computers got fried by an EMP...";
+                Char3name.text = "Unknown";
+                Char3speech.text = "Our computers got fried by an EMP...";
                 Char2name.text = "";
                 Char2speech.text = "";
 				//TextOneAtATime.text = "";
         }
        else if (primeInt ==7){
-                Char1name.text = "Unknown";
-                Char1speech.text = "And that was before we went through that wormhole.";
+                Char3name.text = "Unknown";
+                Char3speech.text = "And that was before we went through that wormhole.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
         else if (primeInt ==8){
-                 Char1name.text = "Rory";
-                 Char1speech.text = "Captain, look! The badge!";
+                 Char3name.text = "Rory";
+                 Char3speech.text = "Captain, look! The badge!";
                  Char2name.text = "";
                  Char2speech.text = "";
          }
@@ -128,8 +130,8 @@ public void talking5c(){         // main story function. Players hit next to pro
                   ArtChar4.SetActive(false);
                   ArtBG5.SetActive(true);
                   ArtChar5.SetActive(true);
-                  Char1name.text = "You";
-                  Char1speech.text = "That's impossible...";
+                  Char3name.text = "You";
+                  Char3speech.text = "That's impossible...";
                   Char2name.text = "";
                   Char2speech.text = "";
           }
@@ -141,12 +143,12 @@ public void talking5c(){         // main story function. Players hit next to pro
                    ArtChar4.SetActive(true);
                    ArtBG5.SetActive(true);
                    ArtChar5.SetActive(false);
-                   Char1name.text = "You";
-                   Char1speech.text = "Agh!";
+                   Char3name.text = "You";
+                   Char3speech.text = "Agh!";
                    Char2name.text = "";
                    Char2speech.text = "";
            }
-           else if (primeInt ==10){
+           else if (primeInt ==11){
                     ArtBG1.SetActive(false);
                     ArtChar2.SetActive(false);
                     ArtBG2.SetActive(true);
