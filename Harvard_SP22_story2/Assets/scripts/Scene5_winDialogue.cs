@@ -156,10 +156,12 @@ public void talking5c(){         // main story function. Players hit next to pro
                     ArtChar4.SetActive(true);
                     ArtBG5.SetActive(true);
                     ArtChar5.SetActive(false);
-                    Char1name.text = "Unknown";
-                    Char1speech.text = "Agh!";
-                    Char2name.text = "";
-                    Char2speech.text = "";
+                    Char2name.text = "Unknown";
+                    Char2speech.text = "Agh!";
+                    Char3name.text = "";
+                    Char3speech.text = "";
+                    nextButton.SetActive(false);
+                    NextScene1Button.SetActive(true);
             }
     //   else if (primeInt == 8){
       //          Char1name.text = "Rory";
@@ -197,7 +199,7 @@ public void talking5c(){         // main story function. Players hit next to pro
        // ArtLaser3.SetActive(false);
        // ArtLaser4.SetActive(false);
      }
-}
+
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
 //        public void Choice1aFunct2a(){
   //              Char1name.text = "";
@@ -237,11 +239,11 @@ public void talking5c(){         // main story function. Players hit next to pro
       //  }
 //
 
-//        public void SceneChange1(){
-  //             SceneManager.LoadScene("Scene2a");
-    //    }
+       public void SceneChange1(){
+              SceneManager.LoadScene("Scene6");
+       }
 
       //  public void SceneChange5_win3(){
         //        SceneManager.LoadScene("Scene2b");
         //}
-//}
+}
