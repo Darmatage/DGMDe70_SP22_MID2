@@ -1404,6 +1404,8 @@ MonoBehaviour:
   NextScene1aButton: {fileID: 1505945958}
   NextScene2Button: {fileID: 932512872}
   nextButton: {fileID: 85011773}
+  playerName: 
+  gameHandler: {fileID: 740064396}
 --- !u!114 &740064396 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1824655010691904265, guid: 452fc7bcb4a54984ab7588b9d3a594c6, type: 3}

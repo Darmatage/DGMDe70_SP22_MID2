@@ -16,6 +16,7 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject Char1Plate;
         public GameObject Char2Plate;
         public GameObject Char3Plate;
+		
     // public Text TextDelay;
     public Text Char4speech_shake;
         public GameObject DialogueDisplay;
@@ -33,6 +34,10 @@ public class Scene1Dialogue : MonoBehaviour {
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+		
+		// allow input name
+	  public string playerName;
+       public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
@@ -50,6 +55,10 @@ void Start(){         // initial visibility settings
         Char1Plate.SetActive(false);
         Char2Plate.SetActive(false);
         Char3Plate.SetActive(false);
+		
+		// input player name
+	  string pNameTemp = gameHandler.GetName();
+       playerName = pNameTemp.ToUpper();
     }
 
 void Update(){         // use spacebar as Next button
@@ -84,7 +93,7 @@ public void talking(){         // main story function. Players hit next to progr
        else if (primeInt == 3){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "YOU";
+                Char2name.text = playerName;
                 Char2speech.text = "recieving, Commander...Like a book sir.";
             //gameHandler.AddPlayerStat(1);
             Char1Plate.SetActive(false);
@@ -101,7 +110,7 @@ public void talking(){         // main story function. Players hit next to progr
        else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "YOU";
+                Char2name.text = playerName;
                 Char2speech.text = "We are en route to Beta 9’s Intergalactic Conference as planned. No events to report, no contact with vessels of any kind. Just another day in space.";
             //gameHandler.AddPlayerStat(1);
             Char1Plate.SetActive(false);
@@ -146,7 +155,7 @@ public void talking(){         // main story function. Players hit next to progr
 		 else if (primeInt == 9){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "YOU";
+                Char2name.text = playerName;
                 Char2speech.text = "We're losing contact...Lieutenant, can you reconnect to command?";
 				        Char3name.text = "";
                 Char3speech.text = "";
@@ -190,7 +199,7 @@ public void talking(){         // main story function. Players hit next to progr
 else if (primeInt == 12){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "YOU";
+                Char2name.text = playerName;
 			        	Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -307,7 +316,7 @@ else if (primeInt == 12){
        // else if (primeInt == 201){
                 // Char1name.text = "";
                 // Char1speech.text = "";
-                // Char2name.text = "You";
+                // Char2name.text = playerName;
                 // Char2speech.text = "Ragu hangs out in a rough part of town. I'll take you now.";
                 // nextButton.SetActive(false);
                 // allowSpace = false;
