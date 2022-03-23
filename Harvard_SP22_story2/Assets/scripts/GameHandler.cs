@@ -10,6 +10,11 @@ public class GameHandler : MonoBehaviour {
         public static int playerStat;
 		public static int AggressionScore = 0;
 		public static int PeacefulnessScore = 0;
+		
+		// InputName Code
+		public static string playerName = "YOU";
+		
+		
 
 
         public static bool GameisPaused = false;
@@ -129,5 +134,14 @@ public class GameHandler : MonoBehaviour {
 		    public void SceneChangeCredits(){
                SceneManager.LoadScene("Credits");
         }
+		
+		  public void UpdateName(string newName){
+            playerName = newName;
+            Debug.Log("name changed to " + playerName);
+      }
+      public string GetName(){
+            return playerName;
+      }
+
 }
     
