@@ -37,7 +37,7 @@ public class Scene5_winDialogue : MonoBehaviour {
 void Start(){         // initial visibility settings
         resetArt();
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(true);
+        ArtChar1.SetActive(false);
         ArtBG4.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -62,7 +62,6 @@ public void talking5c(){         // main story function. Players hit next to pro
         }
         else if (primeInt == 2){
 			//Char1speech.gameObject.GetComponentInParent<Shaker>().ChangeShake(10f);
-                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char3name.text = "Rory";
                 Char3speech.text = "Airlock is attached, Captain. Doors open on your word.";
@@ -71,6 +70,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
+                ArtChar1.SetActive(true);
                 ArtBG4.SetActive(false);
                 ArtBG1.SetActive(true);
                 Char1name.text = "";
