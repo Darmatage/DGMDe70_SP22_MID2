@@ -31,6 +31,8 @@ public class Scene3_1Script : MonoBehaviour {
         public GameObject Char1Plate;
         public GameObject Char2Plate;
         public GameObject Char3Plate;
+		
+	   public string playerName;
 
 void Start(){         // initial visibility settings
 		resetArt();
@@ -54,6 +56,11 @@ void Start(){         // initial visibility settings
         Char2Plate.SetActive(false);
         Char3Plate.SetActive(false);
 		// TalkButton.SetActive(false);
+		
+		
+		
+       string pNameTemp = gameHandler.GetName();
+       playerName = pNameTemp.ToUpper();
    }
 
 void Update(){         // use spacebar as Next button
@@ -71,7 +78,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Ow, my head.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -92,7 +99,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 
 		}else if (primeInt == 4){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "What is it, Rory?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -112,7 +119,7 @@ public void talking(){         // main story function. Players hit next to progr
 
         }
 	else if (primeInt == 6){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "You mean...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -134,7 +141,7 @@ public void talking(){         // main story function. Players hit next to progr
 
         }
 else if (primeInt == 7){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Lieutenant, do you know what this means?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -156,7 +163,7 @@ else if (primeInt == 8){
 
         }
 else if (primeInt == 9){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "I believe we've unlocked the secret to interdimensional travel! Damn it all! We're also going to miss the convention, ha. ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -178,7 +185,7 @@ else if (primeInt == 10){
 
         }
 else if (primeInt == 11){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Good point Lieutenant. Now scan the area.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -213,7 +220,7 @@ else if (primeInt == 13){
 
         }
 else if (primeInt == 14){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Careful, this could be a pirate trap.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -235,7 +242,7 @@ else if (primeInt == 15){
 
         }
 else if (primeInt == 16){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Call them on the open Channel. Let's have a chat with our new neighbors.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -284,7 +291,7 @@ else if (primeInt == 19){
 
         }
 else if (primeInt == 20){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -301,7 +308,7 @@ else if (primeInt == 20){
 else if (primeInt == 21){
                 choice1Button.SetActive(false);
                 choice2Button.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "FIRE MISSLES!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -328,7 +335,7 @@ else if (primeInt == 22){
 
         }
 else if (primeInt == 23){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "My head…";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -345,7 +352,7 @@ else if (primeInt == 23){
 
         }
 		else if (primeInt == 24){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "My head…";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -369,7 +376,7 @@ else if (primeInt == 23){
 
         }
     else if (primeInt == 31){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "I don't like it either... But I know what General Lome would say.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -391,7 +398,7 @@ else if (primeInt == 23){
         }
 
     else if (primeInt == 33){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "In the desperate nothing of space, even a rock could be a rescue.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -415,7 +422,7 @@ else if (primeInt == 23){
         }
 
     else if (primeInt == 35){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "It means they're stranded, and we're all they've got. Prepare to board.";
                 Char2name.text = "";
                 Char2speech.text = "";
