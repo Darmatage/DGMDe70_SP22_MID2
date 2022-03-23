@@ -28,12 +28,15 @@ public class Scene4Dialogue : MonoBehaviour {
 
         public GameObject nextButton;
         public GameObject ButtonChoice1a;
-		public Text textButtonChoice1a;
+		    public Text textButtonChoice1a;
         public GameObject ButtonChoice1b;
-		public Text textButtonChoice1b;
-       public GameHandler gameHandler;
+		    public Text textButtonChoice1b;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+        public GameObject Char1Plate;
+        public GameObject Char2Plate;
+        public GameObject Char3Plate;
 
 void Start(){
            // initial visibility settings
@@ -59,6 +62,9 @@ void Start(){
 
     allowSpace = true;
 		// TalkButton.SetActive(false);
+    Char1Plate.SetActive(false);
+    Char2Plate.SetActive(false);
+    Char3Plate.SetActive(false);
    }
 
 void Update(){         // use spacebar as Next button
@@ -81,57 +87,29 @@ public void talking(){         // main story function. Players hit next to progr
           Char1speech.text = "Captain, something's been bothering me.";
           Char2name.text = "";
           Char2speech.text = "";
-          // Char3name.text = "Lieutenant Rory";
-          // Char3speech.text = "Airlocks attached, Captain. Doors open on your word";
-				  // Char4speech_shake.text = "";
-				  // TalkButton.SetActive(true);
-				  // ButtonText1.text = "Go!";
-				  // nextButton.SetActive(true);
-          // allowSpace = false;
+
         } else if (primeInt == 3){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "What is it, Lieutenant?";
-          // Char3name.text = "";
-          // Char3speech.text = "";
-				  // ArtBG1.SetActive(false);
-				  // ArtBG2.SetActive(true);
-				  // Char4speech_shake.text = "";
-				  // TalkButton.SetActive(false);
-				  // ButtonText1.text = "";
-				  // ArtChar1.SetActive(true);
-				  // ArtChar11.SetActive(true);
-				 // nextButton.SetActive(false);
-                // allowSpace = false;
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
 
 		} else if (primeInt == 4){
           Char1name.text = "RORY";
           Char1speech.text = "The EMP... we entered the wormhole just as it hit us. Yet our ship seems unaffected.";
           Char2name.text = "";
           Char2speech.text = "";
-          // Char3name.text = "";
-          // Char3speech.text = "They’re attacking! ";
-				  // Char4speech_shake.text = "";
-				  // ArtLaser1.SetActive(true);
-				  // TalkButton.SetActive(true);
-				  // ButtonText1.text = "Fire!!";
-				  // nextButton.SetActive(false);
-          // allowSpace = false;
-				  // ArtChar1.SetActive(true);
-				  // ArtChar11.SetActive(true);
+
         } else if (primeInt == 5){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "You have a theory?";
-          // Char3name.text = "";
-          // Char3speech.text = "";
-				  // Char4speech_shake.text = "Fire! Fire! Fire!";
-				  // ArtChar2.SetActive(true);
-				  // ArtLaser2.SetActive(true);
-				  // TalkButton.SetActive(false);
-				  // nextButton.SetActive(false);
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 6){
           Char1name.text = "RORY";
           Char1speech.text = "The best explanation I have is that when we went through, the milliseconds of time between entry and impact became... well, longer.";
@@ -142,13 +120,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 7){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "Explain.";
-         // TalkButton.SetActive(false);
-				 // nextButton.SetActive(false);
-				 // NextScene1Button.SetActive(true);
-				 // ArtLaser4.SetActive(true);
-				 // Char4speech_shake.text = "Fire! Fire! Fire! Fire! FIRE! FIRE!";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
        } else if (primeInt == 8){
           Char1name.text = "RORY";
           Char1speech.text = "Time and space aren’t linear around wormholes. Dimensions shift, bend, diverge, converge... ";
@@ -162,8 +138,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 10){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "We’re not making it to the Intergalactic Convention this year, are we?";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 11){
           Char1name.text = "RORY";
           Char1speech.text = "No. But that’s the least of our worries, now.";
@@ -172,8 +151,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 12){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "What could be more pressing than the mission?";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 13){
           Char1name.text = "RORY";
           Char1speech.text = "I can’t wrap my head around it. The other ship... it could only have come from our time, give or take a century.";
@@ -182,8 +164,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 14){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "And?";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 15){
           Char1name.text = "RORY";
           Char1speech.text = "The odds of another ship from our time going through a wormhole and landing right here, right now must be nearly zero.";
@@ -192,8 +177,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 16){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "Do you know why you were chosen for this mission?";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 17){
           Char1name.text = "RORY";
           Char1speech.text = "Because I’m fluent in 14 languages and was the only one crazy enough to say yes to a 2 year mission?";
@@ -202,8 +190,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 18){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "Because you keep your head on straight when the world goes sideways.";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 19){
           Char1name.text = "RORY";
           Char1speech.text = "You think too highly of me, Captain.";
@@ -212,8 +203,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 20){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "Are you contradicting me, Lieutenant?";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 21){
           Char1name.text = "RORY";
           Char1speech.text = "No, of course not!";
@@ -222,8 +216,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 22){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "At ease, Lieutenant. That was a joke.";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 23){
           Char1name.text = "RORY";
           Char1speech.text = "Ah. Very good, Captain.";
@@ -232,8 +229,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 24){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "Now, let’s focus on the task at hand.";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 25){
           Char1name.text = "RORY";
           Char1speech.text = "Right. We are boarding an unidentified ship at an unknown location and time. Do I have all the facts straight?";
@@ -242,8 +242,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 26){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "That about sums it up.";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
         } else if (primeInt == 27){
           Char1name.text = "RORY";
           Char1speech.text = "Our hail attempt was unsuccessful, as well. How should we board?";
@@ -252,8 +255,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 28){ // KAI ADD BUTTON
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
 		  resetButtons2();
 		  ButtonChoice1a.SetActive(true);
 		  textButtonChoice1a.text = "We'll arm ourselves to the teeth. Prepare for anything!";
@@ -267,8 +273,11 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 30){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
+
 		  resetButtons2();
 		  ButtonChoice1a.SetActive(true);
 		  textButtonChoice1a.text = "Denied. We could be under fire immediately and I need you to follow my orders without question. Let's do this!";
@@ -287,8 +296,10 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 33){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "CAPTAIN";
+          Char2name.text = "YOU";
           Char2speech.text = "";
+          Char2Plate.SetActive(true);
+          Char3Plate.SetActive(false);
 
 		  resetButtons2();
 		  ButtonChoice1a.SetActive(true);

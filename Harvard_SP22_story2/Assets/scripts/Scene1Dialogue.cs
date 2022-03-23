@@ -67,14 +67,14 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                ArtChar1.SetActive(false);
-                DialogueDisplay.SetActive(true);
-                Char1name.text = "COMMAND";
-                 StartCoroutine(TypeText(Char1speech, "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?"));
-                Char2name.text = "";
-                Char2speech.text = "";
-                Char3name.text = "";
-                Char3speech.text = "";
+            ArtChar1.SetActive(false);
+            DialogueDisplay.SetActive(true);
+            Char1name.text = "COMMAND";
+            StartCoroutine(TypeText(Char1speech, "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?"));
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             Char1Plate.SetActive(true);
             Char2Plate.SetActive(false);
             //  if (playerHealth <= 5){
@@ -336,7 +336,7 @@ else if (primeInt == 12){
                 allowSpace = true;
 				talking();
         }
-		
+
 		// fight for our lives button
         public void ChoiceEvade2Fun(){
                 Char1name.text = "";

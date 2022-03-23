@@ -25,9 +25,12 @@ public class Scene3_1Script : MonoBehaviour {
 	    	public Text choice2Text;
         public GameObject NextSceneButton;
         public GameObject nextButton;
-       public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+        public GameObject Char1Plate;
+        public GameObject Char2Plate;
+        public GameObject Char3Plate;
 
 void Start(){         // initial visibility settings
 		resetArt();
@@ -45,8 +48,11 @@ void Start(){         // initial visibility settings
 		// ArtLaser4.SetActive(false);
         // NextScene1Button.SetActive(false);
 
-		nextButton.SetActive(true);
+		    nextButton.SetActive(true);
         allowSpace = true;
+        Char1Plate.SetActive(false);
+        Char2Plate.SetActive(false);
+        Char3Plate.SetActive(false);
 		// TalkButton.SetActive(false);
    }
 
@@ -72,6 +78,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3name.text = "";
                 Char3speech.text = "";
                 allowSpace = false;
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
         }else if (primeInt == 3){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -79,6 +87,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "Glad to see you're awake, Captain. We took quite a beaing, and, well...";
                 Char3name.text = "";
                 Char3speech.text = "";
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
 
 		}else if (primeInt == 4){
@@ -87,6 +97,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
         }
        else if (primeInt == 5){
                 Char1name.text = "";
@@ -95,7 +107,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = " Sorry, captain. It's just... I don't know where we are.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 	else if (primeInt == 6){
@@ -105,7 +118,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 		else if (primeInt == 6){
@@ -115,7 +129,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "Yes, Captain. We entered the Wormhole and ended up.... Well, all I know is the star charts don't match any in our database.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 7){
@@ -125,7 +140,8 @@ else if (primeInt == 7){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 8){
@@ -135,7 +151,8 @@ else if (primeInt == 8){
                 Char2speech.text = "Oh, we're lost?";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 9){
@@ -145,7 +162,8 @@ else if (primeInt == 9){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 10){
@@ -155,7 +173,8 @@ else if (primeInt == 10){
                 Char2speech.text = "I… I suppose that's true, but... That won't matter unless we, you know.... Get back.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 11){
@@ -165,7 +184,8 @@ else if (primeInt == 11){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 12){
@@ -175,7 +195,8 @@ else if (primeInt == 12){
                 Char2speech.text = "Yes, Captain!";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 13){
@@ -187,7 +208,8 @@ else if (primeInt == 13){
                 Char2speech.text = "Sensors are picking up another standard class Galactic union ship! How did it get all the way out here?";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 14){
@@ -195,9 +217,10 @@ else if (primeInt == 14){
                 Char1speech.text = "Careful, this could be a pirate trap.";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 15){
@@ -207,7 +230,8 @@ else if (primeInt == 15){
                 Char2speech.text = "They seem to be bouncing back our signal, Captain. We have no way of knowing whether they are Friend or Foe.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 16){
@@ -215,9 +239,10 @@ else if (primeInt == 16){
                 Char1speech.text = "Call them on the open Channel. Let's have a chat with our new neighbors.";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 17){
@@ -227,22 +252,24 @@ else if (primeInt == 17){
                 Char2speech.text = "Comms are open, Captain.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 18){
-                Char1name.text = "YOU";
+                Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-	resetButtons();
-	choice1Button.SetActive(true);
-	choice2Button.SetActive(true);
-	choice1Text.text = "Unidentified vessel! Respond immediately or we will be forced to treat you as hostile.";
-	choice2Text.text = "This is player name of the Galactic Union Fleet. If you hear this message please respond. We are here in peace.";
-
+              	resetButtons();
+              	choice1Button.SetActive(true);
+              	choice2Button.SetActive(true);
+              	choice1Text.text = "Unidentified vessel! Respond immediately or we will be forced to treat you as hostile.";
+              	choice2Text.text = "This is player name of the Galactic Union Fleet. If you hear this message please respond. We are here in peace.";
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 19){
@@ -252,7 +279,8 @@ else if (primeInt == 19){
                 Char2speech.text = "Nothing but space hiss. I don't like that one bit.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 else if (primeInt == 20){
@@ -267,7 +295,8 @@ else if (primeInt == 20){
               	choice2Button.SetActive(true);
               	choice1Text.text = "We've taken enough risks today. Destroy that ship, Lieutenant. That's an order.";
               	choice2Text.text = "Let's get some answers. Prepare to board.";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
         }
 else if (primeInt == 21){
                 choice1Button.SetActive(false);
@@ -278,7 +307,8 @@ else if (primeInt == 21){
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 else if (primeInt == 22){
@@ -292,7 +322,8 @@ else if (primeInt == 22){
 	              resetArt();
 	              ArtBGExplosion.SetActive(true);
                 ArtCharRory.SetActive(false);
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
 
 
         }
@@ -309,7 +340,8 @@ else if (primeInt == 23){
                 ArtCharRory.SetActive(false);
 		          	ArtBGHeadache.SetActive(true);
 		            NextSceneButton.SetActive(true);
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 		else if (primeInt == 24){
@@ -321,72 +353,78 @@ else if (primeInt == 23){
                 Char3speech.text = "";
 		            resetButtons();
 		            NextSceneButton.SetActive(true);
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
-else if (primeInt == 30){
-Char1name.text = "";
+    else if (primeInt == 30){
+                Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
                 Char2speech.text = "It's too silent out there for my liking.";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
-else if (primeInt == 31){
-Char1name.text = "YOU";
+    else if (primeInt == 31){
+                Char1name.text = "YOU";
                 Char1speech.text = "I don't like it either... But I know what General Lome would say.";
                 Char2name.text = "";
-      Char2speech.text = "";
-               Char3name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
         }
 
-else if (primeInt == 32){
+    else if (primeInt == 32){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
                 Char2speech.text = "What’s that Captain?";
                 Char3name.text = "";
                 Char3speech.text = "";
-
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
         }
 
-else if (primeInt == 33){
+    else if (primeInt == 33){
                 Char1name.text = "YOU";
                 Char1speech.text = "In the desperate nothing of space, even a rock could be a rescue.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 
-else if (primeInt == 34){
+    else if (primeInt == 34){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
                 Char2speech.text = "Sir? I'm not sure I catch your meaning.";
                 Char3name.text = "";
                 Char3speech.text = "";
-
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
 
         }
 
-else if (primeInt == 35){
+    else if (primeInt == 35){
                 Char1name.text = "YOU";
                 Char1speech.text = "It means they're stranded, and we're all they've got. Prepare to board.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-		resetButtons();
-		NextSceneButton.SetActive(true);
+            		resetButtons();
+            		NextSceneButton.SetActive(true);
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
 
         }
 
@@ -396,21 +434,21 @@ else if (primeInt == 35){
 
 	   // this turns off ALL art to make it easier to reset the canvas
 	   public void resetArt(){
-		 ArtBG1.SetActive(false);
-       ArtBGExplosion.SetActive(false);
-	ArtBGShip.SetActive(false);
-	ArtBGHeadache.SetActive(false);
-        ArtCharRory.SetActive(true);
+		     ArtBG1.SetActive(false);
+         ArtBGExplosion.SetActive(false);
+	       ArtBGShip.SetActive(false);
+	       ArtBGHeadache.SetActive(false);
+         ArtCharRory.SetActive(true);
 
 	   }
 
 
 	   public void resetButtons(){
         NextSceneButton.SetActive(false);
-		nextButton.SetActive(false);
+		    nextButton.SetActive(false);
         allowSpace = false;
-	choice1Button.SetActive(false);
-choice2Button.SetActive(false);
+	      choice1Button.SetActive(false);
+        choice2Button.SetActive(false);
 
 
 	   }
@@ -418,18 +456,18 @@ choice2Button.SetActive(false);
 public void choice1button(){
 		// hostile ++;
 		gameHandler.updateAggressionScore(10);
-		 if (primeInt == 18){
-		       primeInt = 29;
-           resetButtons();
-           nextButton.SetActive(true);
-           allowSpace = true;
-           talking();
+		if (primeInt == 18){
+       primeInt = 29;
+       resetButtons();
+       nextButton.SetActive(true);
+       allowSpace = true;
+       talking();
          }
-     if (primeInt == 20){
+    if (primeInt == 20){
   //mistake  if (primeInt == 20){
   //  SceneChange();
-        nextButton.SetActive(true);
-        allowSpace = true;
+       nextButton.SetActive(true);
+       allowSpace = true;
         talking();
       }
 }
