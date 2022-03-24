@@ -19,6 +19,7 @@ public class Scene3_1Script : MonoBehaviour {
 	      public GameObject ArtBGShip;
 		    public GameObject ArtBGHeadache;
         public GameObject ArtCharRory;
+        public GameObject ArtBGWormhole;
 		    public GameObject choice1Button;
 		    public Text choice1Text;
 	    	public GameObject choice2Button;
@@ -31,18 +32,22 @@ public class Scene3_1Script : MonoBehaviour {
         public GameObject Char1Plate;
         public GameObject Char2Plate;
         public GameObject Char3Plate;
-		
+
 	   public string playerName;
 
 void Start(){         // initial visibility settings
 		resetArt();
 		resetButtons();
 
-        DialogueDisplay.SetActive(true);
+        DialogueDisplay.SetActive(false);
         // ArtChar1.SetActive(false);
 		// ArtChar11.SetActive(false);
 		// ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
+        ArtBGExplosion.SetActive(false);
+        ArtBGShip.SetActive(false);
+        ArtBGHeadache.SetActive(false);
+        ArtBGWormhole.SetActive(false);
         // ArtBG2.SetActive(false);
 		// ArtLaser1.SetActive(false);
 		// ArtLaser2.SetActive(false);
@@ -56,9 +61,9 @@ void Start(){         // initial visibility settings
         Char2Plate.SetActive(false);
         Char3Plate.SetActive(false);
 		// TalkButton.SetActive(false);
-		
-		
-		
+
+
+
        string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
    }
@@ -78,6 +83,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+                DialogueDisplay.SetActive(true);
                 Char1name.text = playerName;
                 Char1speech.text = "Ow, my head.";
                 Char2name.text = "";
@@ -87,7 +93,8 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 Char2Plate.SetActive(true);
                 Char3Plate.SetActive(false);
-        }else if (primeInt == 3){
+        }
+        else if (primeInt == 3){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
@@ -264,6 +271,7 @@ else if (primeInt == 17){
 
         }
 else if (primeInt == 18){
+                DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -280,6 +288,7 @@ else if (primeInt == 18){
 
         }
 else if (primeInt == 19){
+                DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
@@ -291,6 +300,7 @@ else if (primeInt == 19){
 
         }
 else if (primeInt == 20){
+                DialogueDisplay.SetActive(false);
                 Char1name.text = playerName;
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -306,6 +316,7 @@ else if (primeInt == 20){
                 Char3Plate.SetActive(false);
         }
 else if (primeInt == 21){
+                DialogueDisplay.SetActive(true);
                 choice1Button.SetActive(false);
                 choice2Button.SetActive(false);
                 Char1name.text = playerName;
@@ -319,7 +330,7 @@ else if (primeInt == 21){
 
         }
 else if (primeInt == 22){
-
+                DialogueDisplay.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -335,6 +346,38 @@ else if (primeInt == 22){
 
         }
 else if (primeInt == 23){
+                DialogueDisplay.SetActive(false);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+	              resetArt();
+	              ArtBGExplosion.SetActive(true);
+                ArtBGHeadache.SetActive(true);
+                ArtCharRory.SetActive(false);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
+        }
+else if (primeInt == 24){
+                DialogueDisplay.SetActive(false);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+	              resetArt();
+	              ArtBGExplosion.SetActive(false);
+                ArtBGWormhole.SetActive(true);
+                ArtBGHeadache.SetActive(true);
+                ArtCharRory.SetActive(false);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
+        }
+else if (primeInt == 25){
+                DialogueDisplay.SetActive(true);
                 Char1name.text = playerName;
                 Char1speech.text = "My head…";
                 Char2name.text = "";
@@ -344,6 +387,7 @@ else if (primeInt == 23){
 		            resetButtons();
 		            resetArt();
                 ArtBG1.SetActive(true);
+                ArtBGHeadache.SetActive(false);
                 ArtCharRory.SetActive(false);
 		          	ArtBGHeadache.SetActive(true);
 		            NextSceneButton.SetActive(true);
@@ -351,7 +395,7 @@ else if (primeInt == 23){
                 Char3Plate.SetActive(false);
 
         }
-		else if (primeInt == 24){
+		else if (primeInt == 26){
                 Char1name.text = playerName;
                 Char1speech.text = "My head…";
                 Char2name.text = "";
@@ -497,7 +541,7 @@ public void choice2button() {
 
 public void SceneChange() {
 
-   if (primeInt != 23) {
+   if (primeInt != 25) {
         SceneManager.LoadScene("Scene4");
    }
    else {
