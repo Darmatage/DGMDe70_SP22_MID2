@@ -81,7 +81,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                 ArtBG1.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = playerName;
+                Char2name.text = playername;
 		//		TextOneAtATime.text = "";
                 Char2speech.text = "Make it so, Lieutenant.";
                 Char3name.text = "";
@@ -104,7 +104,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                 ArtChar4.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = playerName;
+                Char2name.text = playername;
                 Char2speech.text = "We hailed you earlier - why didn't you answer?";
 			//	TextOneAtATime.text = "";
                 //gameHandler.AddPlayerStat(1);
@@ -136,7 +136,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                   ArtChar4.SetActive(false);
                   ArtBG5.SetActive(true);
                   ArtChar5.SetActive(true);
-                  Char3name.text = playerName;
+                  Char3name.text = playername;
                   Char3speech.text = "That's impossible...";
                   Char2name.text = "";
                   Char2speech.text = "";
@@ -149,7 +149,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                    ArtChar4.SetActive(true);
                    ArtBG5.SetActive(true);
                    ArtChar5.SetActive(false);
-                   Char3name.text = playerName;
+                   Char3name.text = playername;
                    Char3speech.text = "Agh!";
                    Char2name.text = "";
                    Char2speech.text = "";
@@ -210,7 +210,7 @@ public void talking5c(){         // main story function. Players hit next to pro
 //        public void Choice1aFunct2a(){
   //              Char1name.text = "";
     //            Char1speech.text = "";
-      //          Char2name.text = playerName;
+      //          Char2name.text = playername;
         //        Char2speech.text = "I don't know what you're talking about!";
           //      primeInt = 99;
             //    Choice1a.SetActive(false);
@@ -221,7 +221,7 @@ public void talking5c(){         // main story function. Players hit next to pro
       //  public void Choice1bFunct2a(){
         //        Char1name.text = "";
           //      Char1speech.text = "";
-            //    Char2name.text = playerName;
+            //    Char2name.text = playername;
               //  Char2speech.text = "Sure, anything you want... just lay off the club.";
                 //primeInt = 199;
 //                Choice1a.SetActive(false);

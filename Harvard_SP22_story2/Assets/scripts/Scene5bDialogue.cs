@@ -33,6 +33,8 @@ public class Scene5bDialogue : MonoBehaviour {
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+		       public string playerName;
+       public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
@@ -51,6 +53,9 @@ void Start(){         // initial visibility settings
 		nextButton.SetActive(true);
         allowSpace = true;
 		TalkButton.SetActive(false);
+		
+		       string pNameTemp = gameHandler.GetName();
+       playerName = pNameTemp.ToUpper();
    }
 
 void Update(){         // use spacebar as Next button
@@ -319,7 +324,7 @@ public void talking(){         // main story function. Players hit next to progr
        // else if (primeInt == 201){
                 // Char1name.text = "";
                 // Char1speech.text = "";
-                // Char2name.text = "You";
+                // Char2name.text = playerName;
                 // Char2speech.text = "Ragu hangs out in a rough part of town. I'll take you now.";
                 // nextButton.SetActive(false);
                 // allowSpace = false;
@@ -338,7 +343,7 @@ public void talking(){         // main story function. Players hit next to progr
         // public void Choice1aFunct(){
                 // Char1name.text = "";
                 // Char1speech.text = "";
-                // Char2name.text = "You";
+                // Char2name.text = playerName;
                 // Char2speech.text = "I don't know what you're talking about!";
                 // primeInt = 99;
                 // Choice1a.SetActive(false);
