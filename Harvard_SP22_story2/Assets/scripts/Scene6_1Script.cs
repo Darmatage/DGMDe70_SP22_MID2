@@ -27,6 +27,9 @@ public class Scene6_1Script : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject nextButton;
         private bool allowSpace = true;
+		
+		    public string playerName;
+       public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
 		resetArt();
@@ -41,6 +44,9 @@ void Start(){         // initial visibility settings
         Char2speech.text = "";
         Char3name.text = "";
         Char3speech.text = "";
+		
+		       string pNameTemp = gameHandler.GetName();
+       playerName = pNameTemp.ToUpper();
    }
 
 void Update(){         // use spacebar as Next button
@@ -106,7 +112,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 6){
                 ArtBG3.SetActive(false);
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "The wormhole must have split our timeline into two...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -116,7 +122,7 @@ public void talking(){         // main story function. Players hit next to progr
 		else if (primeInt == 7){
                 ArtBG5.SetActive(true);
                 ArtBG8.SetActive(false);
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "In one timeline, the EMP hit us, and in the other, we dodged it";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -134,7 +140,7 @@ public void talking(){         // main story function. Players hit next to progr
 		else if (primeInt == 9){
                 ArtBG5.SetActive(false);
                 ArtBG8.SetActive(true);
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "Eureka!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -142,7 +148,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "";
         }
 				else if (primeInt == 10){
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "Making that decision in the wormhole must have cause the timelines to entagle.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -162,7 +168,7 @@ public void talking(){         // main story function. Players hit next to progr
 						else if (primeInt == 12){
                 ArtChar1.SetActive(true);
                 ArtChar2.SetActive(false);
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "Many times. It seems the timelines needed to synchronize for us to progress.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -197,12 +203,12 @@ public void talking(){         // main story function. Players hit next to progr
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "COMMAND";
-                 StartCoroutine(TypeText(Char2speech,"This is Camander Zurchik hailing Captain {Playername} of the Gyrafalcon. Do you read me? "));
+                 StartCoroutine(TypeText(Char2speech,"This is Camander Zurchik hailing Captain " + playerName + " of the Gyrafalcon. Do you read me? "));
                 Char3name.text = "";
                 Char3speech.text = "";
         }
 						else if (primeInt == 16){
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "Loud and clear, Command...";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -210,7 +216,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "";
         }
 					  else if (primeInt == 17){
-				        Char1name.text = "YOU";
+				        Char1name.text = playerName;
                 Char1speech.text = "Things went south pretty fast when your transmiision failed, but we made it out in one piece.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -251,7 +257,7 @@ public void talking(){         // main story function. Players hit next to progr
 
         }
 			else if (primeInt == 22){
-				Char1name.text = "YOU";
+				Char1name.text = playerName;
                 Char1speech.text = "Let's open that can of wormholes in a bit. Lieutenant Rory?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -267,7 +273,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "Yes, Captain Playername?";
         }
 					else if (primeInt == 24){
-				Char1name.text = "YOU";
+				Char1name.text = playerName;
                 Char1speech.text = "Full power to engines. We've a mission to complete.";
                 Char2name.text = "";
                 Char2speech.text = "";

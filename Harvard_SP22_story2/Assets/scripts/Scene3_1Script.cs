@@ -282,7 +282,7 @@ else if (primeInt == 18){
               	choice1Button.SetActive(true);
               	choice2Button.SetActive(true);
               	choice1Text.text = "Unidentified vessel! Respond immediately or we will be forced to treat you as hostile.";
-              	choice2Text.text = "This is player name of the Galactic Union Fleet. If you hear this message please respond. We are here in peace.";
+              	choice2Text.text = "This is " + playerName + " of the Galactic Union Fleet. If you hear this message please respond. We are here in peace.";
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(false);
 

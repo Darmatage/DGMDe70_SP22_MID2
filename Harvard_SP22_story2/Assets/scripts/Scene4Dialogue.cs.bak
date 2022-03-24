@@ -30,6 +30,8 @@ public class Scene4Dialogue : MonoBehaviour {
     public GameObject Char1Plate;
     public GameObject Char2Plate;
     public GameObject Char3Plate;
+	
+	public string playerName;
 
 void Start(){
     // initial visibility settings
@@ -51,6 +53,9 @@ void Start(){
     Char1Plate.SetActive(false);
     Char2Plate.SetActive(false);
     Char3Plate.SetActive(false);
+	
+	   string pNameTemp = gameHandler.GetName();
+       playerName = pNameTemp.ToUpper();
    }
 
 void Update(){         // use spacebar as Next button
@@ -79,7 +84,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 3){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "What is it, Lieutenant?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -95,7 +100,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 5){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "You have a theory?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -111,7 +116,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 7){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "Explain.";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -133,7 +138,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 10){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "We’re not making it to the Intergalactic Convention this year, are we?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -149,7 +154,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 12){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "What could be more pressing than the mission?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -165,7 +170,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 14){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "And?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -181,7 +186,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 16){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "Do you know why you were chosen for this mission?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -197,7 +202,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 18){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "Because you keep your head on straight when the world goes sideways.";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -213,7 +218,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 20){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "Are you contradicting me, Lieutenant?";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -229,7 +234,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 22){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "At ease, Lieutenant. That was a joke.";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -245,7 +250,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 24){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "Now, let’s focus on the task at hand.";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -261,7 +266,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 26){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "That about sums it up.";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -277,7 +282,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 28){ // KAI ADD BUTTON
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -299,7 +304,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 30){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -328,7 +333,7 @@ public void talking(){         // main story function. Players hit next to progr
         } else if (primeInt == 33){
           Char1name.text = "";
           Char1speech.text = "";
-          Char2name.text = "YOU";
+          Char2name.text = playerName;
           Char2speech.text = "";
           Char2Plate.SetActive(true);
           Char3Plate.SetActive(false);
@@ -393,7 +398,11 @@ public void choice1button(){
 			SceneManager.LoadScene("Scene5a");
 		}
      if (primeInt == 33){
-			SceneManager.LoadScene("Scene5c");
+		 if(gameHandler.checkAggressionScore() >= gameHandler.checkPeacefulnessScore()) {
+			SceneManager.LoadScene("Scene5a_aggressive");
+		 }
+		 else {
+			 SceneManager.LoadScene("Scene5a_peaceful");
       }
 }
 
