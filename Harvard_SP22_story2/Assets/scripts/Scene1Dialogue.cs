@@ -16,9 +16,9 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject Char1Plate;
         public GameObject Char2Plate;
         public GameObject Char3Plate;
-		
+
     // public Text TextDelay;
-    public Text Char4speech_shake;
+        public Text Char4speech_shake;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
         public GameObject ArtBG1;
@@ -34,7 +34,7 @@ public class Scene1Dialogue : MonoBehaviour {
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
-		
+
 		// allow input name
 	  public string playerName;
        public GameHandler gameHandler;
@@ -55,7 +55,7 @@ void Start(){         // initial visibility settings
         Char1Plate.SetActive(false);
         Char2Plate.SetActive(false);
         Char3Plate.SetActive(false);
-		
+
 		// input player name
 	  string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
@@ -79,7 +79,7 @@ public void talking(){         // main story function. Players hit next to progr
             ArtChar1.SetActive(false);
             DialogueDisplay.SetActive(true);
             Char1name.text = "COMMAND";
-            StartCoroutine(TypeText(Char1speech, "This is Commander Zurcik hailing Captain Asana of the SI-627. Do you read me?"));
+            StartCoroutine(TypeText(Char1speech, "This is Commander Zurcik hailing Captain playerName of the SI-627. Do you read me? "));
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -94,14 +94,14 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = playerName;
-                Char2speech.text = "recieving, Commander...Like a book sir.";
+                Char2speech.text = "We read you, Commander... Like a book sir.";
             //gameHandler.AddPlayerStat(1);
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(true);
         }
        else if (primeInt == 4){
                 Char1name.text = "COMMAND";
-                  StartCoroutine(TypeText(Char1speech, "Requesting a status report from the Galactic Union’s most capable ambassadors."));
+                  StartCoroutine(TypeText(Char1speech, "Requesting a status report from the Galactic Union’s most capable ambassadors. "));
                 Char2name.text = "";
                 Char2speech.text = "";
             Char1Plate.SetActive(true);
@@ -118,7 +118,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 6){
                 Char1name.text = "COMMAND";
-                  StartCoroutine(TypeText(Char1speech,"Thank you, Captain. Anything to add, Lieutenant Rory "));
+                  StartCoroutine(TypeText(Char1speech,"Thank you, Captain. Anything to add, Lieutenant Rory? "));
                 Char2name.text = "";
                 Char2speech.text = "";
             Char1Plate.SetActive(true);
@@ -138,7 +138,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 8){
                 Char1name.text = "COMMAND";
-                  StartCoroutine(TypeText(Char1speech,"Thank you, Lieutenant. That may... {tchhkshhh} notice of a batt... {zztch} earby territory. Avoid at... {tzzkkshh} mission... {ktchhhhssshhhh}"));
+                  StartCoroutine(TypeText(Char1speech,"Thank you, Lieutenant. That may... {tchhkshhh} notice of a batt... {zztch} earby territory. Avoid at... {tzzkkshh} mission... {ktchhhhssshhhh} "));
                 Char2name.text = "";
                 Char2speech.text = "";
 				        Char3name.text = "";
@@ -156,7 +156,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = playerName;
-                Char2speech.text = "We're losing contact...Lieutenant, can you reconnect to command?";
+                Char2speech.text = "We're losing contact... Lieutenant, can you reconnect to command?";
 				        Char3name.text = "";
                 Char3speech.text = "";
             Char1Plate.SetActive(false);
@@ -174,7 +174,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "My requests won’t go through. It’s almost as if we’re being jammed, but I don’t-";
+                Char3speech.text = "My requests won’t go through. It’s almost as if we’re being jammed, but I don’t -";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
             Char3Plate.SetActive(true);
@@ -197,11 +197,11 @@ public void talking(){         // main story function. Players hit next to progr
             Char3Plate.SetActive(false);
         }
 else if (primeInt == 12){
+                Char2Plate.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = playerName;
 			        	Char1speech.text = "";
-                Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
@@ -212,6 +212,8 @@ else if (primeInt == 12){
                 ArtBG1.SetActive(false);
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(true);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -222,6 +224,7 @@ else if (primeInt == 12){
         }
 
 				else if (primeInt == 14){
+                Char3Plate.SetActive(false);
                 ArtBG1.SetActive(false);
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(true);
@@ -238,16 +241,18 @@ else if (primeInt == 12){
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(false);
                 ArtBG4.SetActive(true);
+                Char3Plate.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
+                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "Shields at 80 percent, Captain. Here comes another volley!";
-				 Char4speech_shake.text = "";
+				        Char4speech_shake.text = "";
         }
 
 				else if (primeInt == 16){
+                Char3Plate.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -261,7 +266,7 @@ else if (primeInt == 12){
 		       		  nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1aButton.SetActive(true);
-		NextScene2Button.SetActive(true);
+		            NextScene2Button.SetActive(true);
                 //Choice1a.SetActive(true); // function Choice1aFunct()
                 // Choice2.SetActive(true); // function Choice1bFunct()
 		}
