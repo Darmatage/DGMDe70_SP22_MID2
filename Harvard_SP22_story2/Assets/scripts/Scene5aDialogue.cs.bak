@@ -32,9 +32,6 @@ public class Scene5aDialogue : MonoBehaviour {
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
-		
-		     public string playerName;
-       public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
@@ -51,9 +48,6 @@ void Start(){         // initial visibility settings
 		nextButton.SetActive(true);
         allowSpace = true;
 		TalkButton.SetActive(false);
-		
-		       string pNameTemp = gameHandler.GetName();
-       playerName = pNameTemp.ToUpper();
    }
 
 void Update(){         // use spacebar as Next button
