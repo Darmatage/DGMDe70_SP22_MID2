@@ -30,8 +30,8 @@ public class Scene4Dialogue : MonoBehaviour {
     public GameObject Char1Plate;
     public GameObject Char2Plate;
     public GameObject Char3Plate;
-	
-	public string playerName;
+
+	  public string playerName;
 
 void Start(){
     // initial visibility settings
@@ -53,7 +53,7 @@ void Start(){
     Char1Plate.SetActive(false);
     Char2Plate.SetActive(false);
     Char3Plate.SetActive(false);
-	
+
 	   string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
    }
