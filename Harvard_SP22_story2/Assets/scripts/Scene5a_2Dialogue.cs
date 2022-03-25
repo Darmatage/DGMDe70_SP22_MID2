@@ -207,8 +207,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 7){
       DialogueDisplay.SetActive(true);
-      Char1Plate.SetActive(true);
-      Char2Plate.SetActive(false);
+      Char1Plate.SetActive(false);
+      Char2Plate.SetActive(true);
       Char3Plate.SetActive(false);
       ArtHeadache.SetActive(true);
   			 Char1name.text = playerName;

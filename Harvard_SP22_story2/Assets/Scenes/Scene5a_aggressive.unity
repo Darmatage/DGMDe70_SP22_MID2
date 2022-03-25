@@ -2237,6 +2237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonNext
       objectReference: {fileID: 0}
+    - target: {fileID: 2075410349835048125, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5529412
+      objectReference: {fileID: 0}
     - target: {fileID: 2075410349835048126, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

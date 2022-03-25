@@ -360,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonNext
       objectReference: {fileID: 0}
+    - target: {fileID: 2075410349835048125, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5529412
+      objectReference: {fileID: 0}
     - target: {fileID: 2075410349835048127, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -426,11 +430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075410349835048127, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 518
+      value: 524.3
       objectReference: {fileID: 0}
     - target: {fileID: 2075410349835048127, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -252
+      value: -270.2
       objectReference: {fileID: 0}
     - target: {fileID: 2075410349835048127, guid: 9ffa06fe748e742489d649968c1cadbc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1002,17 +1006,20 @@ MonoBehaviour:
   Char2speech: {fileID: 446876272}
   Char3name: {fileID: 1525176943}
   Char3speech: {fileID: 1161099878}
-  ButtonText1: {fileID: 1214641521}
-  Char4speech_shake: {fileID: 1418154991}
-  DialogueDisplay: {fileID: 2130640575}
   Char1Plate: {fileID: 1009814970}
   Char2Plate: {fileID: 612242782}
   Char3Plate: {fileID: 1009814970}
+  ButtonText1: {fileID: 1214641521}
+  Char4speech_shake: {fileID: 1418154991}
+  DialogueDisplay: {fileID: 2130640575}
   ArtBG1: {fileID: 1782560756}
   ArtBG2: {fileID: 1310621133}
+  ArtBG3: {fileID: 0}
   ArtChar1: {fileID: 111443883}
-  ArtChar11: {fileID: 1084019374}
   ArtChar2: {fileID: 55610221}
+  ArtChar22: {fileID: 0}
+  ArtChar3: {fileID: 0}
+  ArtChar4: {fileID: 0}
   ArtLaser1: {fileID: 1850794058}
   ArtLaser2: {fileID: 369666057}
   ArtLaser3: {fileID: 322939022}

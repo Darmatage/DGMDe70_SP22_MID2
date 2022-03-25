@@ -6,28 +6,29 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Scene2Dialogue : MonoBehaviour {
-        public int primeInt = 1; // This integer drives game progress!
-        public Text Char1name;
-        public Text Char1speech;
-	public Text Choice1Text;
-	public Text Choice2Text;
-        public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-        public GameObject ArtChar2;
-        public GameObject ArtBG1;
-        public GameObject ArtBG2;
-        public GameObject ArtBG3;
+public int primeInt = 1; // This integer drives game progress!
+public Text Char1name;
+public Text Char1speech;
+public Text Choice1Text;
+public Text Choice2Text;
+public GameObject DialogueDisplay;
+public GameObject ArtChar1;
+public GameObject ArtChar2;
+public GameObject ArtBG1;
+public GameObject ArtBG2;
+public GameObject ArtBG3;
 //
 //	public GameObject blue1;
-        public GameObject Choice1;
-        public GameObject Choice2;
-        public GameObject ButtonScene3;
-        // public GameObject NextScene2Button;
-        public GameObject nextButton;
-       //public GameHandler gameHandler;
-       //public AudioSource audioSource;
-        private bool allowSpace = true;
-		public GameHandler gameHandler;
+public GameObject Choice1;
+public GameObject Choice2;
+public GameObject ButtonScene3;
+// public GameObject NextScene2Button;
+public GameObject nextButton;
+//public GameHandler gameHandler;
+//public AudioSource audioSource;
+private bool allowSpace = true;
+public GameHandler gameHandler;
+
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
@@ -68,7 +69,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
         else if (primeInt == 3){
 			gameHandler.updatePeacefulnessScore(10);
-		
+
           ArtChar1.SetActive(false);
           ArtBG1.SetActive(false);
           ArtBG2.SetActive(true);

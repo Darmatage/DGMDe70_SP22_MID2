@@ -372,7 +372,7 @@ public void talking(){         // main story function. Players hit next to progr
         Char3Plate.SetActive(false);
         Char1name.text = "";
         Char1speech.text = "";
-        Char2name.text = "";
+        Char2name.text = "      ";
         Char2speech.text = "";
 	   }
 

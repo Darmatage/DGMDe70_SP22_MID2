@@ -58,6 +58,9 @@ void Start(){         // initial visibility settings
     nextButton.SetActive(true);
     allowSpace = true;
     TalkButton.SetActive(false);
+    Char1Plate.SetActive(false);
+    Char2Plate.SetActive(false);
+    Char3Plate.SetActive(false);
 
 		// input player name
 	  string pNameTemp = gameHandler.GetName();
@@ -102,8 +105,8 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtBG3.SetActive(false);
                 ArtBG1.SetActive(true);
                 Char1Plate.SetActive(false);
-                Char2Plate.SetActive(false);
-                Char3Plate.SetActive(true);
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = playerName;
@@ -177,6 +180,7 @@ else if (primeInt == 5){
 				        ArtChar4.SetActive(true);
         }
        else if (primeInt == 7){
+                Char3Plate.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
