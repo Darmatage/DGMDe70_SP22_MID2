@@ -21,9 +21,12 @@ public class Scene5aDialogue : MonoBehaviour {
         public GameObject DialogueDisplay;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
+        public GameObject ArtBG3;
 		    public GameObject ArtChar1;
-		    public GameObject ArtChar11;
-        public GameObject ArtChar2;
+		    public GameObject ArtChar2;
+        public GameObject ArtChar22;
+        public GameObject ArtChar3;
+        public GameObject ArtChar4;
     		public GameObject ArtLaser1;
     		public GameObject ArtLaser2;
     		public GameObject ArtLaser3;
@@ -40,12 +43,16 @@ public class Scene5aDialogue : MonoBehaviour {
        public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
+        resetArt();
         DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
-		    ArtChar11.SetActive(false);
 		    ArtChar2.SetActive(false);
+		    ArtChar22.SetActive(false);
+        ArtChar3.SetActive(false);
+        ArtChar4.SetActive(false);
         ArtBG1.SetActive(true);
         ArtBG2.SetActive(false);
+        ArtBG3.SetActive(false);
     		ArtLaser1.SetActive(false);
     		ArtLaser2.SetActive(false);
     		ArtLaser3.SetActive(false);
@@ -133,6 +140,8 @@ public void talking(){         // main story function. Players hit next to progr
 else if (primeInt == 5){
         DialogueDisplay.SetActive(true);
         ArtBG2.SetActive(true);
+        ArtChar2.SetActive(false);
+        ArtChar22.SetActive(true);
         Char1Plate.SetActive(false);
         Char2Plate.SetActive(false);
         Char3Plate.SetActive(false);
@@ -147,44 +156,45 @@ else if (primeInt == 5){
         ButtonText1.text = "";
  // nextButton.SetActive(false);
         // allowSpace = false;
-
-    else if (primeInt == 4){
+}
+    else if (primeInt == 6){
+                Char3Plate.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "They’re attacking! ";
-				 Char4speech_shake.text = "";
-				 ArtLaser1.SetActive(true);
-				 TalkButton.SetActive(true);
-				 ButtonText1.text = "Fire!!";
-				 nextButton.SetActive(false);
+				        Char4speech_shake.text = "";
+				        ArtLaser1.SetActive(true);
+				        TalkButton.SetActive(true);
+				        ButtonText1.text = "Fire!!";
+				        nextButton.SetActive(false);
                 allowSpace = false;
-				ArtChar1.SetActive(true);
-				 ArtChar11.SetActive(true);
+				        ArtChar3.SetActive(true);
+				        ArtChar4.SetActive(true);
         }
-       else if (primeInt == 5){
+       else if (primeInt == 7){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-				 Char4speech_shake.text = "Fire! Fire! Fire!";
-				 ArtChar2.SetActive(true);
-				 ArtLaser2.SetActive(true);
-				 TalkButton.SetActive(false);
-				 nextButton.SetActive(false);
+				        Char4speech_shake.text = "Fire! Fire! Fire!";
+				        ArtChar2.SetActive(true);
+				        ArtLaser2.SetActive(true);
+				        TalkButton.SetActive(false);
+				        nextButton.SetActive(false);
 
 
         }
-		else if (primeInt == 6){
+		else if (primeInt == 8){
 				 Char4speech_shake.text = "Fire! Fire! Fire! Fire! FIRE!";
 				 ArtLaser3.SetActive(true);
 
         }
-		else if (primeInt == 7){
+		else if (primeInt == 9){
                 Char1name.text = "";
               	 TalkButton.SetActive(false);
 				 nextButton.SetActive(false);
@@ -198,10 +208,13 @@ else if (primeInt == 5){
 	   // this turns off ALL art to make it easier to reset the canvas
 	   public void resetArt(){
 		   ArtChar1.SetActive(false);
-		ArtChar11.SetActive(false);
-		ArtChar2.SetActive(false);
+       ArtChar2.SetActive(false);
+       ArtChar22.SetActive(false);
+		ArtChar3.SetActive(false);
+		ArtChar4.SetActive(false);
         ArtBG1.SetActive(false);
         ArtBG2.SetActive(false);
+        ArtBG3.SetActive(false);
 		ArtLaser1.SetActive(false);
 		ArtLaser2.SetActive(false);
 		ArtLaser3.SetActive(false);
