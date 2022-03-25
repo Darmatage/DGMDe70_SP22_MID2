@@ -44,7 +44,7 @@ public class Scene5aDialogue : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         resetArt();
-        DialogueDisplay.SetActive(true);
+        DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
 		    ArtChar2.SetActive(false);
 		    ArtChar22.SetActive(false);
