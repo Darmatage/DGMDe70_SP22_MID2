@@ -255,8 +255,8 @@ public void talking(){         // main story function. Players hit next to progr
 
         }
 		 else if (primeInt == 10){
-       Char1Plate.SetActive(true);
-       Char2Plate.SetActive(false);
+       Char1Plate.SetActive(false);
+       Char2Plate.SetActive(true);
        Char3Plate.SetActive(false);
                 Char1name.text = playerName;
                 Char1speech.text = "We hailed you earlier - why didn't you answer?";
@@ -271,8 +271,8 @@ public void talking(){         // main story function. Players hit next to progr
 				}
 
 		else if (primeInt == 11){
-      Char1Plate.SetActive(false);
-      Char2Plate.SetActive(true);
+      Char1Plate.SetActive(true);
+      Char2Plate.SetActive(false);
       Char3Plate.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";

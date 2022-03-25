@@ -6,54 +6,60 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Scene5bDialogue : MonoBehaviour {
-        public int primeInt = 1; // This integer drives game progress!
-        public Text Char1name;
-        public Text Char1speech;
-        public Text Char2name;
-        public Text Char2speech;
-        public Text Char3name;
-        public Text Char3speech;
-		public Text ButtonText1;
-		public Text Char4speech_shake;
-        public GameObject DialogueDisplay;
-        public GameObject ArtBG1;
-        public GameObject ArtOpenAirLock;
-		public GameObject ArtHeadache;
-		public GameObject ArtChar1;
-		public GameObject ArtChar2;
-        public GameObject ArtChar3Unholstered;
-		public GameObject ArtLaser1;
-		public GameObject ArtLaser2;
-		public GameObject ArtLaser3;
-		public GameObject ArtLaser4;
-        public GameObject NextScene1Button;
-		 public GameObject TalkButton;
-        // public GameObject NextScene2Button;
-        public GameObject nextButton;
-       //public GameHandler gameHandler;
-       //public AudioSource audioSource;
-        private bool allowSpace = true;
-		       public string playerName;
-       public GameHandler gameHandler;
+      public int primeInt = 1; // This integer drives game progress!
+      public Text Char1name;
+      public Text Char1speech;
+      public Text Char2name;
+      public Text Char2speech;
+      public Text Char3name;
+      public Text Char3speech;
+      public GameObject Char1Plate;
+      public GameObject Char2Plate;
+      public GameObject Char3Plate;
+      public Text ButtonText1;
+      public Text Char4speech_shake;
+      public GameObject DialogueDisplay;
+      public GameObject ArtBG1;
+      public GameObject ArtOpenAirLock;
+      public GameObject ArtHeadache;
+      public GameObject ArtChar1;
+      public GameObject ArtChar2;
+      public GameObject ArtChar3Unholstered;
+      public GameObject ArtLaser1;
+      public GameObject ArtLaser2;
+      public GameObject ArtLaser3;
+      public GameObject ArtLaser4;
+      public GameObject NextScene1Button;
+      public GameObject TalkButton;
+      // public GameObject NextScene2Button;
+      public GameObject nextButton;
+      //public GameHandler gameHandler;
+      //public AudioSource audioSource;
+      private bool allowSpace = true;
+      public string playerName;
+      public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
-		ArtChar1.SetActive(false);
-		ArtChar2.SetActive(false);
+		    ArtChar1.SetActive(false);
+		    ArtChar2.SetActive(false);
         ArtChar3Unholstered.SetActive(false);
-		ArtBG1.SetActive(true);
+		    ArtBG1.SetActive(true);
         ArtOpenAirLock.SetActive(false);
-		ArtHeadache.SetActive(false);
-		ArtLaser1.SetActive(false);
-		ArtLaser2.SetActive(false);
-		ArtLaser3.SetActive(false);
-		ArtLaser4.SetActive(false);
+    		ArtHeadache.SetActive(false);
+    		ArtLaser1.SetActive(false);
+    		ArtLaser2.SetActive(false);
+    		ArtLaser3.SetActive(false);
+    		ArtLaser4.SetActive(false);
         NextScene1Button.SetActive(false);
-		nextButton.SetActive(true);
+		    nextButton.SetActive(true);
         allowSpace = true;
-		TalkButton.SetActive(false);
-		
+		    TalkButton.SetActive(false);
+        Char1Plate.SetActive(false);
+        Char2Plate.SetActive(false);
+        Char3Plate.SetActive(false);
+
 		       string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
    }
@@ -94,7 +100,7 @@ public void talking(){         // main story function. Players hit next to progr
 				 nextButton.SetActive(false);
 				 // nextButton.SetActive(false);
                 // allowSpace = false;
-				
+
 		}else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -110,7 +116,7 @@ public void talking(){         // main story function. Players hit next to progr
 				 ArtChar2.SetActive(true);
 				 nextButton.SetActive(true);
 				 allowSpace = true;
-				 
+
         }
        else if (primeInt == 5){
                 Char1name.text = "";
@@ -124,9 +130,9 @@ public void talking(){         // main story function. Players hit next to progr
 				 ArtOpenAirLock.SetActive(true);
 				 ArtChar3Unholstered.SetActive(true);
 				 ArtChar1.SetActive(false);
-				 
-				 
-				 
+
+
+
         }
 		else if (primeInt == 6){
 				         Char1name.text = "";
@@ -140,11 +146,11 @@ public void talking(){         // main story function. Players hit next to progr
 				 ArtOpenAirLock.SetActive(true);
 				 ArtChar3Unholstered.SetActive(true);
 				 ArtChar1.SetActive(false);
-				 
-			
+
+
         }
 		else if (primeInt == 7){
-     	
+
 				         Char1name.text = "Alt Captain";
                 Char1speech.text = "Fire!";
                 Char2name.text = "";
@@ -152,10 +158,10 @@ public void talking(){         // main story function. Players hit next to progr
                Char3name.text = "Alt Lieutenant";
                 Char3speech.text = "Your orders, Captain?";
 				 Char4speech_shake.text = "";
-	
-				 
-			
-        }  
+
+
+
+        }
        else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -198,7 +204,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // Char3name.text = "";
                 // Char3speech.text = "";
 
-    
+
 			     	    // nextButton.SetActive(false);
 				        // allowSpace = false;
 				        // NextScene1Button.SetActive(true);
@@ -356,7 +362,7 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
-		
+
 		public void resetArt(){
 			ArtChar1.SetActive(false);
 		ArtChar1.SetActive(false);
