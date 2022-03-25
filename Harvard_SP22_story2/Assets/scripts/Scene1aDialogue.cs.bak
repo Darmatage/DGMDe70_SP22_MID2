@@ -254,7 +254,6 @@ public void talking(){         // main story function. Players hit next to progr
       ArtBG4.SetActive(false);
       ArtBG5.SetActive(false);
       ArtBG6.SetActive(false);
-	  DialogueDisplay.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
