@@ -395,7 +395,7 @@ public void choice1button(){
     }
 
 		if (primeInt == 30) {
-			SceneManager.LoadScene("Scene5a");
+			SceneManager.LoadScene("Scene5a_aggressive");
 		}
      if (primeInt == 33){
 		 if(gameHandler.checkAggressionScore() >= gameHandler.checkPeacefulnessScore()) {

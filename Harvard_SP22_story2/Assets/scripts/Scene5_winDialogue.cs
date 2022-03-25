@@ -48,7 +48,7 @@ void Start(){         // initial visibility settings
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 		
-		       string pNameTemp = gameHandler.GetName();
+	   string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
    }
 
