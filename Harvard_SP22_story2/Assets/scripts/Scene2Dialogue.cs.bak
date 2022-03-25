@@ -30,7 +30,7 @@ public class Scene2Dialogue : MonoBehaviour {
 		public GameHandler gameHandler;
 
 void Start(){         // initial visibility settings
-        DialogueDisplay.SetActive(false);
+        DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(true);
         ArtChar2.SetActive(false);
 //	ArtBG_wormhole.SetActive(true);
@@ -60,7 +60,6 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-			DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "You punch it. As the nose of your vessel enters the wormhole, you see a flash of blue light from the Dreadnought. The blue ripples around you as the world as you knew it falls apart. ";
 	// Char4speech_shake.text = "";

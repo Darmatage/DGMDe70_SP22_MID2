@@ -339,6 +339,8 @@ else if (primeInt == 12){
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
 		// evade button
         public void ChoiceEvade1Fun(){
+				gameHandler.updateAggressionScore(10);
+				Debug.Log("ChoiceEvade1Fun Current Player updateAggressionScore Stat");
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -353,6 +355,9 @@ else if (primeInt == 12){
 
 		// fight for our lives button
         public void ChoiceEvade2Fun(){
+			Debug.Log("ChoiceEvade2Fun Current Player PeacefulnessScore Stat");
+      
+				gameHandler.updatePeacefulnessScore(10);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -366,9 +371,11 @@ else if (primeInt == 12){
 
 		// just link this to fight for our lives button
         public void NextScene1aFun(){
+				gameHandler.updateAggressionScore(10);
                SceneManager.LoadScene("Scene1a");
         }
         public void NextScene2Fun(){
+			gameHandler.updatePeacefulnessScore(10);
                 SceneManager.LoadScene("Scene2");
         }
 

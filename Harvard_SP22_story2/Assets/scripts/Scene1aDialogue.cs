@@ -84,6 +84,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+				gameHandler.updateAggressionScore(10);
                 ArtBG1.SetActive(true);
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(false);
@@ -187,7 +188,7 @@ public void talking(){         // main story function. Players hit next to progr
 				        Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "It's been an honor.";
+                Char3speech.text = "It's been an honor, " + playerName ;
 				        Char4speech_shake.text = "";
 //	 red1.SetActive(true);
 	//			 blue1.SetActive(false);
