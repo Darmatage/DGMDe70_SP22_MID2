@@ -1050,7 +1050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You have travailed through thick and thing! And now you are victorious!
+  m_Text: You have travailed through thick and thin! And now you are victorious!
 --- !u!222 &1206756693
 CanvasRenderer:
   m_ObjectHideFlags: 0
