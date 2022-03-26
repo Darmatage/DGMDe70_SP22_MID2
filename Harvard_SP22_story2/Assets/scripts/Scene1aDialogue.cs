@@ -47,8 +47,6 @@ public class Scene1aDialogue : MonoBehaviour {
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(true);
-        Char2Plate.SetActive(true);
-        Char2name.text = playerName.ToUpper();
 	//	red1.SetActive(false);
 	//	red2.SetActive(false);
 //		red3.SetActive(false);
@@ -71,6 +69,10 @@ void Start(){         // initial visibility settings
         nextButton.SetActive(true);
         string pNameTemp = gameHandler.GetName();
            playerName = pNameTemp.ToUpper();
+        Char1Plate.SetActive(false);
+        Char2Plate.SetActive(true);
+        Char3Plate.SetActive(false);
+        Char2name.text = playerName;
    }
 
 void Update(){         // use spacebar as Next button
@@ -165,12 +167,12 @@ public void talking(){         // main story function. Players hit next to progr
 //				 red2.SetActive(true);
         }
 		    else if (primeInt == 6){
-                Char1Plate.SetActive(true);
-                Char2Plate.SetActive(false);
+                Char2Plate.SetActive(true);
+                Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char1name.text = playerName;
-                Char1speech.text = "Yes, Lieutenant?";
-                Char2speech.text = "";
+                Char2name.text = playerName;
+                Char2speech.text = "Yes, Lieutenant?";
+                Char1speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
 				        Char4speech_shake.text = "";
@@ -203,13 +205,13 @@ public void talking(){         // main story function. Players hit next to progr
 	//			  red4.SetActive(true);
         }
        else if (primeInt == 8){
-                Char1Plate.SetActive(true);
-                Char2Plate.SetActive(false);
+                Char2Plate.SetActive(true);
+                Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char1name.text = playerName;
-                Char1speech.text = "The honor is mine, Lieutenant.";
-				        Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = playerName;
+                Char2speech.text = "The honor is mine, Lieutenant.";
+				        Char1name.text = "";
+                Char1speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
 				        Char4speech_shake.text = "";
@@ -221,13 +223,13 @@ public void talking(){         // main story function. Players hit next to progr
 		//		  red5.SetActive(true);
         }
       else if (primeInt == 9){
-                Char1Plate.SetActive(true);
-                Char2Plate.SetActive(false);
+                Char2Plate.SetActive(true);
+                Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char1name.text = playerName;
-                Char1speech.text = "You’re a good man, Rory. Thank you.";
-				        Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = playerName;
+                Char2speech.text = "You’re a good man, Rory. Thank you.";
+				        Char1name.text = "";
+                Char1speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
 				        Char4speech_shake.text = "";
