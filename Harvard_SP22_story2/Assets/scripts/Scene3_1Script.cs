@@ -46,7 +46,7 @@ void Start(){         // initial visibility settings
         ArtBG1.SetActive(true);
         ArtBGExplosion.SetActive(false);
         ArtBGShip.SetActive(false);
-        ArtBGHeadache.SetActive(false);
+        ArtBGHeadache.SetActive(true);
         ArtBGWormhole.SetActive(false);
         // ArtBG2.SetActive(false);
 		// ArtLaser1.SetActive(false);
@@ -95,6 +95,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3Plate.SetActive(false);
         }
         else if (primeInt == 3){
+                ArtBGHeadache.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
@@ -162,7 +163,7 @@ else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
-                Char2speech.text = "Oh, we're lost?";
+                Char2speech.text = "Uh... we're lost?";
                 Char3name.text = "";
                 Char3speech.text = "";
                 Char2Plate.SetActive(false);
@@ -193,7 +194,7 @@ else if (primeInt == 10){
         }
 else if (primeInt == 11){
                 Char1name.text = playerName;
-                Char1speech.text = "Good point Lieutenant. Now scan the area.";
+                Char1speech.text = "Good point Lieutenant. Well, scan the area. See if there's anything to see.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
@@ -219,7 +220,7 @@ else if (primeInt == 13){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
-                Char2speech.text = "Sensors are picking up another standard class Galactic union ship! How did it get all the way out here?";
+                Char2speech.text = "Sensors are picking up another standard class Galactic Union ship! How did it get all the way out here?";
                 Char3name.text = "";
                 Char3speech.text = "";
                 Char2Plate.SetActive(false);
@@ -241,7 +242,7 @@ else if (primeInt == 15){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
-                Char2speech.text = "They seem to be bouncing back our signal, Captain. We have no way of knowing whether they are Friend or Foe.";
+                Char2speech.text = "They do seem to be bouncing back our signal, Captain. We have no way of knowing whether they are friend or foe.";
                 Char3name.text = "";
                 Char3speech.text = "";
                 Char2Plate.SetActive(false);
@@ -250,7 +251,7 @@ else if (primeInt == 15){
         }
 else if (primeInt == 16){
                 Char1name.text = playerName;
-                Char1speech.text = "Call them on the open Channel. Let's have a chat with our new neighbors.";
+                Char1speech.text = "Call them on the open channel. Let's have a chat with our new neighbors.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
@@ -300,7 +301,7 @@ else if (primeInt == 19){
 
         }
 else if (primeInt == 20){
-                DialogueDisplay.SetActive(false);
+                DialogueDisplay.SetActive(true);
                 Char1name.text = playerName;
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -546,6 +547,7 @@ public void SceneChange() {
    }
    else {
         SceneManager.LoadScene("Scene3");
+
    }
 }
 
