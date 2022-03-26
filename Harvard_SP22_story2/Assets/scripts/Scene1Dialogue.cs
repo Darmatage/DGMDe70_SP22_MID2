@@ -25,6 +25,7 @@ public class Scene1Dialogue : MonoBehaviour {
     public GameObject ArtBG2;
     public GameObject ArtBG3;
     public GameObject ArtBG4;
+    public GameObject ArtBG5;
     public GameObject ChoiceNext;
     public GameObject ChoiceEvade1;
     public GameObject ChoiceEvade2;
@@ -47,6 +48,7 @@ public class Scene1Dialogue : MonoBehaviour {
         ArtBG2.SetActive(false);
         ArtBG3.SetActive(false);
         ArtBG4.SetActive(false);
+        ArtBG5.SetActive(false);
         ChoiceNext.SetActive(false);
         ChoiceEvade1.SetActive(false);
         ChoiceEvade2.SetActive(false);
@@ -131,7 +133,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lt. Rory";
+            Char3name.text = "Lieutenant Rory";
             Char3speech.text = "No, Captain. Systems are stable and functioning as expected... ";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
@@ -141,7 +143,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1name.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lt. Rory";
+            Char3name.text = "Lieutenant Rory";
             Char3speech.text = "We did move through some interference a few hours back, but that seems to have passed. ";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
@@ -182,11 +184,12 @@ public class Scene1Dialogue : MonoBehaviour {
             Char3Plate.SetActive(false);
         }
         else if (primeInt == 11) {
+            ArtChar1.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lt. Rory";
+            Char3name.text = "Lieutenant Rory";
             Char3speech.text = "It’s happening again, Captain. We must be getting jammed, there’s nothing wrong with our equip– ";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
@@ -194,7 +197,7 @@ public class Scene1Dialogue : MonoBehaviour {
         }
         else if (primeInt == 12) {
             ArtBG1.SetActive(false);
-            ArtBG2.SetActive(true);
+            ArtBG5.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -207,6 +210,8 @@ public class Scene1Dialogue : MonoBehaviour {
             Char3Plate.SetActive(true);
         }
         else if (primeInt == 13) {
+            ArtBG5.SetActive(false);
+            ArtBG2.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = playerName.ToUpper();
@@ -222,7 +227,10 @@ public class Scene1Dialogue : MonoBehaviour {
             allowSpace = false;
         }
         else if (primeInt == 14) {
+            DialogueDisplay.SetActive(false);
+            Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
             ArtBG1.SetActive(false);
             ArtBG2.SetActive(false);
             ArtBG3.SetActive(true);
@@ -240,11 +248,12 @@ public class Scene1Dialogue : MonoBehaviour {
 
 
         else if (primeInt == 15) {
+            DialogueDisplay.SetActive(true);
+            Char3Plate.SetActive(true);
             ArtBG1.SetActive(false);
             ArtBG2.SetActive(false);
             ArtBG3.SetActive(false);
             ArtBG4.SetActive(true);
-
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -279,7 +288,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lt. Rory";
+            Char3name.text = "Lieutenant Rory";
             Char3speech.text = "Captain " + playerName + ", look! It’s a wormhole! ";
             Char3Plate.SetActive(true);
             nextButton.SetActive(true);
@@ -305,7 +314,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lt. Rory";
+            Char3name.text = "Lieutenant Rory";
             Char3speech.text = "The risk would be huge. We can’t know what will happen once we enter its event horizon. ";
             Char2Plate.SetActive(false);
             Char3Plate.SetActive(true);
@@ -317,7 +326,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lt. Rory";
+            Char3name.text = "Lieutenant Rory";
             Char3speech.text = "Crap, they’re readying an EMP!! Your orders, Captain? ";
             Char2Plate.SetActive(false);
             Char3Plate.SetActive(true);
@@ -392,5 +401,5 @@ public class Scene1Dialogue : MonoBehaviour {
             allowSpace = true;
         }
 
-   
+
 }

@@ -25,6 +25,7 @@ public class Scene1aDialogue : MonoBehaviour {
         public GameObject ArtBG4;
         public GameObject ArtBG5;
         public GameObject ArtBG6;
+        public GameObject ArtBG7;
 	//	    public GameObject red1;
 	//	    public GameObject red2;
 	//	    public GameObject red3;
@@ -45,7 +46,9 @@ public class Scene1aDialogue : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(true);
-        ArtChar1.SetActive(false);
+        ArtChar1.SetActive(true);
+        Char2Plate.SetActive(true);
+        Char2name.text = playerName.ToUpper();
 	//	red1.SetActive(false);
 	//	red2.SetActive(false);
 //		red3.SetActive(false);
@@ -59,10 +62,11 @@ void Start(){         // initial visibility settings
         ArtBG4.SetActive(false);
         ArtBG5.SetActive(false);
         ArtBG6.SetActive(false);
+        ArtBG7.SetActive(false);
         // Choice1a.SetActive(false);
         // Choice2.SetActive(false);
         NextScene1Button.SetActive(false);
-		nextButton.SetActive(false);
+		    nextButton.SetActive(false);
         allowSpace = false;
         nextButton.SetActive(true);
         string pNameTemp = gameHandler.GetName();
@@ -84,13 +88,14 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-				gameHandler.updateAggressionScore(10);
-                ArtBG1.SetActive(true);
+				        gameHandler.updateAggressionScore(10);
+                ArtBG1.SetActive(false);
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(false);
                 ArtBG4.SetActive(false);
                 ArtBG5.SetActive(false);
                 ArtBG6.SetActive(false);
+                ArtBG7.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(true);
@@ -109,6 +114,7 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtBG4.SetActive(false);
                 ArtBG5.SetActive(false);
                 ArtBG6.SetActive(false);
+                ArtBG7.SetActive(false);
                 Char1Plate.SetActive(false);
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(false);
@@ -249,6 +255,7 @@ public void talking(){         // main story function. Players hit next to progr
 				//  red5.SetActive(true);
 				}
 		else if (primeInt == 11){
+      ArtChar1.SetActive(false);
       ArtBG1.SetActive(false);
       ArtBG2.SetActive(true);
       ArtBG3.SetActive(false);
@@ -272,7 +279,7 @@ public void talking(){         // main story function. Players hit next to progr
 				        allowSpace = false;
 				        NextScene1Button.SetActive(true);
 				}
-				
+
 				if(Char1name.text != "") {
 			Char1Plate.SetActive(true);
 		}
