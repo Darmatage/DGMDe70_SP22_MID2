@@ -20,6 +20,9 @@ public class Scene5_winDialogue : MonoBehaviour {
         public GameObject ArtChar3;
         public GameObject ArtChar4;
         public GameObject ArtChar5;
+		public GameObject Char1Plate;
+		public GameObject Char2Plate;
+		public GameObject Char3Plate;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
         public GameObject ArtBG3;
@@ -47,6 +50,9 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+		Char1Plate.SetActive(false);
+		Char2Plate.SetActive(false);
+		Char3Plate.SetActive(false);
 		
 	   string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
@@ -66,6 +72,10 @@ public void talking5c(){         // main story function. Players hit next to pro
         if (primeInt == 1){
                 // AudioSource.Play();
         }
+		
+		
+		
+		
         else if (primeInt == 2){
 			//Char1speech.gameObject.GetComponentInParent<Shaker>().ChangeShake(10f);
                 DialogueDisplay.SetActive(true);
@@ -74,6 +84,9 @@ public void talking5c(){         // main story function. Players hit next to pro
 		//		TextOneAtATime.text = "Centurion Alpha Speca System. Star Date 5550. Star Code 234j22d1";
                 Char2name.text = "";
                 Char2speech.text = "";
+				
+				
+				
         }
        else if (primeInt ==3){
                 ArtChar1.SetActive(true);
@@ -96,10 +109,12 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char1name.text = "";
                 Char1speech.text = "";
 				//TextOneAtATime.text = "";
+				DialogueDisplay.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
+		   DialogueDisplay.SetActive(true);
                 ArtChar3.SetActive(true);
                 ArtChar4.SetActive(true);
                 Char1name.text = "";
@@ -169,17 +184,20 @@ public void talking5c(){         // main story function. Players hit next to pro
                     nextButton.SetActive(false);
                     NextScene1Button.SetActive(true);
             }
-    //   else if (primeInt == 8){
-      //          Char1name.text = "Rory";
-        //        Char1speech.text = "Captain, look! The badge!";
-          //      Char2name.text = "";
-            //    Char2speech.text = "";
-				//TextOneAtATime.text = "";
-                // Turn off "Next" button, turn on "Choice" buttons
-              //  nextButton.SetActive(false);
-              //  allowSpace = false;
-              //  Choice1a.SetActive(true); // function Choice1aFunct()
-              //  Choice1b.SetActive(true); // function Choice1bFunct()
+			
+			Char1Plate.SetActive(false);
+		Char2Plate.SetActive(false);
+		Char3Plate.SetActive(false);
+			
+		if(Char1name.text != "") {
+			Char1Plate.SetActive(true);
+		}
+		if(Char2name.text != "") {
+			Char2Plate.SetActive(true);
+		}
+		if(Char3name.text != "") {
+			Char3Plate.SetActive(true);
+		}
         }
 
 

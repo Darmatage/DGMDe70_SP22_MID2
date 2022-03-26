@@ -25,6 +25,10 @@ public class Scene6_1Script : MonoBehaviour {
         public GameObject ArtChar1;
         public GameObject ArtChar2;
         public GameObject NextScene1Button;
+		public GameObject Char1Plate;
+		public GameObject Char2Plate;
+		public GameObject Char3Plate;
+		
         public GameObject nextButton;
         private bool allowSpace = true;
 		
@@ -34,7 +38,7 @@ public class Scene6_1Script : MonoBehaviour {
 void Start(){         // initial visibility settings
 		resetArt();
 		resetButtons();
-        DialogueDisplay.SetActive(true);
+        DialogueDisplay.SetActive(false);
 		    ArtBG1.SetActive(true);
         ArtBG3.SetActive(true);
 		    nextButton.SetActive(true);
@@ -44,6 +48,9 @@ void Start(){         // initial visibility settings
         Char2speech.text = "";
         Char3name.text = "";
         Char3speech.text = "";
+		Char1Plate.SetActive(false);
+		Char2Plate.SetActive(false);
+		Char3Plate.SetActive(false);
 		
 		       string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
@@ -99,6 +106,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "";
         }
        else if (primeInt == 5){
+		   DialogueDisplay.SetActive(true);
                 ArtBG4.SetActive(false);
                 ArtBG8.SetActive(true);
                 ArtBG3.SetActive(true);
@@ -176,6 +184,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "";
         }
             else if (primeInt == 13){
+				DialogueDisplay.SetActive(false);
                 ArtChar1.SetActive(false);
                 ArtBG8.SetActive(false);
                 ArtBG6.SetActive(true);
@@ -197,6 +206,7 @@ public void talking(){         // main story function. Players hit next to progr
             Char3speech.text = "";
     }
 						else if (primeInt == 15){
+								DialogueDisplay.SetActive(true);
                 ArtBG7.SetActive(false);
                 ArtBG8.SetActive(true);
                 ArtChar1.SetActive(true);
@@ -282,6 +292,19 @@ public void talking(){         // main story function. Players hit next to progr
 				resetButtons();
 				NextScene1Button.SetActive(true);
         }
+		Char1Plate.SetActive(false);
+		Char2Plate.SetActive(false);
+		Char3Plate.SetActive(false);
+			
+		if(Char1name.text != "") {
+			Char1Plate.SetActive(true);
+		}
+		if(Char2name.text != "") {
+			Char2Plate.SetActive(true);
+		}
+		if(Char3name.text != "") {
+			Char3Plate.SetActive(true);
+		}
 }
 
 
