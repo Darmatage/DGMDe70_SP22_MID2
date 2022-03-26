@@ -29,6 +29,10 @@ public GameObject nextButton;
 private bool allowSpace = true;
 public GameHandler gameHandler;
 
+public CameraShaker cameraShake;
+
+// public GameObject mainCamera;
+
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
@@ -44,6 +48,7 @@ void Start(){         // initial visibility settings
         ButtonScene3.SetActive(false);
         allowSpace = true;
         nextButton.SetActive(true);
+		// mainCamera.TriggerShake();
    }
 
 void Update(){         // use spacebar as Next button
@@ -52,6 +57,8 @@ void Update(){         // use spacebar as Next button
                        talking();
                 }
         }
+		StartCoroutine(cameraShake.Shake(2.15f, .4f));
+		// StartCoroutine(cameraShake.Shake(2.15f, .4f));
    }
 
 //Story Units:
@@ -61,6 +68,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
+			StartCoroutine(cameraShake.Shake(2.15f, .4f));
 			DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "You punch it. As the nose of your vessel enters the wormhole, you see a flash of blue light from the Dreadnought. The blue ripples around you as the world as you knew it falls apart. ";
