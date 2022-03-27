@@ -626,23 +626,18 @@ public class Scene3_1Script : MonoBehaviour
 
     public void SceneChange()
     {
-
-       
-            SceneManager.LoadScene("Scene4");
+          SceneManager.LoadScene("Scene4");
         
-
-
     }
+
+
     public void WormholeLoop()
     {
-
-
-        SceneManager.LoadScene("Scene2");
-        primeInt = 5;
-
-
-
+        SceneManager.LoadScene("Scene2Loop");
+        
     }
+
+
     IEnumerator TypeText(Text target, string fullText)
     {
         float delay = 0.2f;
