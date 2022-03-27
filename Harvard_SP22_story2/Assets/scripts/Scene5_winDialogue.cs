@@ -13,6 +13,9 @@ public class Scene5_winDialogue : MonoBehaviour {
         public Text Char2speech;
         public Text Char3name;
         public Text Char3speech;
+        public GameObject Char1Plate;
+        public GameObject Char2Plate;
+        public GameObject Char3Plate;
 		  //  public Text TextOneAtATime; // shaking text
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
@@ -20,9 +23,6 @@ public class Scene5_winDialogue : MonoBehaviour {
         public GameObject ArtChar3;
         public GameObject ArtChar4;
         public GameObject ArtChar5;
-		public GameObject Char1Plate;
-		public GameObject Char2Plate;
-		public GameObject Char3Plate;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
         public GameObject ArtBG3;
@@ -36,7 +36,7 @@ public class Scene5_winDialogue : MonoBehaviour {
         public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
-		
+
        public string playerName;
 
 
@@ -53,7 +53,7 @@ void Start(){         // initial visibility settings
 		Char1Plate.SetActive(false);
 		Char2Plate.SetActive(false);
 		Char3Plate.SetActive(false);
-		
+
 	   string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
    }
@@ -72,23 +72,27 @@ public void talking5c(){         // main story function. Players hit next to pro
         if (primeInt == 1){
                 // AudioSource.Play();
         }
-		
-		
-		
-		
+
         else if (primeInt == 2){
 			//Char1speech.gameObject.GetComponentInParent<Shaker>().ChangeShake(10f);
                 DialogueDisplay.SetActive(true);
-                Char3name.text = "Rory";
+                Char1Plate.SetActive(false);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
+                Char1name.text = "";
+                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "Airlock is attached, Captain. Doors open on your word.";
 		//		TextOneAtATime.text = "Centurion Alpha Speca System. Star Date 5550. Star Code 234j22d1";
                 Char2name.text = "";
                 Char2speech.text = "";
-				
-				
-				
+
+
+
         }
        else if (primeInt ==3){
+                Char1Plate.SetActive(false);
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
                 ArtChar1.SetActive(true);
                 ArtBG4.SetActive(false);
                 ArtBG1.SetActive(true);
@@ -102,6 +106,9 @@ public void talking5c(){         // main story function. Players hit next to pro
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
+                Char1Plate.SetActive(false);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
                 ArtChar1.SetActive(false);
                 ArtBG1.SetActive(false);
                 ArtChar2.SetActive(true);
@@ -109,12 +116,15 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char1name.text = "";
                 Char1speech.text = "";
 				//TextOneAtATime.text = "";
-				DialogueDisplay.SetActive(false);
+				        DialogueDisplay.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
-		   DialogueDisplay.SetActive(true);
+                Char1Plate.SetActive(false);
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
+		            DialogueDisplay.SetActive(true);
                 ArtChar3.SetActive(true);
                 ArtChar4.SetActive(true);
                 Char1name.text = "";
@@ -125,25 +135,44 @@ public void talking5c(){         // main story function. Players hit next to pro
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-                Char3name.text = "Unknown";
-                Char3speech.text = "Our computers got fried by an EMP...";
+                DialogueDisplay.SetActive(true);
+                Char2Plate.SetActive(false);
+                Char1Plate.SetActive(true);
+                Char3Plate.SetActive(false);
+                Char1name.text = "Unknown";
+                Char1speech.text = "Our computers got fried by an EMP...";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
 				//TextOneAtATime.text = "";
         }
        else if (primeInt ==7){
-                Char3name.text = "Unknown";
-                Char3speech.text = "And that was before we went through that wormhole.";
+                DialogueDisplay.SetActive(true);
+                Char1Plate.SetActive(true);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
+                Char1name.text = "Unknown";
+                Char1speech.text = "And that was before we went through that wormhole.";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
         }
         else if (primeInt ==8){
-                 Char3name.text = "Rory";
+                DialogueDisplay.SetActive(true);
+                 Char1Plate.SetActive(false);
+                 Char2Plate.SetActive(false);
+                 Char3Plate.SetActive(true);
+                 Char3name.text = "Lieutenant Rory";
                  Char3speech.text = "Captain, look! The badge!";
+                 Char1name.text = "";
+                 Char1speech.text = "";
                  Char2name.text = "";
-                 Char2speech.text = "";
          }
          else if (primeInt ==9){
+                  DialogueDisplay.SetActive(true);
+                  Char1Plate.SetActive(false);
+                  Char2Plate.SetActive(true);
+                  Char3Plate.SetActive(false);
                   ArtBG1.SetActive(true);
                   ArtChar2.SetActive(false);
                   ArtBG2.SetActive(false);
@@ -151,12 +180,18 @@ public void talking5c(){         // main story function. Players hit next to pro
                   ArtChar4.SetActive(false);
                   ArtBG5.SetActive(true);
                   ArtChar5.SetActive(true);
-                  Char3name.text = playerName;
-                  Char3speech.text = "That's impossible...";
-                  Char2name.text = "";
-                  Char2speech.text = "";
+                  Char2name.text = playerName;
+                  Char2speech.text = "That's impossible...";
+                  Char1name.text = "";
+                  Char1speech.text = "";
+                  Char3name.text = "";
+                  Char3speech.text = "";
           }
           else if (primeInt ==10){
+                   DialogueDisplay.SetActive(true);
+                   Char1Plate.SetActive(false);
+                   Char2Plate.SetActive(true);
+                   Char3Plate.SetActive(false);
                    ArtBG1.SetActive(false);
                    ArtChar2.SetActive(false);
                    ArtBG2.SetActive(true);
@@ -164,12 +199,18 @@ public void talking5c(){         // main story function. Players hit next to pro
                    ArtChar4.SetActive(true);
                    ArtBG5.SetActive(true);
                    ArtChar5.SetActive(false);
-                   Char3name.text = playerName;
-                   Char3speech.text = "Agh!";
-                   Char2name.text = "";
-                   Char2speech.text = "";
+                   Char2name.text = playerName;
+                   Char2speech.text = "Agh!";
+                   Char1name.text = "";
+                   Char1speech.text = "";
+                   Char3name.text = "";
+                   Char3speech.text = "";
            }
            else if (primeInt ==11){
+                    DialogueDisplay.SetActive(true);
+                    Char1Plate.SetActive(true);
+                    Char2Plate.SetActive(false);
+                    Char3Plate.SetActive(false);
                     ArtBG1.SetActive(false);
                     ArtChar2.SetActive(false);
                     ArtBG2.SetActive(true);
@@ -177,18 +218,20 @@ public void talking5c(){         // main story function. Players hit next to pro
                     ArtChar4.SetActive(true);
                     ArtBG5.SetActive(true);
                     ArtChar5.SetActive(false);
-                    Char2name.text = "Unknown";
-                    Char2speech.text = "Agh!";
+                    Char1name.text = "Unknown";
+                    Char1speech.text = "Agh!";
+                    Char2name.text = "";
+                    Char2speech.text = "";
                     Char3name.text = "";
                     Char3speech.text = "";
                     nextButton.SetActive(false);
                     NextScene1Button.SetActive(true);
             }
-			
+
 			Char1Plate.SetActive(false);
 		Char2Plate.SetActive(false);
 		Char3Plate.SetActive(false);
-			
+
 		if(Char1name.text != "") {
 			Char1Plate.SetActive(true);
 		}

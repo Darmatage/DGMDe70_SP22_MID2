@@ -1043,20 +1043,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primeInt: 1
   Char1name: {fileID: 1243326148}
-  Char1speech: {fileID: 24645077}
+  Char1speech: {fileID: 862971260}
   Char2name: {fileID: 936730760}
   Char2speech: {fileID: 24645077}
   Char3name: {fileID: 769512020}
   Char3speech: {fileID: 640211880}
+  Char1Plate: {fileID: 513139076}
+  Char2Plate: {fileID: 1573742257}
+  Char3Plate: {fileID: 55637517}
   DialogueDisplay: {fileID: 900219524}
   ArtChar1: {fileID: 111443883}
   ArtChar2: {fileID: 1346036277}
   ArtChar3: {fileID: 861874952}
   ArtChar4: {fileID: 885539303}
   ArtChar5: {fileID: 1592986265}
-  Char1Plate: {fileID: 513139076}
-  Char2Plate: {fileID: 1573742257}
-  Char3Plate: {fileID: 55637517}
   ArtBG1: {fileID: 1782560756}
   ArtBG2: {fileID: 1191796876}
   ArtBG3: {fileID: 1724999982}
@@ -1297,6 +1297,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861874952}
   m_CullTransparentMesh: 1
+--- !u!114 &862971260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 924828907179942598, guid: fa3fc448d9dbde641ab1b0e144bfdea0, type: 3}
+  m_PrefabInstance: {fileID: 604300298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885539303
 GameObject:
   m_ObjectHideFlags: 0
