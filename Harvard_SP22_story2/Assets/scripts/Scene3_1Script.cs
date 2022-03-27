@@ -21,6 +21,7 @@ public class Scene3_1Script : MonoBehaviour
     public GameObject ArtBGHeadache;
     public GameObject ArtCharRory;
     public GameObject ArtBGWormhole;
+    public GameObject ArtBGAltBridgeMissile;
     public GameObject ButtonChoiceDestroy1;
     public GameObject ButtonChoiceDestroy2;
     public GameObject ButtonChoiceAggressive;
@@ -28,6 +29,7 @@ public class Scene3_1Script : MonoBehaviour
     public GameObject ButtonChoiceNext;
     public GameObject ButtonChoiceScene4;
     public GameObject nextButton;
+    public GameObject ButtonNextLoop;
     public GameHandler gameHandler;
     //public AudioSource audioSource;
     private bool allowSpace = true;
@@ -50,6 +52,8 @@ public class Scene3_1Script : MonoBehaviour
         ArtBGHeadache.SetActive(true);
         ArtBGWormhole.SetActive(false);
         ArtCharRory.SetActive(true);
+        ArtBGAltBridgeMissile.SetActive(false);
+        ButtonNextLoop.SetActive(false);
 
         nextButton.SetActive(true);
         allowSpace = true;
@@ -417,12 +421,12 @@ public class Scene3_1Script : MonoBehaviour
         {
             //Char1name.text = "Lt. Rory";
             Char1name.text = playerName;
-            Char1speech.text = "Unidentified vessel! You are being hailed by the Captain of the Gyrfalcon... ";
+            Char1speech.text = "Unidentified vessel! This is "+playerName+", Captain of the Gyrfalcon... ";
 
             resetButtons();
             ButtonChoiceAggressive.SetActive(true);
             ButtonChoicePeaceful.SetActive(true);
-            YouPlate.SetActive(false);
+            YouPlate.SetActive(true);
             RoryPlate.SetActive(false);
         }
         else if (primeInt == 33)
@@ -443,7 +447,7 @@ public class Scene3_1Script : MonoBehaviour
             Char1speech.text = "Nothing but space hiss. I don't like this one bit. ";
             CommandPlate.SetActive(false);
             YouPlate.SetActive(false);
-            RoryPlate.SetActive(false);
+            RoryPlate.SetActive(true);
 
         }
         else if (primeInt == 35)
@@ -454,7 +458,7 @@ public class Scene3_1Script : MonoBehaviour
             ButtonChoiceDestroy2.SetActive(true);
             ButtonChoiceScene4.SetActive(true);
             CommandPlate.SetActive(false);
-            YouPlate.SetActive(false);
+            YouPlate.SetActive(true);
             RoryPlate.SetActive(false);
 
         }
@@ -466,6 +470,7 @@ public class Scene3_1Script : MonoBehaviour
             resetArt();
             ArtBGShip.SetActive(true);
             ArtCharRory.SetActive(true);
+            DialogueDisplay.SetActive(false);
 
             resetButtons();
             YouPlate.SetActive(false);
@@ -479,7 +484,9 @@ public class Scene3_1Script : MonoBehaviour
             Char1name.text = "Lt. Rory";
             //Char1name.text = playerName;
             Char1speech.text = "Firing missiles!";
-
+            DialogueDisplay.SetActive(true);
+            allowSpace = true;
+            nextButton.SetActive(true);
             YouPlate.SetActive(false);
             RoryPlate.SetActive(true);
         }
@@ -488,22 +495,59 @@ public class Scene3_1Script : MonoBehaviour
             //Char1name.text = "Lt. Rory";
             //Char1name.text = playerName;
             Char1speech.text = "";
+            DialogueDisplay.SetActive(false);
             resetArt();
-            ArtBGExplosion.SetActive(true);
+            ArtBGAltBridgeMissile.SetActive(true);
 
         }
         else if (primeInt == 103)
         {
+            Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "Captain "+playerName+"? What should we- ";
+            DialogueDisplay.SetActive(true);
+            ArtCharRory.SetActive(true);
+        }
+        else if (primeInt == 104)
+        {
             //Char1name.text = "Lt. Rory";
             //Char1name.text = playerName;
-            Char1speech.text = "Firing missiles!";
-            resetArt();
-            resetButtons();
-            YouPlate.SetActive(false);
-            RoryPlate.SetActive(false);
+            Char1speech.text = "";
+            DialogueDisplay.SetActive(false);
+            ArtBGExplosion.SetActive(true);
+            ArtBGHeadache.SetActive(false);
+            ArtBGAltBridgeMissile.SetActive(false);
+            ArtCharRory.SetActive(false);
+        }
+        else if (primeInt == 105)
+        {
+            Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "My head... Captain, what's happening? I... ";
+            DialogueDisplay.SetActive(true);
+            ArtBG1.SetActive(true);
+            ArtBGHeadache.SetActive(true);
+            ArtBGExplosion.SetActive(false);
+            ArtCharRory.SetActive(true);
 
         }
+        else if (primeInt == 106)
+        {
+            //Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "";
 
+            resetButtons();
+            DialogueDisplay.SetActive(false);
+            ArtBGExplosion.SetActive(false);
+            ArtBGHeadache.SetActive(true);
+            ArtBGWormhole.SetActive(true);
+            ArtCharRory.SetActive(false);
+            ButtonNextLoop.SetActive(true);
+            allowSpace = false;
+            
+        }
+        
 
 
 
@@ -589,9 +633,19 @@ public class Scene3_1Script : MonoBehaviour
 
 
     }
+    public void WormholeLoop()
+    {
+
+
+        SceneManager.LoadScene("Scene2");
+        primeInt = 5;
+
+
+
+    }
     IEnumerator TypeText(Text target, string fullText)
     {
-        float delay = 0.02f;
+        float delay = 0.2f;
         nextButton.SetActive(false);
         allowSpace = false;
         for (int i = 0; i < fullText.Length; i++)
