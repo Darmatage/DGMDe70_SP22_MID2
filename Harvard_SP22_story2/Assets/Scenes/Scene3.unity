@@ -307,9 +307,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -11.5905
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.795288
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330963503028537339, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 719187705}
+    - target: {fileID: 2330963503028537339, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330963503028537339, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Scene3_1Script, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2840653451240933981, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_Name
       value: ButtonChoiceScene4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817408173544751503, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_Text
+      value: "I cannot gamble on the lives of Galactic Union crewmembers. Prepare
+        to board. We\u2019re getting some answers."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
@@ -888,6 +913,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -14.902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.450989
+      objectReference: {fileID: 0}
     - target: {fileID: 2330963503028537339, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -906,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817408173544751503, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_Text
-      value: '  ... Respond immediately or we will be forced to treat you as hostile.'
+      value: ... Respond immediately or we will be forced to treat you as hostile.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
@@ -1146,7 +1179,7 @@ MonoBehaviour:
   ButtonChoiceScene4: {fileID: 61812739}
   nextButton: {fileID: 1684403937}
   gameHandler: {fileID: 8897926}
-  CommandPlate: {fileID: 0}
+  CommandPlate: {fileID: 2119580159}
   YouPlate: {fileID: 578066444}
   RoryPlate: {fileID: 410916111}
   playerName: 
@@ -2166,6 +2199,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -18.2137
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.1069
+      objectReference: {fileID: 0}
     - target: {fileID: 2330963503028537339, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2181,6 +2222,11 @@ PrefabInstance:
     - target: {fileID: 2840653451240933981, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_Name
       value: ButtonChoiceDestroy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817408173544751503, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_Text
+      value: "We\u2019ve taken enough risks today. Destroy their ship, Lieutenant.
+        That\u2019s an order."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
@@ -2287,6 +2333,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -13.2464
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182360234716794615, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.6231995
+      objectReference: {fileID: 0}
     - target: {fileID: 2330963503028537339, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2305,7 +2359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817408173544751503, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
       propertyPath: m_Text
-      value: "  ... We have to destroy that ship. We can\u2019t afford the risk."
+      value: "... We have to destroy that ship. We can\u2019t afford the risk."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f21e2e62338746e18a038c9f033b868, type: 3}
@@ -2470,6 +2524,10 @@ PrefabInstance:
     - target: {fileID: 964083018161420863, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202119773841777427, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154a45baee6832a45ba681bd18f549c6, type: 3}
@@ -2822,6 +2880,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095894941}
   m_CullTransparentMesh: 1
+--- !u!1 &2119580159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3647353842579646370, guid: 82b9739f5892a4fa887f307dcd7a33ac, type: 3}
+  m_PrefabInstance: {fileID: 1452945099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2075410350824546159
 PrefabInstance:
   m_ObjectHideFlags: 0

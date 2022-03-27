@@ -441,8 +441,64 @@ public class Scene3_1Script : MonoBehaviour
             Char1name.text = "Lt. Rory";
             //Char1name.text = playerName;
             Char1speech.text = "Nothing but space hiss. I don't like this one bit. ";
+            CommandPlate.SetActive(false);
+            YouPlate.SetActive(false);
+            RoryPlate.SetActive(false);
 
-            CommandPlate.SetActive(true);
+        }
+        else if (primeInt == 35)
+        {
+            //Char1name.text = "Lt. Rory";
+            Char1name.text = playerName;
+            Char1speech.text = "";
+            ButtonChoiceDestroy2.SetActive(true);
+            ButtonChoiceScene4.SetActive(true);
+            CommandPlate.SetActive(false);
+            YouPlate.SetActive(false);
+            RoryPlate.SetActive(false);
+
+        }
+        else if (primeInt == 100)
+        {
+            //Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "";
+            resetArt();
+            ArtBGShip.SetActive(true);
+            ArtCharRory.SetActive(true);
+
+            resetButtons();
+            YouPlate.SetActive(false);
+            RoryPlate.SetActive(false);
+            allowSpace = true;
+            nextButton.SetActive(true);
+
+        }
+        else if (primeInt == 101)
+        {
+            Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "Firing missiles!";
+
+            YouPlate.SetActive(false);
+            RoryPlate.SetActive(true);
+        }
+        else if (primeInt == 102)
+        {
+            //Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "";
+            resetArt();
+            ArtBGExplosion.SetActive(true);
+
+        }
+        else if (primeInt == 103)
+        {
+            //Char1name.text = "Lt. Rory";
+            //Char1name.text = playerName;
+            Char1speech.text = "Firing missiles!";
+            resetArt();
+            resetButtons();
             YouPlate.SetActive(false);
             RoryPlate.SetActive(false);
 
@@ -450,9 +506,17 @@ public class Scene3_1Script : MonoBehaviour
 
 
 
+
+
+
+
+
+
+
+
+
+
     }
-
-
     // this turns off ALL art to make it easier to reset the canvas
     public void resetArt()
     {
@@ -485,7 +549,6 @@ public class Scene3_1Script : MonoBehaviour
     {
         resetArt();
         resetButtons();
-        ArtBGExplosion.SetActive(true);
         primeInt = 100 - 1;
         nextButton.SetActive(true);
         allowSpace = true;
@@ -520,15 +583,9 @@ public class Scene3_1Script : MonoBehaviour
     public void SceneChange()
     {
 
-        if (primeInt != 25)
-        {
+       
             SceneManager.LoadScene("Scene4");
-        }
-        else
-        {
-            SceneManager.LoadScene("Scene3");
-
-        }
+        
 
 
     }
