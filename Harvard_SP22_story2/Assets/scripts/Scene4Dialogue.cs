@@ -291,7 +291,7 @@ public void talking(){         // main story function. Players hit next to progr
     		  ButtonChoice1a.SetActive(true);
     		  textButtonChoice1a.text = "We'll arm ourselves to the teeth. Prepare for anything!";
     		  ButtonChoice1b.SetActive(true);
-    		  textButtonChoice1b.text = "This is arescue mission. We will bring medkits, not weapons.";
+    		  textButtonChoice1b.text = "This is a rescue mission. We will bring medkits, not weapons.";
 
         } else if (primeInt == 29){
           Char1name.text = "Lieutenant Rory";
@@ -310,10 +310,11 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
     		  resetButtons2();
-    		  ButtonChoice1a.SetActive(true);
+    		  ButtonChoice1a.SetActive(true); // goes to 5a_aggressive
     		  textButtonChoice1a.text = "Denied. We could be under fire immediately and I need you to follow my orders without question. Let's do this!";
     		  ButtonChoice1b.SetActive(true);
     		  textButtonChoice1b.text = "Permission granted. Speak your mind.";
+
         } else if (primeInt == 31){
           Char1name.text = "Lieutenant Rory";
           Char1speech.text = "They never responded to the hail. It’s possible they never even received it.";
