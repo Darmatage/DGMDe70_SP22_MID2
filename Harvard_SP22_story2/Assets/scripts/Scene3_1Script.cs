@@ -99,7 +99,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Lieutenant Rory";
-                Char2speech.text = "Glad to see you're awake, Captain. We took quite a beaing, and, well...";
+                Char2speech.text = "Glad to see you're awake, Captain. We took quite a beating, and, well...";
                 Char3name.text = "";
                 Char3speech.text = "";
                 Char2Plate.SetActive(false);

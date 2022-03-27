@@ -104,6 +104,7 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 3){
                 ArtBG3.SetActive(false);
                 ArtBG1.SetActive(true);
+                ArtChar1.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char2Plate.SetActive(true);
                 Char3Plate.SetActive(false);
@@ -124,7 +125,8 @@ public void talking(){         // main story function. Players hit next to progr
             DialogueDisplay.SetActive(false);
             ArtBG1.SetActive(false);
             ArtBG2.SetActive(true);
-            ArtChar1.SetActive(true);
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(true);
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
             Char3Plate.SetActive(false);

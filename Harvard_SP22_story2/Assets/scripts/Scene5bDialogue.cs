@@ -83,12 +83,13 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-				 Char4speech_shake.text = "";
-
+				        Char4speech_shake.text = "";
                 allowSpace = false;
-        }else if (primeInt == 3){
+                nextButton.SetActive(true);
+        }
+        else if (primeInt == 3){
                  Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";

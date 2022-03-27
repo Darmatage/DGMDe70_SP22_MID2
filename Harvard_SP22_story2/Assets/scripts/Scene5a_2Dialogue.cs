@@ -241,39 +241,39 @@ public void talking(){         // main story function. Players hit next to progr
       else if (primeInt == 9){
                 Char1name.text = "";
                 Char1speech.text = "";
-				Char2name.text = "";
+				        Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-				 Char4speech_shake.text = "";
-				   ArtWormhole.SetActive(false);
-				 ArtHeadache.SetActive(true);
-				 ArtBridge.SetActive(true);
-				 NextScene1Button.SetActive(true);
-				 nextButton.SetActive(false);
-				 allowSpace = false;
+				        Char4speech_shake.text = "";
+				        ArtWormhole.SetActive(false);
+				        ArtHeadache.SetActive(true);
+      				  ArtBridge.SetActive(true);
+      				  NextScene1Button.SetActive(true);
+      				  nextButton.SetActive(false);
+      				  allowSpace = false;
 
         }
 		 else if (primeInt == 10){
-       Char1Plate.SetActive(false);
-       Char2Plate.SetActive(true);
-       Char3Plate.SetActive(false);
+                Char1Plate.SetActive(false);
+                Char2Plate.SetActive(true);
+                Char3Plate.SetActive(false);
                 Char1name.text = playerName;
                 Char1speech.text = "We hailed you earlier - why didn't you answer?";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "";
+        				Char3name.text = "";
                 Char3speech.text = "";
-				ResetButtons();
-				nextButton.SetActive(true);
-				allowSpace=true;
+				        ResetButtons();
+				        nextButton.SetActive(true);
+				        allowSpace=true;
 
 				}
 
 		else if (primeInt == 11){
-      Char1Plate.SetActive(true);
-      Char2Plate.SetActive(false);
-      Char3Plate.SetActive(false);
+                Char1Plate.SetActive(true);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Unknown";
@@ -285,49 +285,48 @@ public void talking(){         // main story function. Players hit next to progr
 
 
         else if (primeInt == 12){
-                 Char1name.text = "";
-				 Char1speech.text = "";
+                Char1name.text = "";
+				        Char1speech.text = "";
                 Char2name.text = "Unknown";
                 Char2speech.text = "And that was before we went through the wormhole.";
-               Char3name.text = "";
+                Char3name.text = "";
                 Char3speech.text = "";
-                 Char4speech_shake.text = "";
+                Char4speech_shake.text = "";
 
          }
 else if (primeInt == 13){
-  Char1Plate.SetActive(false);
-  Char2Plate.SetActive(false);
-  Char3Plate.SetActive(true);
+                Char1Plate.SetActive(false);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
-				Char1speech.text = "";
+				        Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
+                Char3name.text = "Lieutenant Rory";
                 Char3speech.text = "Captain, look! Their badge!";
-
                 Char4speech_shake.text = "";
 
 			  }
 				else if (primeInt == 14){
-				ResetArt();
-				ArtShip.SetActive(true);
-				ArtBadge.SetActive(true);
-        Char1Plate.SetActive(true);
-        Char2Plate.SetActive(false);
-        Char3Plate.SetActive(false);
+        				ResetArt();
+        				ArtBG2.SetActive(true);
+        				ArtBadge.SetActive(true);
+                Char1Plate.SetActive(true);
+                Char2Plate.SetActive(false);
+                Char3Plate.SetActive(false);
                 Char1name.text = playerName;
                 Char1speech.text = "That's impossible!";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "";
-			   Char3speech.text = "";
+                Char3name.text = "";
+			          Char3speech.text = "";
                 Char4speech_shake.text = "";
         }
 
 
-				else if (primeInt == 15){
+else if (primeInt == 15){
 				ResetArt();
         Char1Plate.SetActive(false);
         Char2Plate.SetActive(false);
@@ -504,11 +503,11 @@ else if (primeInt == 13){
     ArtBridge.SetActive(false);
 		ArtHeadache.SetActive(false);
 		ArtCharShip.SetActive(false);
-        NextScene1Button.SetActive(false);
+    NextScene1Button.SetActive(false);
 		Choice1Button.SetActive(false);
 		Choice2Button.SetActive(false);
 		nextButton.SetActive(true);
-        allowSpace = true;
+    allowSpace = true;
 		TalkButton.SetActive(false);
         }
 
@@ -517,8 +516,9 @@ else if (primeInt == 13){
 			{
 				SceneManager.LoadScene("Scene6");
 			}
-               SceneManager.LoadScene("Scene2");
+      if (primeInt != 16){SceneManager.LoadScene("Scene3");
         }
+      }
 		        public void SceneChange6(){
                SceneManager.LoadScene("Scene6");
         }

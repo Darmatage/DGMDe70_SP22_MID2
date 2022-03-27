@@ -423,7 +423,7 @@ public void choice2button() {
 			      talking();
 		}
       if (primeInt == 33){
-            SceneManager.LoadScene("Scene5b");
+            SceneManager.LoadScene("Scene5a_peaceful");
 		  }
 }
 
