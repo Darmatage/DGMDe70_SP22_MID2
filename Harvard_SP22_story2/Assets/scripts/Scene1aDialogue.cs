@@ -171,7 +171,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char2name.text = playerName.ToUpper();
+                Char2name.text = playerName;
                 Char2speech.text = "Yes, Lieutenant?";
                 Char1speech.text = "";
                 Char3name.text = "";
@@ -209,7 +209,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char2name.text = playerName.ToUpper();
+                Char2name.text = playerName;
                 Char2speech.text = "The honor is mine, Lieutenant.";
 				        Char1name.text = "";
                 Char1speech.text = "";
@@ -227,7 +227,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char2name.text = playerName.ToUpper();
+                Char2name.text = playerName;
                 Char2speech.text = "You’re a good man.";
 				        Char1name.text = "";
                 Char1speech.text = "";
