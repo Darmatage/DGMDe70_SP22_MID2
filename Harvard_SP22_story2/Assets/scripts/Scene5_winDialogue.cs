@@ -20,14 +20,16 @@ public class Scene5_winDialogue : MonoBehaviour {
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
         public GameObject ArtChar2;
+        public GameObject ArtChar2Moved;
         public GameObject ArtChar3;
         public GameObject ArtChar4;
-        public GameObject ArtChar5;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
         public GameObject ArtBG3;
         public GameObject ArtBG4;
         public GameObject ArtBG5;
+    public GameObject ArtBadgeClose;
+    public GameObject ArtBadgeFar;
         public GameObject Choice1a;
         public GameObject Choice1b;
         public GameObject NextScene1Button;
@@ -47,12 +49,17 @@ void Start(){         // initial visibility settings
         ArtBG4.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
+        ArtChar2Moved.SetActive(false);
+        ArtBadgeClose.SetActive(false);
+        ArtBadgeFar.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 		Char1Plate.SetActive(false);
 		Char2Plate.SetActive(false);
 		Char3Plate.SetActive(false);
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
 
 	   string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
@@ -111,7 +118,8 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char3Plate.SetActive(false);
                 ArtChar1.SetActive(false);
                 ArtBG1.SetActive(false);
-                ArtChar2.SetActive(true);
+                ArtChar2.SetActive(false);
+                ArtChar2Moved.SetActive(true);
                 ArtBG2.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
