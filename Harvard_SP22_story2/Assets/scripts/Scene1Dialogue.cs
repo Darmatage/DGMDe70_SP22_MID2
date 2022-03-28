@@ -114,7 +114,7 @@ public class Scene1Dialogue : MonoBehaviour {
         else if (primeInt == 5) {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName;
+            Char2name.text = playerName.ToUpper();
             Char2speech.text = "We are en route to Beta 9’s Intergalactic Conference as planned. In fact, we should arrive a few cycles before the Conference begins. ";
             //gameHandler.AddPlayerStat(1);
             Char1Plate.SetActive(false);
@@ -122,7 +122,7 @@ public class Scene1Dialogue : MonoBehaviour {
         }
         else if (primeInt == 6) {
             Char1name.text = "";
-            Char2name.text = playerName;
+            Char2name.text = playerName.ToUpper();
             Char2speech.text = "Anything to add, Lieutenant Rory?";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(true);
@@ -133,7 +133,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "No, Captain. Systems are stable and functioning as expected... ";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
@@ -143,7 +143,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1name.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "We did move through some interference a few hours back, but that seems to have passed. ";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
@@ -189,7 +189,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "It’s happening again, Captain. We must be getting jammed, there’s nothing wrong with our equip– ";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(false);
@@ -258,7 +258,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "Shields at 80 percent, Captain. We’re safe for now, but we can’t do this all day! ";
             Char4speech_shake.text = "";
             Char3Plate.SetActive(true);
@@ -288,8 +288,9 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "Captain " + playerName + ", look! It’s a wormhole! ";
+            Char2Plate.SetActive(false);
             Char3Plate.SetActive(true);
             nextButton.SetActive(true);
             allowSpace = true;
@@ -301,7 +302,7 @@ public class Scene1Dialogue : MonoBehaviour {
         else if (primeInt == 21) {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName;
+            Char2name.text = playerName.ToUpper();
             Char2speech.text = "Could we use it to escape? ";
             Char3name.text = "";
             Char3speech.text = "";
@@ -314,7 +315,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "The risk would be huge. We can’t know what will happen once we enter its event horizon. ";
             Char2Plate.SetActive(false);
             Char3Plate.SetActive(true);
@@ -326,7 +327,7 @@ public class Scene1Dialogue : MonoBehaviour {
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "Lieutenant Rory";
+            Char3name.text = "Lt. Rory";
             Char3speech.text = "Crap, they’re readying an EMP!! Your orders, Captain? ";
             Char2Plate.SetActive(false);
             Char3Plate.SetActive(true);
@@ -336,7 +337,7 @@ public class Scene1Dialogue : MonoBehaviour {
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName;
+            Char2name.text = playerName.ToUpper();
             Char2speech.text = "For our best chance of survival, we must...";
             Char3name.text = "";
             Char3speech.text = "";

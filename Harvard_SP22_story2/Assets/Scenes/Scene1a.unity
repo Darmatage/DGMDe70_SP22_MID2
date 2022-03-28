@@ -602,7 +602,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ...Weapons at maximum power...
+  m_Text: 
 --- !u!222 &268012057
 CanvasRenderer:
   m_ObjectHideFlags: 0

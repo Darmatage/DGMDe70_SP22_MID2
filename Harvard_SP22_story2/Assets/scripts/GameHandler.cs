@@ -12,7 +12,7 @@ public class GameHandler : MonoBehaviour {
 		public static int PeacefulnessScore = 0;
 		
 		// InputName Code
-		public static string playerName = "Dope Name";
+		public static string playerName = "Ren";
 		
 		
 
