@@ -1117,7 +1117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "A succesful mission is its own reward. \nThen again, so is tequila.\n\n-General
+  m_Text: "A successful mission is its own reward. \nThen again, so is tequila.\n\n-General
     Lorne"
 --- !u!222 &1206756693
 CanvasRenderer:
