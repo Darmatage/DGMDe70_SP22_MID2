@@ -302,7 +302,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
                Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "Yes, Captain Playername?";
+                Char3speech.text = "Yes, Captain " + playerName + "?";
         }
 					else if (primeInt == 25){
 				Char1name.text = playerName;

@@ -415,6 +415,9 @@ public void choice2button() {
             // resetButtons2();
             // nextButton.SetActive(true);
             // allowSpace = true;
+			if(gameHandler.checkAggressionScore() > gameHandler.checkPeacefulnessScore()) {
+			SceneManager.LoadScene("Scene5a_aggressive");
+		 }
             SceneManager.LoadScene("Scene5c");
       }
 	   	if (primeInt == 30) {
