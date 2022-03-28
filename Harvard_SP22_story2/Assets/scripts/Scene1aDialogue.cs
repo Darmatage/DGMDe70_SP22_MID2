@@ -46,7 +46,7 @@ public class Scene1aDialogue : MonoBehaviour {
         	  public string playerName;
 
 void Start(){         // initial visibility settings
-        DialogueDisplay.SetActive(true);
+        DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(true);
 	//	red1.SetActive(false);
 	//	red2.SetActive(false);
@@ -92,6 +92,7 @@ public void talking(){         // main story function. Players hit next to progr
             DialogueDisplay.SetActive(false);
         }
         else if (primeInt == 2){
+                DialogueDisplay.SetActive(true);
                 ArtBG1.SetActive(false);
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(false);
