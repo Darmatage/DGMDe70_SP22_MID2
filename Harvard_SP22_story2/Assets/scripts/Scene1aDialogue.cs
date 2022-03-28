@@ -74,6 +74,7 @@ void Start(){         // initial visibility settings
         Char2Plate.SetActive(true);
         Char3Plate.SetActive(false);
         Char2name.text = playerName;
+        Char2speech.text = "Fire at will, Leiutenant!";
    }
 
 void Update(){         // use spacebar as Next button

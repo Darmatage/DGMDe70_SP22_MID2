@@ -18,6 +18,7 @@ public class Scene2Loop : MonoBehaviour
     public GameObject ArtBG1;
     public GameObject ArtBG2;
     public GameObject ArtBG3;
+    public GameObject ArtBG4;
     //
     //	public GameObject blue1;
     public GameObject Choice1;
@@ -46,6 +47,7 @@ public class Scene2Loop : MonoBehaviour
         ArtBG1.SetActive(false);
         ArtBG2.SetActive(false);
         ArtBG3.SetActive(true);
+        ArtBG4.SetActive(true);
         Choice1.SetActive(false);
         Choice2.SetActive(false);
         ButtonScene3.SetActive(false);
@@ -87,6 +89,7 @@ public class Scene2Loop : MonoBehaviour
             ArtBG1.SetActive(false);
             ArtBG2.SetActive(false);
             ArtBG3.SetActive(true);
+            ArtBG4.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "You feel reality rip into infinite threads yet somehow manage to perceive your lieutenant reaching for you through the quantum mire. You are floating out of your seat, away from the helm. You have an infinite moment to make your decision.";
             //	blue1.SetActive(true);
@@ -105,6 +108,7 @@ public class Scene2Loop : MonoBehaviour
             ArtBG1.SetActive(false);
             ArtBG2.SetActive(false);
             ArtBG3.SetActive(true);
+            ArtBG4.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
 
@@ -114,6 +118,7 @@ public class Scene2Loop : MonoBehaviour
             ArtBG1.SetActive(false);
             ArtBG2.SetActive(false);
             ArtBG3.SetActive(true);
+            ArtBG4.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
         }
@@ -126,6 +131,7 @@ public class Scene2Loop : MonoBehaviour
         ArtBG1.SetActive(false);
         ArtBG2.SetActive(false);
         ArtBG3.SetActive(true);
+        ArtBG4.SetActive(true);
         Char1name.text = "";
         Char1speech.text = "You reach for Rory's hand and he pulls you to the floor beside him. For a brief moment, Rory's face seems split by a searing red glow and crackling blue electricity. Your vision darkens and your head aches. You lose consciousness.";
         primeInt = 99;
@@ -140,6 +146,7 @@ public class Scene2Loop : MonoBehaviour
         ArtBG1.SetActive(false);
         ArtBG2.SetActive(false);
         ArtBG3.SetActive(true);
+        ArtBG4.SetActive(true);
         Char1name.text = "";
         Char1speech.text = "You reach for the helm. You feel it in your hand and pull. A shock of blue electricity courses through your body and out into the room, dancing across monitors and into control boards. Your vision darkens and your head aches. You lose consciousness.";
         primeInt = 199;
