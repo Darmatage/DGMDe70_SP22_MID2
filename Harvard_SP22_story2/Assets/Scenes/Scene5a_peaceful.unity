@@ -3991,6 +3991,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 719187704}
     m_Modifications:
+    - target: {fileID: 9206868139692020570, guid: bea32860063af49cabbc417540277d70, type: 3}
+      propertyPath: m_Text
+      value: Ren
+      objectReference: {fileID: 0}
     - target: {fileID: 9206868140434202124, guid: bea32860063af49cabbc417540277d70, type: 3}
       propertyPath: m_Name
       value: ArtBadgeClose
