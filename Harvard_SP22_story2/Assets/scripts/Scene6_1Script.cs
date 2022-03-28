@@ -52,9 +52,9 @@ void Start(){         // initial visibility settings
 		Char1Plate.SetActive(false);
 		Char2Plate.SetActive(false);
 		Char3Plate.SetActive(false);
-
+        allowSpace = true;
 		       string pNameTemp = gameHandler.GetName();
-       playerName = pNameTemp.ToUpper();
+       playerName = pNameTemp;
    }
 
 void Update(){         // use spacebar as Next button
@@ -96,6 +96,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+
+            Char1Plate.SetActive(false);
 				 // nextButton.SetActive(false);
                 // allowSpace = false;
 
@@ -137,73 +139,88 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
+               Char3name.text = "Lt. Rory";
                 Char3speech.text = "Oh God, my head. Why do I have two sets of memories?";
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(true);
         }
 		else if (primeInt == 7){
                 ArtBG3.SetActive(false);
-				        Char1name.text = playerName;
+				        Char1name.text = playerName.ToUpper();
                 Char1speech.text = "The wormhole must have split our timeline into two...";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 		else if (primeInt == 8){
-                ArtBG5.SetActive(true);
-                ArtBG8.SetActive(false);
-				        Char1name.text = playerName;
-                Char1speech.text = "In one timeline, the EMP hit us, and in the other, we dodged it.";
+                ArtBG5.SetActive(false);
+                Char1name.text = playerName.ToUpper();
+                Char1speech.text = "In one timeline the EMP hit us and in the other we dodged it.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 		else if (primeInt == 9){
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char3name.text = "Lieutenant Rory";
+                Char3name.text = "Lt. Rory";
                 Char3speech.text = "In the wormhole, you reached for me. But you also grabbed the helm.";
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(true);
         }
 		else if (primeInt == 10){
                 ArtBG5.SetActive(false);
                 ArtBG8.SetActive(true);
-				        Char1name.text = playerName;
+				        Char1name.text = playerName.ToUpper();
                 Char1speech.text = "Eureka!";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 				else if (primeInt == 11){
-				        Char1name.text = playerName;
-                Char1speech.text = "Making that decision in the wormhole must have cause the timelines to entagle.";
+				        Char1name.text = playerName.ToUpper();
+                Char1speech.text = "Making that decision in the wormhole must have cause the timelines to entangle.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 				else if (primeInt == 12){
-                ArtChar1.SetActive(false);
-                ArtChar2.SetActive(true);
+                ArtChar1.SetActive(true);
+                ArtChar2.SetActive(false);
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char3name.text = "Lieutenant Rory";
+                Char3name.text = "Lt. Rory";
                 Char3speech.text = "Do you... remember dying?";
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(true);
         }
 						else if (primeInt == 13){
                 ArtChar1.SetActive(true);
                 ArtChar2.SetActive(false);
-				        Char1name.text = playerName;
+				        Char1name.text = playerName.ToUpper();
                 Char1speech.text = "Many times. It seems the timelines needed to synchronize for us to progress.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
             else if (primeInt == 14){
 				DialogueDisplay.SetActive(false);
@@ -216,6 +233,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
         }
         else if (primeInt == 15){
             ArtBG6.SetActive(false);
@@ -226,7 +245,9 @@ public void talking(){         // main story function. Players hit next to progr
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
-    }
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
+        }
 						else if (primeInt == 16){
 								DialogueDisplay.SetActive(true);
                 ArtBG7.SetActive(false);
@@ -238,95 +259,114 @@ public void talking(){         // main story function. Players hit next to progr
                  StartCoroutine(TypeText(Char2speech,"This is Commander Zurchik hailing Captain " + playerName + " of the Gyrfalcon. Do you read me? "));
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(true);
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
         }
 						else if (primeInt == 17){
-				        Char1name.text = playerName;
+				        Char1name.text = playerName.ToUpper();
                 Char1speech.text = "Loud and clear, Command...";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(false);
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 					  else if (primeInt == 18){
-				        Char1name.text = playerName;
-                Char1speech.text = "Things went south pretty fast when your transmision failed, but we made it out in one piece.";
+				        Char1name.text = playerName.ToUpper();
+                Char1speech.text = "Things went south pretty fast when your transmission failed, but we made it out in one piece.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(false);
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 			else if (primeInt == 19){
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "COMMAND";
-                 StartCoroutine(TypeText(Char2speech, "When our transmission failed? Captain, this is our first attempt to hail. "));
+                 StartCoroutine(TypeText(Char2speech, "When our transmission failed? Captain, this is our first attempt to hail you. "));
                 Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(true);
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
         }
 			else if (primeInt == 20){
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "The clock, Captain! We've gone back to before the dreadnought's attack!";
+                Char3name.text = "Lt. Rory";
+                Char3speech.text = "The clock, Captain! We've gone back to before the Pyhrran dreadnought's attack!";
+            Char1Plate.SetActive(false);
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(true);
         }
 			else if (primeInt == 21){
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "COMMAND";
-                StartCoroutine(TypeText(Char2speech, "A dreadnought attack? We received notice of a battle over a territory on your course, but... "));
+                StartCoroutine(TypeText(Char2speech, "A Pyhrran attack? We received notice of a battle over a territory in your course, but... "));
                Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(true);
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
         }
 			else if (primeInt == 22){
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "COMMAND";
-                StartCoroutine(TypeText(Char2speech, "How did you survive a dreadnought attack?? And what's this about --gone back to before--? "));
+                StartCoroutine(TypeText(Char2speech, "How the hell did you survive a dreadnought attack?? And what's this about --gone back to before--? "));
                Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(true);
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(false);
 
         }
 			else if (primeInt == 23){
-				Char1name.text = playerName;
-                Char1speech.text = "Let's open that can of wormholes in a bit. Lieutenant Rory?";
+				Char1name.text = playerName.ToUpper();
+                Char1speech.text = "Let's open that can of wormholes in a moment, command. Lieutenant Rory? ";
                 Char2name.text = "";
                 Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
+            Char1Plate.SetActive(false);
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
 					else if (primeInt == 24){
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
+               Char3name.text = "Lt. Rory";
                 Char3speech.text = "Yes, Captain " + playerName + "?";
+            Char1Plate.SetActive(false);
+            Char2Plate.SetActive(false);
+            Char3Plate.SetActive(true);
         }
 					else if (primeInt == 25){
-				Char1name.text = playerName;
-                Char1speech.text = "Full power to engines. We've a mission to complete.";
+				Char1name.text = playerName.ToUpper();
+                Char1speech.text = "Full power to engines. We've got a mission to complete. ";
                 Char2name.text = "";
                 Char2speech.text = "";
                Char3name.text = "";
                 Char3speech.text = "";
 				resetButtons();
 				NextScene1Button.SetActive(true);
+            Char1Plate.SetActive(false);
+            Char2Plate.SetActive(true);
+            Char3Plate.SetActive(false);
         }
-		Char1Plate.SetActive(false);
-		Char2Plate.SetActive(false);
-		Char3Plate.SetActive(false);
+		
 
-		if(Char1name.text != "") {
-			Char1Plate.SetActive(true);
-		}
-		if(Char2name.text != "") {
-			Char2Plate.SetActive(true);
-		}
-		if(Char3name.text != "") {
-			Char3Plate.SetActive(true);
-		}
 }
 
 
