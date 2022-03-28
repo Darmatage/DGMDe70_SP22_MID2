@@ -39,6 +39,7 @@ public class Scene5a_2Dialogue : MonoBehaviour {
 		    public GameObject ArtLaser2;
 		    public GameObject ArtLaser3;
 		    public GameObject ArtLaser4;
+            public GameObject ArtLaser5;
         public GameObject NextScene1Button;
 		    public GameObject TalkButton;
 		    public GameObject ButtonChoice1;
@@ -72,6 +73,7 @@ void Start(){         // initial visibility settings
 		    ArtLaser2.SetActive(false);
 		    ArtLaser3.SetActive(false);
 		    ArtLaser4.SetActive(false);
+        ArtLaser5.SetActive(false);
 		    ArtBridge.SetActive(false);
         ArtWormhole.SetActive(false);
 		    ArtHeadache.SetActive(false);
@@ -197,13 +199,14 @@ public void talking(){         // main story function. Players hit next to progr
 				 TalkButton.SetActive(false);
 				 ArtBG2.SetActive(true);
 				 ArtBG1.SetActive(false);
-				 ArtChar1.SetActive(true);
+				 ArtChar1.SetActive(false);
 				 ArtChar11.SetActive(true);
 				 ArtChar2.SetActive(true);
 				 ArtLaser1.SetActive(true);
 				 ArtLaser2.SetActive(true);
 				 ArtLaser3.SetActive(true);
 				 ArtLaser4.SetActive(true);
+                 ArtLaser5.SetActive(true);
 
         }
 		else if (primeInt == 7){
@@ -213,7 +216,7 @@ public void talking(){         // main story function. Players hit next to progr
       Char3Plate.SetActive(false);
       ArtHeadache.SetActive(true);
   			 Char1name.text = playerName;
-                Char1speech.text = "Something feels wrong...";
+                Char1speech.text = "We should be dead... What's happening?";
                 Char2name.text = "";
                 Char2speech.text = "";
                Char3name.text = "";
@@ -223,6 +226,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 8){
          ResetArt();
+            ArtLaser5.SetActive(false);
          DialogueDisplay.SetActive(false);
          Char1Plate.SetActive(false);
          Char2Plate.SetActive(false);
@@ -526,7 +530,7 @@ else if (primeInt == 15){
 			{
 				SceneManager.LoadScene("Scene6");
 			}
-      if (primeInt != 16){SceneManager.LoadScene("Scene3");
+      if (primeInt != 16){SceneManager.LoadScene("Scene2Loop");
         }
       }
 		        public void SceneChange6(){
