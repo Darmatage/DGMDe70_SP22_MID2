@@ -418,7 +418,7 @@ public void choice2button() {
 			if(gameHandler.checkAggressionScore() > gameHandler.checkPeacefulnessScore()) {
 			SceneManager.LoadScene("Scene5a_aggressive");
 		 }
-            SceneManager.LoadScene("Scene5c");
+            SceneManager.LoadScene("Scene5a_peaceful");
       }
 	   	if (primeInt == 30) {
 			      resetButtons2();
