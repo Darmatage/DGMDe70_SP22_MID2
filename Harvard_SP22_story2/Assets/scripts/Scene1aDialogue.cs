@@ -88,7 +88,7 @@ void Update(){         // use spacebar as Next button
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
-            talking();
+            DialogueDisplay.SetActive(false);
         }
         else if (primeInt == 2){
                 ArtBG1.SetActive(false);

@@ -97,7 +97,7 @@ public class Scene1Dialogue : MonoBehaviour {
         else if (primeInt == 3) {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "Captain " + playerName + " receiving, Commander. ";
             //gameHandler.AddPlayerStat(1);
             Char1Plate.SetActive(false);
@@ -114,7 +114,7 @@ public class Scene1Dialogue : MonoBehaviour {
         else if (primeInt == 5) {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "We are en route to Beta 9’s Intergalactic Conference as planned. In fact, we should arrive a few cycles before the Conference begins. ";
             //gameHandler.AddPlayerStat(1);
             Char1Plate.SetActive(false);
@@ -122,7 +122,7 @@ public class Scene1Dialogue : MonoBehaviour {
         }
         else if (primeInt == 6) {
             Char1name.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "Anything to add, Lieutenant Rory?";
             Char1Plate.SetActive(false);
             Char2Plate.SetActive(true);
@@ -175,7 +175,7 @@ public class Scene1Dialogue : MonoBehaviour {
             ArtChar1.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "Lieutenant, what’s going on? ";
             Char3name.text = "";
             Char3speech.text = "";
@@ -214,7 +214,7 @@ public class Scene1Dialogue : MonoBehaviour {
             ArtBG2.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
@@ -267,7 +267,7 @@ public class Scene1Dialogue : MonoBehaviour {
         else if (primeInt == 16) {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "No. We'll have to... ";
             Char3name.text = "";
             Char3speech.text = "";
@@ -302,7 +302,7 @@ public class Scene1Dialogue : MonoBehaviour {
         else if (primeInt == 21) {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "Could we use it to escape? ";
             Char3name.text = "";
             Char3speech.text = "";
@@ -337,7 +337,7 @@ public class Scene1Dialogue : MonoBehaviour {
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = playerName.ToUpper();
+            Char2name.text = playerName;
             Char2speech.text = "For our best chance of survival, we must...";
             Char3name.text = "";
             Char3speech.text = "";
