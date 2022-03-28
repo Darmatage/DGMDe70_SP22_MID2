@@ -17,8 +17,6 @@ public class Scene5a_2Dialogue : MonoBehaviour {
         public GameObject Char2Plate;
         public GameObject Char3Plate;
 		    public Text ButtonText1;
-		    public Text Choice1ButtonText;
-		    public Text Choice2ButtonText;
 		    public Text Char4speech_shake;
         public GameObject DialogueDisplay;
         public GameObject ArtBG1;
@@ -32,7 +30,10 @@ public class Scene5a_2Dialogue : MonoBehaviour {
 		    public GameObject ArtChar11;
         public GameObject ArtChar2;
         public GameObject ArtChar3;
-		    public GameObject ArtBadge;
+		    public GameObject ArtBadgeClose;
+            public GameObject ArtBadgeFar;
+    public GameObject ArtCaptainClose;
+            public Text BadgeText;
 		    public GameObject ArtCharShip;
 		    public GameObject ArtLaser1;
 		    public GameObject ArtLaser2;
@@ -40,8 +41,8 @@ public class Scene5a_2Dialogue : MonoBehaviour {
 		    public GameObject ArtLaser4;
         public GameObject NextScene1Button;
 		    public GameObject TalkButton;
-		    public GameObject Choice1Button;
-		    public GameObject Choice2Button;
+		    public GameObject ButtonChoice1;
+		    public GameObject ButtonChoice2;
         // public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
@@ -60,11 +61,12 @@ void Start(){         // initial visibility settings
 		    ArtChar11.SetActive(false);
 		    ArtChar2.SetActive(false);
         ArtChar3.SetActive(false);
-		    ArtBadge.SetActive(false);
-		    ArtBadge.SetActive(false);
+		    ArtBadgeClose.SetActive(false);
+		    ArtBadgeFar.SetActive(false);
 		    ArtConvergence.SetActive(false);
         ArtBG1.SetActive(true);
         ArtBG2.SetActive(false);
+        ArtCaptainClose.SetActive(false);
 		    ArtShip.SetActive(false);
 		    ArtLaser1.SetActive(false);
 		    ArtLaser2.SetActive(false);
@@ -75,8 +77,8 @@ void Start(){         // initial visibility settings
 		    ArtHeadache.SetActive(false);
 		    ArtCharShip.SetActive(false);
         NextScene1Button.SetActive(false);
-		    Choice1Button.SetActive(false);
-		    Choice2Button.SetActive(false);
+		    ButtonChoice1.SetActive(false);
+		    ButtonChoice2.SetActive(false);
 		    nextButton.SetActive(true);
         allowSpace = true;
 		    TalkButton.SetActive(false);
@@ -115,7 +117,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char3speech.text = "Airlocks attached, Captain. Doors open on your word.";
 				        Char4speech_shake.text = "";
 			          ButtonText1.text = "Go!";
-                allowSpace = false;
+                allowSpace = true;
         }
         else if (primeInt == 3){
           Char1Plate.SetActive(false);
@@ -126,22 +128,23 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtBG2.SetActive(true);
                 ArtChar1.SetActive(false);
                 ArtChar11.SetActive(true);
+                ArtBadgeFar.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
-				// ArtBG1.SetActive(false);
-				// ArtBG2.SetActive(true);
+            // ArtBG1.SetActive(false);
+            // ArtBG2.SetActive(true);
 
-				 Char4speech_shake.text = "";
+            nextButton.SetActive(true);
+            Char4speech_shake.text = "";
 				 TalkButton.SetActive(false);
 				 ButtonText1.text = "";
 				 ArtChar2.SetActive(true);
 				 ArtChar3.SetActive(true);
-				 // nextButton.SetActive(false);
-                // allowSpace = false;
+				
 
 		}else if (primeInt == 4){
       Char1Plate.SetActive(false);
@@ -152,15 +155,13 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-               Char3name.text = "Lieutenant Rory";
+               Char3name.text = "Lt. Rory";
                 Char3speech.text = "What should we do Captain? ";
 				 Char4speech_shake.text = "";
 				 nextButton.SetActive(false);
                 allowSpace = false;
-				Choice1Button.SetActive(true);
-				Choice1ButtonText.text = "Let's talk things out";
-				Choice2Button.SetActive(true);
-				Choice2ButtonText.text = "Eliminate the threat";
+            ButtonChoice1.SetActive(true);
+            ButtonChoice2.SetActive(true);
 
 
         }
@@ -312,7 +313,10 @@ else if (primeInt == 13){
 				else if (primeInt == 14){
         				ResetArt();
         				ArtBG2.SetActive(true);
-        				ArtBadge.SetActive(true);
+        				ArtBadgeClose.SetActive(true);
+                        ArtCaptainClose.SetActive(true);
+                        BadgeText.text = playerName;
+                
                 Char1Plate.SetActive(true);
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(false);
@@ -332,7 +336,11 @@ else if (primeInt == 15){
         Char2Plate.SetActive(false);
         Char3Plate.SetActive(false);
         DialogueDisplay.SetActive(false);
+            ArtCaptainClose.SetActive(false);
+            ArtBadgeClose.SetActive(false);
         ArtBG2.SetActive(true);
+            ArtChar2.SetActive(true);
+            ArtChar3.SetActive(true);
 				ArtHeadache.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -345,7 +353,9 @@ else if (primeInt == 15){
 
 	else if (primeInt == 16){
 				ResetArt();
-				ResetButtons();
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(false);
+            ResetButtons();
         ArtHeadache.SetActive(true);
 				ArtConvergence.SetActive(true);
                 Char1name.text = "";
@@ -453,19 +463,19 @@ else if (primeInt == 15){
                 // allowSpace = true;
         // }
 
-		public void Choice1ButtonFun(){
+		public void ButtonChoice1Fun(){
 				primeInt = 9;
 				talking();
-				Choice1Button.SetActive(false);
-				Choice2Button.SetActive(false);
+				ButtonChoice1.SetActive(false);
+				ButtonChoice2.SetActive(false);
 				nextButton.SetActive(true);
                 allowSpace = true;
 		}
 
-			public void Choice2ButtonFun(){
+			public void ButtonChoice2Fun(){
 				talking();
-				Choice1Button.SetActive(false);
-				Choice2Button.SetActive(false);
+				ButtonChoice1.SetActive(false);
+				ButtonChoice2.SetActive(false);
 				nextButton.SetActive(true);
                 allowSpace = true;
 		}
@@ -478,8 +488,8 @@ else if (primeInt == 15){
 
 		public void ResetButtons(){
 			NextScene1Button.SetActive(false);
-		Choice1Button.SetActive(false);
-		Choice2Button.SetActive(false);
+		ButtonChoice1.SetActive(false);
+		ButtonChoice2.SetActive(false);
 		nextButton.SetActive(false);
         allowSpace = false;
 		TalkButton.SetActive(false);
@@ -489,10 +499,10 @@ else if (primeInt == 15){
 		ArtChar11.SetActive(false);
 		ArtChar2.SetActive(false);
     ArtChar3.SetActive(false);
-		ArtBadge.SetActive(false);
+		ArtBadgeClose.SetActive(false);
         ArtBG1.SetActive(false);
 		ArtConvergence.SetActive(false);
-		ArtBadge.SetActive(false);
+		ArtBadgeFar.SetActive(false);
         ArtBG2.SetActive(false);
 		ArtShip.SetActive(false);
 		ArtLaser1.SetActive(false);
@@ -504,8 +514,8 @@ else if (primeInt == 15){
 		ArtHeadache.SetActive(false);
 		ArtCharShip.SetActive(false);
     NextScene1Button.SetActive(false);
-		Choice1Button.SetActive(false);
-		Choice2Button.SetActive(false);
+		ButtonChoice1.SetActive(false);
+		ButtonChoice2.SetActive(false);
 		nextButton.SetActive(true);
     allowSpace = true;
 		TalkButton.SetActive(false);
