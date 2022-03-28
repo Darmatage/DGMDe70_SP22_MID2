@@ -78,7 +78,7 @@ public class Scene2Loop : MonoBehaviour
             Choice2.SetActive(false);
             DialogueDisplay.SetActive(false);
             allowSpace = true;
-            
+            nextButton.SetActive(true);
         }
         else if (primeInt == 2)
         {

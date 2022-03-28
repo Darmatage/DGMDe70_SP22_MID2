@@ -55,7 +55,7 @@ void Start(){
     Char3Plate.SetActive(false);
 
 	   string pNameTemp = gameHandler.GetName();
-       playerName = pNameTemp.ToUpper();
+       playerName = pNameTemp;
    }
 
 void Update(){         // use spacebar as Next button
@@ -74,7 +74,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
         else if (primeInt == 2){
           DialogueDisplay.SetActive(true);
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Captain, something's been bothering me.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -90,7 +90,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
 		} else if (primeInt == 4){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "The EMP... we entered the wormhole just as it hit us. Yet our ship seems unaffected.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -106,7 +106,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 6){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "The best explanation I have is that when we went through, the milliseconds of time between entry and impact became... well, longer.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -122,13 +122,13 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
        } else if (primeInt == 8){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Time and space aren’t linear around wormholes. Dimensions shift, bend, diverge, converge... ";
           Char2name.text = "";
           Char2speech.text = "";
 
         } else if (primeInt == 9){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "So not only could we be anywhere... but we could be any-when, too.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -144,7 +144,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 11){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "No. But that’s the least of our worries, now.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -160,7 +160,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 13){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "I can’t wrap my head around it. The other ship... it could only have come from our time, give or take a century.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -176,7 +176,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 15){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "The odds of another ship from our time going through a wormhole and landing right here, right now must be nearly zero.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -192,7 +192,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 17){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Because I’m fluent in 14 languages and was the only one crazy enough to say yes to a 2 year mission?";
           Char2name.text = "";
           Char2speech.text = "";
@@ -208,7 +208,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 19){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "You think too highly of me, Captain.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -224,7 +224,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 21){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "No, of course not!";
           Char2name.text = "";
           Char2speech.text = "";
@@ -240,7 +240,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 23){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Ah. Very good, Captain.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -256,7 +256,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 25){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Right. We are boarding an unidentified ship at an unknown location and time. Do I have all the facts straight?";
           Char2name.text = "";
           Char2speech.text = "";
@@ -272,7 +272,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(false);
 
         } else if (primeInt == 27){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Our hail attempt was unsuccessful, as well. How should we board?";
           Char2name.text = "";
           Char2speech.text = "";
@@ -294,7 +294,7 @@ public void talking(){         // main story function. Players hit next to progr
     		  textButtonChoice1b.text = "This is a rescue mission. We will bring medkits, not weapons.";
 
         } else if (primeInt == 29){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "Permission to voice a concern, Captain?";
           Char2name.text = "";
           Char2speech.text = "";
@@ -316,7 +316,7 @@ public void talking(){         // main story function. Players hit next to progr
     		  textButtonChoice1b.text = "Permission granted. Speak your mind.";
 
         } else if (primeInt == 31){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "They never responded to the hail. It’s possible they never even received it.";
           Char2name.text = "";
           Char2speech.text = "";
@@ -324,7 +324,7 @@ public void talking(){         // main story function. Players hit next to progr
           Char3Plate.SetActive(true);
 
         } else if (primeInt == 32){
-          Char1name.text = "Lieutenant Rory";
+          Char1name.text = "Lt. Rory";
           Char1speech.text = "If the first thing they see is the barrel of a rifle, they may see us as a threat.";
           Char2name.text = "";
           Char2speech.text = "";

@@ -65,7 +65,7 @@ public class Scene3_1Script : MonoBehaviour
 
 
         string pNameTemp = gameHandler.GetName();
-        playerName = pNameTemp.ToUpper();
+        playerName = pNameTemp;
     }
 
     void Update()
@@ -107,7 +107,7 @@ public class Scene3_1Script : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = playerName;
+            Char3name.text = playerName ;
             Char3speech.text = "I think so... what happened? ";
             YouPlate.SetActive(true);
             RoryPlate.SetActive(false);
@@ -132,7 +132,7 @@ public class Scene3_1Script : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = playerName;
+            Char3name.text = playerName ;
             Char3speech.text = "What about the ship? ";
             YouPlate.SetActive(true);
             RoryPlate.SetActive(false);
@@ -156,7 +156,7 @@ public class Scene3_1Script : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = playerName;
+            Char3name.text = playerName ;
             Char3speech.text = "What? ";
             YouPlate.SetActive(true);
             RoryPlate.SetActive(false);
@@ -201,7 +201,7 @@ public class Scene3_1Script : MonoBehaviour
         }
         else if (primeInt == 11)
         {
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "We must still be in the 29th century. Have they attempted to make contact? ";
             Char2name.text = "";
             Char2speech.text = "";
@@ -223,7 +223,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 13)
         {
 
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "What else do we know about them?";
 
             YouPlate.SetActive(true);
@@ -233,7 +233,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 14)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "This is where things get weird... ";
 
             YouPlate.SetActive(false);
@@ -243,7 +243,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 15)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "They’re not just the same model of ship. They’re exactly like us. ";
 
             YouPlate.SetActive(false);
@@ -253,7 +253,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 16)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "So they’re Galactic Union? We have to rescue them! ";
 
             YouPlate.SetActive(true);
@@ -263,7 +263,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 17)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "It’s not that simple, Captain. According to their ID, the name of their ship is the Gyrfalcon... ";
 
             YouPlate.SetActive(false);
@@ -273,7 +273,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 18)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "And the Captain of the vessel is " + playerName + ". ";
 
             YouPlate.SetActive(false);
@@ -283,7 +283,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 19)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "That’s impossible. ";
 
             YouPlate.SetActive(true);
@@ -293,7 +293,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 20)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "I do have a theory, but it’s a troubling one. ";
 
             YouPlate.SetActive(false);
@@ -303,7 +303,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 21)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "Well, out with it, Lieutenant! ";
 
             YouPlate.SetActive(true);
@@ -313,7 +313,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 22)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "Sometimes, pirates are able to capture Galactic Union vessels intact, usually during refueling in dangerous territories. ";
 
             YouPlate.SetActive(false);
@@ -323,7 +323,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 23)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "They use these captured ships as decoys, and it would be a simple task to code an ID chip to copy and return the signal that scans it. ";
 
             YouPlate.SetActive(false);
@@ -333,7 +333,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 24)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "So they’re pirates?";
 
             YouPlate.SetActive(true);
@@ -343,7 +343,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 25)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "That’s one possibility. But it’s just as likely that our scanner was busted by the wormhole.";
 
             YouPlate.SetActive(false);
@@ -353,7 +353,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 26)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "If they are a Galactic Union crew, we are mandated to save them. ";
 
             YouPlate.SetActive(true);
@@ -363,7 +363,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 27)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "Yes, Captain. But we can’t confirm their identity. They could kill us as soon as we turn our backs. ";
 
             YouPlate.SetActive(false);
@@ -373,7 +373,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 28)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "Well, shit. ";
 
             YouPlate.SetActive(true);
@@ -383,7 +383,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 29)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "What are your orders, Captain? ";
 
             YouPlate.SetActive(false);
@@ -393,7 +393,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 30)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "The mission must come first...";
 
             ButtonChoiceDestroy1.SetActive(true);
@@ -407,7 +407,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 31)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "Understood. Comms open. ";
 
             resetButtons();
@@ -420,7 +420,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 32)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "Unidentified vessel! This is "+playerName+", Captain of the Gyrfalcon... ";
 
             resetButtons();
@@ -432,7 +432,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 33)
         {
             Char1name.text = "RADIO";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             StartCoroutine(TypeText(Char1speech, "... ... ... ... "));
 
             CommandPlate.SetActive(true);
@@ -443,7 +443,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 34)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "Nothing but space hiss. I don't like this one bit. ";
             CommandPlate.SetActive(false);
             YouPlate.SetActive(false);
@@ -453,7 +453,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 35)
         {
             //Char1name.text = "Lt. Rory";
-            Char1name.text = playerName;
+            Char1name.text = playerName ;
             Char1speech.text = "";
             ButtonChoiceDestroy2.SetActive(true);
             ButtonChoiceScene4.SetActive(true);
@@ -465,7 +465,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 100)
         {
             //Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "";
             resetArt();
             ArtBGShip.SetActive(true);
@@ -482,7 +482,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 101)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "Firing missiles!";
             DialogueDisplay.SetActive(true);
             allowSpace = true;
@@ -493,7 +493,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 102)
         {
             //Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "";
             DialogueDisplay.SetActive(false);
             resetArt();
@@ -503,7 +503,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 103)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "Captain "+playerName+"? What should we- ";
             DialogueDisplay.SetActive(true);
             ArtCharRory.SetActive(true);
@@ -511,7 +511,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 104)
         {
             //Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "";
             DialogueDisplay.SetActive(false);
             ArtBGExplosion.SetActive(true);
@@ -522,7 +522,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 105)
         {
             Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "My head... Captain, what's happening? I... ";
             DialogueDisplay.SetActive(true);
             ArtBG1.SetActive(true);
@@ -534,7 +534,7 @@ public class Scene3_1Script : MonoBehaviour
         else if (primeInt == 106)
         {
             //Char1name.text = "Lt. Rory";
-            //Char1name.text = playerName;
+            //Char1name.text = playerName ;
             Char1speech.text = "";
 
             resetButtons();
