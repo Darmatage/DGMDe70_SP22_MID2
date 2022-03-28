@@ -26,6 +26,7 @@ public class Scene1aDialogue : MonoBehaviour {
         public GameObject ArtBG5;
         public GameObject ArtBG6;
         public GameObject ArtBG7;
+        public GameObject Red1;
 	//	    public GameObject red1;
 	//	    public GameObject red2;
 	//	    public GameObject red3;
@@ -64,11 +65,11 @@ void Start(){         // initial visibility settings
         // Choice1a.SetActive(false);
         // Choice2.SetActive(false);
         NextScene1Button.SetActive(false);
-		    nextButton.SetActive(false);
-        allowSpace = false;
+		    nextButton.SetActive(true);
+        allowSpace = true;
         nextButton.SetActive(true);
         string pNameTemp = gameHandler.GetName();
-           playerName = pNameTemp.ToUpper();
+           playerName = pNameTemp;
         Char1Plate.SetActive(false);
         Char2Plate.SetActive(true);
         Char3Plate.SetActive(false);
@@ -87,10 +88,9 @@ void Update(){         // use spacebar as Next button
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
-                // AudioSource.Play();
+            talking();
         }
         else if (primeInt == 2){
-				        gameHandler.updateAggressionScore(10);
                 ArtBG1.SetActive(false);
                 ArtBG2.SetActive(false);
                 ArtBG3.SetActive(false);
@@ -105,8 +105,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "Suck plasma, you bastards! ...FIRE!";
+                Char3name.text = "Lt. Rory";
+                Char3speech.text = "Suck plasma, you bastards! FIRE!";
 				        Char4speech_shake.text = "";
         }
         else if (primeInt == 3){
@@ -159,8 +159,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "Captain?";
+                Char3name.text = "Lt. Rory";
+                Char3speech.text = "Captain " +playerName+ "?";
 				        Char4speech_shake.text = "";
 //				 red1.SetActive(true);
 //				 blue1.SetActive(false);
@@ -170,7 +170,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char2name.text = playerName;
+                Char2name.text = playerName.ToUpper();
                 Char2speech.text = "Yes, Lieutenant?";
                 Char1speech.text = "";
                 Char3name.text = "";
@@ -195,8 +195,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
 				        Char2name.text = "";
                 Char2speech.text = "";
-                Char3name.text = "Lieutenant Rory";
-                Char3speech.text = "It's been an honor, " + playerName ;
+                Char3name.text = "Lt. Rory";
+                Char3speech.text = "It's been an honor to serve with you.";
 				        Char4speech_shake.text = "";
 //	 red1.SetActive(true);
 	//			 blue1.SetActive(false);
@@ -208,7 +208,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char2name.text = playerName;
+                Char2name.text = playerName.ToUpper();
                 Char2speech.text = "The honor is mine, Lieutenant.";
 				        Char1name.text = "";
                 Char1speech.text = "";
@@ -226,8 +226,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(true);
                 Char1Plate.SetActive(false);
                 Char3Plate.SetActive(false);
-                Char2name.text = playerName;
-                Char2speech.text = "You’re a good man, Rory. Thank you.";
+                Char2name.text = playerName.ToUpper();
+                Char2speech.text = "You’re a good man.";
 				        Char1name.text = "";
                 Char1speech.text = "";
                 Char3name.text = "";
@@ -245,11 +245,12 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(false);
                 Char1name.text = "";
-                Char1speech.text = "Lieutenant Rory's steady eyes fade into scarlet lightning as the world roars into oblivion.";
+                Char1speech.text = "Lieutenant Rory fades into scarlet lightning as the world roars into oblivion.";
                 Char2name.text = "";
                 Char2speech.text = "";
 				        Char3name.text = "";
                 Char3speech.text = "";
+                Red1.SetActive(true);
           //      blue1.SetActive(true);
 				// red2.SetActive(true);
 				//  red3.SetActive(true);
@@ -264,7 +265,9 @@ public void talking(){         // main story function. Players hit next to progr
       ArtBG4.SetActive(false);
       ArtBG5.SetActive(false);
       ArtBG6.SetActive(false);
-	  DialogueDisplay.SetActive(false);
+            Red1.SetActive(false);
+            DialogueDisplay.SetActive(false);
+
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
