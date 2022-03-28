@@ -30,10 +30,10 @@ public class Scene5_winDialogue : MonoBehaviour {
         public GameObject ArtBG5;
     public GameObject ArtBadgeClose;
     public GameObject ArtBadgeFar;
+    public GameObject ArtCaptainClose;
         public GameObject Choice1a;
         public GameObject Choice1b;
         public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
         public GameObject nextButton;
         public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -53,13 +53,13 @@ void Start(){         // initial visibility settings
         ArtBadgeClose.SetActive(false);
         ArtBadgeFar.SetActive(false);
         NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 		Char1Plate.SetActive(false);
 		Char2Plate.SetActive(false);
 		Char3Plate.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
+        ArtCaptainClose.SetActive(false);
 
 	   string pNameTemp = gameHandler.GetName();
        playerName = pNameTemp.ToUpper();
@@ -87,7 +87,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(true);
                 Char1name.text = "";
-                Char3name.text = "Lieutenant Rory";
+                Char3name.text = "Lt. Rory";
                 Char3speech.text = "Airlock is attached, Captain. Doors open on your word.";
 		//		TextOneAtATime.text = "Centurion Alpha Speca System. Star Date 5550. Star Code 234j22d1";
                 Char2name.text = "";
@@ -118,9 +118,10 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char3Plate.SetActive(false);
                 ArtChar1.SetActive(false);
                 ArtBG1.SetActive(false);
-                ArtChar2.SetActive(false);
-                ArtChar2Moved.SetActive(true);
+                ArtChar2.SetActive(true);
+                ArtChar2Moved.SetActive(false);
                 ArtBG2.SetActive(true);
+            
                 Char1name.text = "";
                 Char1speech.text = "";
 				//TextOneAtATime.text = "";
@@ -133,6 +134,9 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char2Plate.SetActive(true);
                 Char3Plate.SetActive(false);
 		            DialogueDisplay.SetActive(true);
+            ArtChar2.SetActive(false);
+            ArtChar2Moved.SetActive(true);
+            ArtBadgeFar.SetActive(true);
                 ArtChar3.SetActive(true);
                 ArtChar4.SetActive(true);
                 Char1name.text = "";
@@ -160,7 +164,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                 Char2Plate.SetActive(false);
                 Char3Plate.SetActive(false);
                 Char1name.text = "Unknown";
-                Char1speech.text = "And that was before we went through that wormhole.";
+                Char1speech.text = "And that was before we came through that wormhole.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
@@ -170,7 +174,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                  Char1Plate.SetActive(false);
                  Char2Plate.SetActive(false);
                  Char3Plate.SetActive(true);
-                 Char3name.text = "Lieutenant Rory";
+                 Char3name.text = "Lt. Rory";
                  Char3speech.text = "Captain, look! The badge!";
                  Char1name.text = "";
                  Char1speech.text = "";
@@ -187,7 +191,11 @@ public void talking5c(){         // main story function. Players hit next to pro
                   ArtChar3.SetActive(false);
                   ArtChar4.SetActive(false);
                   ArtBG5.SetActive(true);
-                  ArtChar5.SetActive(true);
+            ArtCaptainClose.SetActive(true);
+            ArtBadgeClose.SetActive(true);
+            ArtBadgeFar.SetActive(false);
+            nextButton.SetActive(true);
+            allowSpace = true;
                   Char2name.text = playerName;
                   Char2speech.text = "That's impossible...";
                   Char1name.text = "";
@@ -197,6 +205,9 @@ public void talking5c(){         // main story function. Players hit next to pro
           }
           else if (primeInt ==10){
                    DialogueDisplay.SetActive(true);
+            ArtCaptainClose.SetActive(false);
+            ArtBadgeClose.SetActive(false);
+            ArtBadgeFar.SetActive(true);
                    Char1Plate.SetActive(false);
                    Char2Plate.SetActive(true);
                    Char3Plate.SetActive(false);
@@ -206,7 +217,7 @@ public void talking5c(){         // main story function. Players hit next to pro
                    ArtChar3.SetActive(true);
                    ArtChar4.SetActive(true);
                    ArtBG5.SetActive(true);
-                   ArtChar5.SetActive(false);
+                   
                    Char2name.text = playerName;
                    Char2speech.text = "Agh!";
                    Char1name.text = "";
@@ -225,8 +236,8 @@ public void talking5c(){         // main story function. Players hit next to pro
                     ArtChar3.SetActive(true);
                     ArtChar4.SetActive(true);
                     ArtBG5.SetActive(true);
-                    ArtChar5.SetActive(false);
-                    Char1name.text = "Unknown";
+                    
+                    Char1name.text = "?Ren?";
                     Char1speech.text = "Agh!";
                     Char2name.text = "";
                     Char2speech.text = "";
@@ -259,7 +270,7 @@ public void talking5c(){         // main story function. Players hit next to pro
        ArtChar2.SetActive(false);
        ArtChar3.SetActive(false);
        ArtChar4.SetActive(false);
-       ArtChar5.SetActive(false);
+     
        ArtBG1.SetActive(false);
        ArtBG2.SetActive(false);
        ArtBG3.SetActive(false);

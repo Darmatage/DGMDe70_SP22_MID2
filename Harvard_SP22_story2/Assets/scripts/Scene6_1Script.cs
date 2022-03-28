@@ -322,7 +322,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "COMMAND";
-                StartCoroutine(TypeText(Char2speech, "How the hell did you survive a dreadnought attack?? And what's this about --gone back to before--? "));
+                StartCoroutine(TypeText(Char2speech, "How the hell did you survive a dreadnought attack?? And what's this about \"gone back to before\"? "));
                Char3name.text = "";
                 Char3speech.text = "";
             Char1Plate.SetActive(true);
